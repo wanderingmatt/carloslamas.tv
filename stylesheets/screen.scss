@@ -1,14 +1,12 @@
-@import "modules/all";
 @import "partials/defaults";
 @import "partials/content";
 
 @include global-reset;
 @include reset-html5;
 
-html, body { background: $background-color; }
+html, body { background: #fff; }
 
 body {
-  @include base-font;
   color: #444;
   padding: 0 5px;
   text-align: center;
@@ -46,6 +44,11 @@ footer {
       position: absolute;
       right: 0;
       top: 0;
+    }
+    @media screen and (min-width: 1024px) {
+      &:hover:after {
+        background: fade_out($purple, .4);
+      }
     }
   }
   img {

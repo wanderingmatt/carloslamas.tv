@@ -3,15 +3,11 @@
 //
 
 .links {
-  a { @include basic-link($link-color, $link-visited-color, $link-hover-color); }
+  a {  }
   a.more {
     white-space: nowrap;
     &:after { content: " »"; }
   }
-}
-
-.typography {
-  @include basic-typography;
 }
 
 .content {
