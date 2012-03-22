@@ -1,24 +1,3 @@
-@charset "UTF-8";
-.links a.more, .content a.more, section[role=main] > article a.more {
-  white-space: nowrap;
-}
-.links a.more:after, .content a.more:after, section[role=main] > article a.more:after {
-  content: " »";
-}
-
-.content .box, section[role=main] > article .box {
-  background: #efeacf;
-  border: 1px solid #e2d9a9;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  margin: 1.5em -1em;
-  padding: 1px 1em;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,19 +58,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before, body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  clear: both;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
 html, body {
   background: #fff;
 }
 
 body {
   color: #444;
+  font: normal 14px "Helvetica Neue", Arial, sans-serif;
   padding: 0 5px;
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+.fade {
+  background: white;
+  content: '';
+  display: block;
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header {
   padding: 20px 5%;
-  position: relative;
 }
 
 footer {
@@ -103,9 +121,6 @@ footer p {
 
 .videos li {
   margin-bottom: 20px;
-}
-.videos h1 {
-  text-align: center;
 }
 .videos a {
   display: inline-block;
@@ -127,11 +142,6 @@ footer p {
   right: 0;
   top: 0;
 }
-@media screen and (min-width: 1024px) {
-  .videos .thumbnail:hover:after {
-    background: rgba(102, 0, 204, 0.6);
-  }
-}
 .videos img {
   -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
@@ -139,4 +149,22 @@ footer p {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   display: block;
   max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper {
+    padding: 0 10%;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  .videos li {
+    display: inline;
+    float: left;
+    width: 28.571%;
+    margin: 0 2.381%;
+  }
+  .videos .thumbnail:hover:after {
+    background: rgba(102, 0, 204, 0.6);
+  }
 }

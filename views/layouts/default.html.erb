@@ -8,6 +8,7 @@
     <script src="/javascripts/html5.js"></script>
   </head>
   <body>
+    <div class="fade"></div>
     <header role="banner">
       <h1><a href="/">Carlos Lamas</a></h1>
       <nav>
@@ -17,7 +18,9 @@
         </ul>
       </nav>
     </header>
-    <%= yield %>
+    <div id="wrapper">
+      <%= yield %>
+    </div>
     <footer>
       Footer
     </footer>

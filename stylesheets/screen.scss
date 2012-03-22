@@ -1,20 +1,35 @@
-@import "partials/defaults";
-@import "partials/content";
-
+@import "compass";
 @include global-reset;
 @include reset-html5;
+@import "framework/grid";
+@import "framework/all";
 
 html, body { background: #fff; }
 
 body {
   color: #444;
+  font: normal 14px $default-font-face;
   padding: 0 5px;
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+.fade {
+  background: white;
+  content: '';
+  display: block;
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header {
   padding: 20px 5%;
-  position: relative;  
 }
 
 footer {
@@ -25,9 +40,6 @@ footer {
 .videos {
   li {
     margin-bottom: 20px;
-  }
-  h1 {
-    text-align: center;
   }
   a {
     display: inline-block;
@@ -45,15 +57,26 @@ footer {
       right: 0;
       top: 0;
     }
-    @media screen and (min-width: 1024px) {
-      &:hover:after {
-        background: fade_out($purple, .4);
-      }
-    }
   }
   img {
     @include box-shadow;
     display: block;
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper {
+    padding: 0 10%;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  .videos {
+    li {
+      @include column(1);
+    }
+    .thumbnail:hover:after {
+      background: fade_out($purple, .4);
+    }
   }
 }
