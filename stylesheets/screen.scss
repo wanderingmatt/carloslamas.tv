@@ -9,6 +9,7 @@ html, body { background: $background-color; }
 
 body {
   @include base-font;
+  color: #444;
   padding: 0 5px;
   text-align: center;
 }
@@ -31,13 +32,25 @@ footer {
     text-align: center;
   }
   a {
-    background-color: #eee;
-    @include box-shadow;
-    color: #fff;
     display: inline-block;
     text-align: center;
   }
+  .thumbnail {
+    position: relative;
+    &:after {
+      bottom: 0;
+      @include box-shadow(rgba(255, 255, 255, .3) 0 0 0 1px inset);
+      content: " ";
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
   img {
+    @include box-shadow;
+    display: block;
     max-width: 100%;
   }
 }
