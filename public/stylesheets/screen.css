@@ -195,6 +195,9 @@ footer p {
     margin: 0 2.083%;
     margin-bottom: 30px;
   }
+  .videos li:hover hgroup {
+    opacity: 1;
+  }
   .videos hgroup {
     opacity: 0;
   }

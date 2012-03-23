@@ -88,6 +88,9 @@ footer {
     li {
       @include column(2);
       margin-bottom: 30px;
+      &:hover hgroup {
+        opacity: 1;
+      }
     }
     hgroup { opacity: 0; }
   }
