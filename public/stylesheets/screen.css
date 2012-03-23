@@ -70,7 +70,6 @@ body:after {
   clear: both;
 }
 
-/*$gutter-width: 20px;*/
 h1 {
   font-size: 20px;
   text-transform: uppercase;
@@ -90,7 +89,7 @@ h3 {
 }
 
 h4 {
-  color: #666;
+  color: #777;
 }
 
 html, body {
@@ -99,7 +98,7 @@ html, body {
 
 body {
   color: #444;
-  font: normal 14px "Helvetica Neue", Arial, sans-serif;
+  font: normal 13px "Helvetica Neue", Arial, sans-serif;
   text-align: center;
 }
 
@@ -120,6 +119,7 @@ nav a {
   margin-bottom: 20px;
 }
 .videos .thumbnail {
+  display: block;
   margin-bottom: 10px;
   position: relative;
 }
@@ -194,6 +194,9 @@ footer p {
     width: 29.167%;
     margin: 0 2.083%;
     margin-bottom: 30px;
+  }
+  .videos hgroup {
+    opacity: 0;
   }
 
   footer {

@@ -8,7 +8,7 @@ html, body { background: #fff; }
 
 body {
   color: #444;
-  font: normal 14px $default-font-face;
+  font: normal $default-font-size $default-font-face;
   text-align: center;
 }
 
@@ -32,6 +32,7 @@ nav {
     margin-bottom: 20px;
   }
   .thumbnail {
+    display: block;
     margin-bottom: 10px;
     position: relative;
     &:after {
@@ -88,6 +89,7 @@ footer {
       @include column(2);
       margin-bottom: 30px;
     }
+    hgroup { opacity: 0; }
   }
   footer {
     clear: both;
