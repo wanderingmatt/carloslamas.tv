@@ -41,15 +41,12 @@ footer {
   li {
     margin-bottom: 20px;
   }
-  a {
-    display: inline-block;
-    text-align: center;
-  }
   .thumbnail {
+    margin-bottom: 10px;
     position: relative;
     &:after {
       bottom: 0;
-      @include box-shadow(rgba(255, 255, 255, .3) 0 0 0 1px inset);
+      @include box-shadow(red 0 0 0 1px inset);
       content: " ";
       display: block;
       left: 0;
@@ -72,11 +69,14 @@ footer {
     max-width: 1024px;
   }
   .videos {
+    @include column(6);
+    ul { @include row(6); }
     li {
-      @include column(1);
+      @include column(2, 6);
+      margin-bottom: 30px;
     }
-    .thumbnail:hover:after {
-      background: fade_out($purple, .4);
-    }
+  }
+  footer {
+    clear: both;
   }
 }

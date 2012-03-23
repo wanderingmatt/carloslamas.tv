@@ -70,6 +70,7 @@ body:after {
   clear: both;
 }
 
+/*$gutter-width: 20px;*/
 h1 {
   text-transform: uppercase;
 }
@@ -80,6 +81,15 @@ h2 {
   font-weight: bold;
   padding: 10px 0;
   text-transform: uppercase;
+}
+
+h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+h4 {
+  color: #666;
 }
 
 html, body {
@@ -122,19 +132,16 @@ footer p {
 .videos li {
   margin-bottom: 20px;
 }
-.videos a {
-  display: inline-block;
-  text-align: center;
-}
 .videos .thumbnail {
+  margin-bottom: 10px;
   position: relative;
 }
 .videos .thumbnail:after {
   bottom: 0;
-  -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
+  -moz-box-shadow: red 0 0 0 1px inset;
+  -webkit-box-shadow: red 0 0 0 1px inset;
+  -o-box-shadow: red 0 0 0 1px inset;
+  box-shadow: red 0 0 0 1px inset;
   content: " ";
   display: block;
   left: 0;
@@ -158,13 +165,34 @@ footer p {
     max-width: 1024px;
   }
 
+  .videos {
+    display: inline;
+    float: left;
+    width: 95.833%;
+    margin: 0 2.083%;
+  }
+  .videos ul {
+    display: block;
+    width: 104.167%;
+    margin: 0 -2.083%;
+    *zoom: 1;
+  }
+  .videos ul:before, .videos ul:after {
+    content: "";
+    display: table;
+  }
+  .videos ul:after {
+    clear: both;
+  }
   .videos li {
     display: inline;
     float: left;
-    width: 28.571%;
-    margin: 0 2.381%;
+    width: 29.167%;
+    margin: 0 2.083%;
+    margin-bottom: 30px;
   }
-  .videos .thumbnail:hover:after {
-    background: rgba(102, 0, 204, 0.6);
+
+  footer {
+    clear: both;
   }
 }
