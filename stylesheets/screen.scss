@@ -79,4 +79,8 @@ footer {
   footer {
     clear: both;
   }
+  @import "modules/jquery.fancybox";
+  .fancybox-outer {
+    background: #000;
+  }
 }

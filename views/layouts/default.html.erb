@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="/stylesheets/screen.css" />
-    <link rel="stylesheet" href="/stylesheets/jquery.fancybox.css" />
     <script src="/javascripts/html5.js"></script>
   </head>
   <body>
@@ -29,7 +28,18 @@
     <script src="/javascripts/jquery.fancybox.pack.js"></script>
     <script type="text/javascript">
     	$(document).ready(function() {
-    		$(".thumbnail").fancybox();
+    		$(".thumbnail").fancybox({
+    		  aspectRatio: true,
+    		  autoSize: false,
+    		  height: 450,
+    		  padding: 0,
+    		  width: 800,
+    		  helpers: {
+        		title: {
+        			type: 'outside'
+        		}
+        	}
+        });
     	});
     </script>
   </body>
