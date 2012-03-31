@@ -82,19 +82,22 @@ h1 strong {
 
 h2 {
   clear: both;
-  font-size: 12px;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 11px;
   font-weight: bold;
-  padding: 30px 0;
+  padding: 30px 0 60px 0;
   text-transform: uppercase;
 }
 
 h3 {
   color: #333;
+  float: left;
   font-weight: bold;
 }
 
 h4 {
   color: #777;
+  float: right;
 }
 
 html, body {
@@ -114,11 +117,11 @@ a {
 }
 
 header {
-  padding: 50px 0;
+  padding: 60px 0 30px 0;
 }
 
 nav a {
-  color: #333;
+  color: rgba(0, 0, 0, 0.5);
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -137,11 +140,11 @@ nav a {
   *display: inline;
 }
 nav a:hover {
-  color: #999;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .videos li {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .videos .thumbnail {
   display: block;
@@ -150,10 +153,10 @@ nav a:hover {
 }
 .videos .thumbnail:after {
   bottom: 0;
-  -moz-box-shadow: red 0 0 0 1px inset;
-  -webkit-box-shadow: red 0 0 0 1px inset;
-  -o-box-shadow: red 0 0 0 1px inset;
-  box-shadow: red 0 0 0 1px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 1px inset;
   content: " ";
   display: block;
   left: 0;
@@ -198,7 +201,7 @@ footer p {
   }
 
   nav {
-    padding: 55px 0;
+    padding: 65px 0;
     position: absolute;
     top: 0;
     width: 100%;
@@ -219,16 +222,20 @@ footer p {
     width: 29.167%;
     margin: 0 2.083%;
     margin-bottom: 30px;
+    position: relative;
   }
   .videos li:hover hgroup {
     opacity: 1;
   }
   .videos hgroup {
+    line-height: 15px;
+    position: absolute;
     opacity: 0;
     -moz-transition: all 0.25s;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
+    width: 100%;
   }
 
   #about, #contact {
@@ -237,6 +244,7 @@ footer p {
 
   footer {
     clear: both;
+    padding: 60px 0;
   }
 
   /* fancyBox v2.0.5 fancyapps.com | fancyapps.com/fancybox/#license */
