@@ -1,6 +1,11 @@
 h1 {
   font-size: 20px;
+  line-height: 20px;
   text-transform: uppercase;
+  strong {
+    display: block;
+    font-weight: bold;
+  }
 }
 
 h2 {

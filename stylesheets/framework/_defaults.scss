@@ -5,8 +5,9 @@ $columns: 6;
 
 // typography
 
-$default-font-face: 'Helvetica Neue', Arial, sans-serif;
+$default-font-family: 'Helvetica Neue', Arial, sans-serif;
 $default-font-size: 13px;
+$default-line-height: 20px;
 
 // border-radius
 
@@ -18,17 +19,12 @@ $default-box-shadow-color: rgba(0, 0, 0, .6);
 $default-box-shadow-v-offset: 2px;
 
 // colors
+
 $purple: rgba(102, 0, 204, 1);
 
-// Base Font
-$base-font-family: "Helvetica Neue", Hevetica, Arial, sans-serif;
-$base-font-size: 110%;
-$base-line-height: 1.4;
+// transition
 
-// Fixed Font
-$fixed-font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
-$fixed-font-size: 85%;
-$fixed-line-height: $base-line-height;
+$default-transition-duration: .25s;
 
 // Text Colors
 $text-color: #333333;
