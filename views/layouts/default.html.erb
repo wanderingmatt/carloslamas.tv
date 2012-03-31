@@ -27,12 +27,17 @@
   <script src="/javascripts/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
   	$(document).ready(function() {
-  	  $("nav a").fancybox({
-  	    background: 'red',
+  	  jQuery.extend(jQuery.fancybox.defaults, {
   	    helpers: { 
           overlay: {
             opacity: 0.95,
-            css: {'background-color': '#551A8B'}
+          } 
+        }
+      });
+  	  $("nav a").fancybox({
+  	    helpers: { 
+          overlay: {
+            css: {'background-color': '#4c489e'}
           } 
         },
   		  padding: 0,
