@@ -17,9 +17,20 @@ h2 {
   text-transform: uppercase;
 }
 
+h3, h4 {
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
 h3 {
+  bottom: 32px;
   color: #fff;
+  font-size: 14px;
   font-weight: bold;
 }
 
-h4 { color: rgba(255, 255, 255, .5); }
+h4 {
+  bottom: 15px;
+  color: lighten($purple, 25%);
+}
