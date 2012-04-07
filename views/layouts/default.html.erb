@@ -30,7 +30,7 @@
   	  jQuery.extend(jQuery.fancybox.defaults, {
   	    helpers: { 
           overlay: {
-            opacity: 0.95,
+            opacity: 0.95
           } 
         }
       });
@@ -57,12 +57,15 @@
       });
       $(".image").fancybox({
         loop: false,
-  		  padding: 0,
-  		  helpers: {
-      		title: {
-      			type: 'outside'
-      		}
-      	}
+        padding: 0,
+        beforeLoad: function() {
+          this.title = $(this.element).children('hgroup').html();
+        },
+        helpers: { 
+          title: {
+            type: 'outside'
+          }
+        }
       });
   	});
   </script>
