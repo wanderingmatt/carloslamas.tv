@@ -45,6 +45,7 @@ nav {
   .thumbnail {
     display: block;
     position: relative;
+    @include transition;
     &:after {
       bottom: 0;
       @include box-shadow(rgba(255, 255, 255, .3) 0 0 0 1px inset);
@@ -70,19 +71,23 @@ footer {
 
 @media screen and (min-width: 720px) {
   #wrapper {
-    padding: 0 2%;
+    padding: 0 20px;
   }
   .videos {
     li {
       @include column(3);
-      margin-bottom: 4% !important;
+      margin-bottom: 2.38% !important;
       position: relative;
-      &:hover hgroup {
-        opacity: 1;
+      &:hover {
+        .thumbnail:after { display: none; }
+        hgroup {
+          opacity: 1;
+        }
       }
     }
     hgroup {
-      background: fade_out($purple, .05);
+      background: fade_out($purple, .1) url('/images/play.png') 50% no-repeat;
+      background-size: auto 30%;
       bottom: 0;
       left: 0;
       line-height: 15px;
