@@ -45,8 +45,11 @@
       });
   		$(".video").fancybox({
   		  aspectRatio: true,
-  		  autoSize: false,
+  		  beforeLoad: function() {
+          this.title = $(this.element).children('hgroup').html();
+        },
   		  height: 540,
+  		  loop: false,
   		  padding: 0,
   		  width: 960,
   		  helpers: {
