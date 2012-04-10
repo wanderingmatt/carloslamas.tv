@@ -28,20 +28,22 @@
   <script type="text/javascript">
   	$(document).ready(function() {
   	  jQuery.extend(jQuery.fancybox.defaults, {
-  	    helpers: { 
+  	    helpers: {
           overlay: {
             opacity: 0.9
-          } 
+          }
         }
       });
   	  $("nav a").fancybox({
-  	    helpers: { 
+  	    helpers: {
           overlay: {
             css: {'background-color': '#4c489e'}
-          } 
+          }
         },
+        maxWidth: '827',
   		  padding: 0,
-  		  wrapCSS: 'modal'
+  		  width: '66.6666666%',
+  		  wrapCSS: 'cover'
       });
   		$(".video").fancybox({
   		  aspectRatio: true,
@@ -64,7 +66,7 @@
         beforeLoad: function() {
           this.title = $(this.element).children('hgroup').html();
         },
-        helpers: { 
+        helpers: {
           title: {
             type: 'outside'
           }
