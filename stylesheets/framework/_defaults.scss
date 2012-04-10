@@ -1,45 +1,34 @@
-// grid
+// colors //
 
-$total-width: 100%;
-$columns: 6;
+$purple: #4c489e;
 
-// typography
+// typography //
 
 $default-font-family: 'Helvetica Neue', Arial, sans-serif;
 $default-font-size: 16px;
 $default-line-height: 30px;
 
-// background-clip
+// grid //
 
-$default-background-clip: text;
+$total-width: 100%;
+$columns: 6;
 
-// border-radius
+// border-radius //
 
 $default-border-radius: 4px;
 
-// box-shadow
+// box-shadow //
 
 $default-box-shadow-color: rgba(0, 0, 0, .8);
 $default-box-shadow-v-offset: 1px;
 $default-box-shadow-blur: 3px;
 
-// colors
+// text-shadow //
 
-$purple: #4c489e;
+$default-text-shadow-color: rgba(0, 0, 0, .6);
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-blur: 0;
 
-// transition
+// transition //
 
 $default-transition-duration: .25s;
-
-// Text Colors
-$text-color: #333333;
-$loud-color: strengthen($text-color);
-$quiet-color: soften($text-color, 1.5);
-$header-color: strengthen($text-color, 0.66);
-
-// Link Colors
-$link-color: #bb3a08;
-$link-visited-color: #a72;
-$link-hover-color: #f66933;
-
-

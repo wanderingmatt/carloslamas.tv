@@ -115,15 +115,18 @@ footer {
     top: 30px;
     right: 30px;
   }
+  .fancybox-nav {
+    position: fixed;
+/*    width: 36px;*/
+  }
+  .fancybox-nav span { visibility: visible; }
   .cover {
     .fancybox-outer {
       background: transparent;
-      color: #fff;
+      color: lighten($purple, 45%);
       @include box-shadow(none);
       text-align: left;
-    }
-    .fancybox-inner {
-      @include column(4);
+      @include text-shadow;
     }
   }
 }
