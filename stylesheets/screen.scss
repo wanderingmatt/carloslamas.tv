@@ -40,7 +40,7 @@ nav {
     margin-bottom: 30px;
   }
   .thumbnail {
-    display: block;
+    display: table;
     position: relative;
     @include transition;
     &:after {
@@ -81,13 +81,13 @@ footer {
       position: relative;
       &:hover {
         .thumbnail:after { display: none; }
-        hgroup { opacity: 1; }
+        aside { opacity: 1; }
       }
       &:active {
-        hgroup { background-color: darken(fade_out($purple, .1), 20%); }
+        aside { background-color: darken(fade_out($purple, .1), 20%); }
       }
     }
-    hgroup {
+    aside {
       background: fade_out($purple, .1) url('/images/play.png') 50% no-repeat;
       background-size: auto 30%;
       bottom: 0;
@@ -99,13 +99,11 @@ footer {
       right: 0;
       top: 0;
       @include transition;
-      h3, h4 {
-        left: 0;
-        position: absolute;
-        right: 0;
-      }
-      h3 { bottom: 32px; }
-      h4 { bottom: 15px; }
+    }
+    hgroup {
+      bottom: 10px;
+      position: absolute;
+      width: 100%;
     }
   }
   @import "modules/jquery.fancybox";
@@ -116,7 +114,6 @@ footer {
   }
   .fancybox-nav {
     position: fixed;
-/*    width: 36px;*/
   }
   .fancybox-nav span { visibility: visible; }
   .cover {

@@ -19,14 +19,19 @@ h2 {
 
 h3 {
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
+  line-height: 25px;
 }
 
 h4 {
-  color: lighten($purple, 25%);
+  color: lighten($purple, 30%);
   font-size: 13px;
-  strong { font-weight: bold; }
+  line-height: 16px;
+  strong {
+    display: block;
+    font-weight: bold;
+  }
 }
 
 p { margin: 20px 0; }

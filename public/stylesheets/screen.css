@@ -91,15 +91,18 @@ h2 {
 
 h3 {
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
+  line-height: 25px;
 }
 
 h4 {
-  color: #9996cf;
+  color: #aaa8d7;
   font-size: 13px;
+  line-height: 16px;
 }
 h4 strong {
+  display: block;
   font-weight: bold;
 }
 
@@ -155,7 +158,7 @@ nav a:hover {
   margin-bottom: 30px;
 }
 .videos .thumbnail {
-  display: block;
+  display: table;
   position: relative;
   -moz-transition: all 0.25s;
   -webkit-transition: all 0.25s;
@@ -218,13 +221,13 @@ footer p {
   .videos li:hover .thumbnail:after {
     display: none;
   }
-  .videos li:hover hgroup {
+  .videos li:hover aside {
     opacity: 1;
   }
-  .videos li:active hgroup {
+  .videos li:active aside {
     background-color: rgba(42, 40, 88, 0.9);
   }
-  .videos hgroup {
+  .videos aside {
     background: rgba(76, 72, 158, 0.9) url("/images/play.png") 50% no-repeat;
     background-size: auto 30%;
     bottom: 0;
@@ -240,16 +243,10 @@ footer p {
     -o-transition: all 0.25s;
     transition: all 0.25s;
   }
-  .videos hgroup h3, .videos hgroup h4 {
-    left: 0;
+  .videos hgroup {
+    bottom: 10px;
     position: absolute;
-    right: 0;
-  }
-  .videos hgroup h3 {
-    bottom: 32px;
-  }
-  .videos hgroup h4 {
-    bottom: 15px;
+    width: 100%;
   }
 
   /* fancyBox v2.0.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -483,7 +480,6 @@ footer p {
 
   .fancybox-nav {
     position: fixed;
-    /*    width: 36px;*/
   }
 
   .fancybox-nav span {
