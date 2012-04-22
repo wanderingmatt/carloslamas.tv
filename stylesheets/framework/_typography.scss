@@ -28,10 +28,7 @@ h4 {
   color: lighten($purple, 30%);
   font-size: 13px;
   line-height: 16px;
-  strong {
-    display: block;
-    font-weight: bold;
-  }
+  strong { font-weight: bold; }
 }
 
 p { margin: 20px 0; }
