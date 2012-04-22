@@ -99,6 +99,9 @@ h4 {
   color: #9996cf;
   font-size: 13px;
 }
+h4 strong {
+  font-weight: bold;
+}
 
 p {
   margin: 20px 0;
