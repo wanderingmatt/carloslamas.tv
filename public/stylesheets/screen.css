@@ -111,6 +111,7 @@ html, body {
 }
 
 body {
+  background: url("/images/bg.png");
   color: #444;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
