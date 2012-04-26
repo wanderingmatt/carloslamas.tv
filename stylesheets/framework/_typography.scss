@@ -1,35 +1,58 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('/fonts/BebasNeue-webfont.eot');
+  src: url('/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/BebasNeue-webfont.woff') format('woff'),
+       url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
+       url('/fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$custom-font: BebasNeueRegular;
+
 h1 {
-  font-size: 20px;
-  line-height: 20px;
+  color: #fff;
+  font-family: $custom-font;
+  font-size: 40px;
+  line-height: 30px;
   text-transform: uppercase;
-  strong {
-    display: block;
-    font-weight: bold;
-  }
+  text-shadow: 0 1px 3px #000;
+  span { @extend .hidden; }
 }
 
 h2 {
+  color: fade_out(#fff, .8);
+  font-family: $custom-font;
+  font-size: 20px;
+/*  line-height: 30px;*/
+  text-transform: uppercase;
+/*  text-shadow: 0 1px 3px #000;*/
+  span { @extend .hidden; }
+}
+
+h3 {
   background: rgba(0, 0, 0, .15);
   @include box-shadow(0 0 3px #000 inset);
   clear: both;
-  color: #fff;
-  font-size: 11px;
+  color: rgba(lighten($purple, 10%), .6);
+  font-size: 13px;
   font-weight: bold;
   line-height: 30px;
   margin: 2.38% 0;
   padding: 15px;
   position: relative;
-  text-transform: uppercase;
+/*  text-shadow: 0 -1px #000;*/
+/*  text-transform: uppercase;*/
 }
 
-h3 {
+h4 {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
   line-height: 25px;
 }
 
-h4 {
+h5 {
   color: lighten($purple, 30%);
   font-size: 13px;
   line-height: 16px;
