@@ -9,11 +9,20 @@ h1 {
 }
 
 h2 {
+  background: rgba(0, 0, 0, .15);
+  @include box-shadow(0 0 3px #000 inset);
+/*  border-bottom: 4px double rgba(255, 255, 255, .1);*/
   clear: both;
-  color: rgba(0, 0, 0, .25);
+  color: #fff;
+/*  @include inline-block;*/
+/*  @include column(6);*/
   font-size: 11px;
   font-weight: bold;
-  margin-bottom: 20px;
+  line-height: 30px;
+  margin: 30px 0;
+  padding: 15px;
+  position: relative;
+/*  opacity: .5;*/
   text-transform: uppercase;
 }
 

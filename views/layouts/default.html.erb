@@ -20,32 +20,26 @@
       </nav>
     </header>
     <%= yield %>
-    <footer>
-      Footer
-    </footer>
   </div>
   <script src="/javascripts/jquery-1.7.1.min.js"></script>
   <script src="/javascripts/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
   	$(document).ready(function() {
   	  jQuery.extend(jQuery.fancybox.defaults, {
-  	    helpers: {
-          overlay: {
-            opacity: 0.9
-          }
-        }
+
       });
   	  $("nav a").fancybox({
   	    helpers: {
           overlay: {
             css: {'background-color': '#4c489e'},
-            opacity: 0.98
+            opacity: 0.95
           }
         },
-        minHeight: 480,
-        maxWidth: '827',
+        fitToView: false,
+        fixed: true,
+        maxWidth: '800',
   		  padding: 0,
-  		  width: '66.6666666%',
+        // width: '800',
   		  wrapCSS: 'cover'
       });
   		$(".video").fancybox({
