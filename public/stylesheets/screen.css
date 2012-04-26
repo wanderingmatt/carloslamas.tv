@@ -86,18 +86,14 @@ h2 {
   -webkit-box-shadow: 0 0 3px black inset;
   -o-box-shadow: 0 0 3px black inset;
   box-shadow: 0 0 3px black inset;
-  /*  border-bottom: 4px double rgba(255, 255, 255, .1);*/
   clear: both;
   color: #fff;
-  /*  @include inline-block;*/
-  /*  @include column(6);*/
   font-size: 11px;
   font-weight: bold;
   line-height: 30px;
-  margin: 30px 0;
+  margin: 2.38% 0;
   padding: 15px;
   position: relative;
-  /*  opacity: .5;*/
   text-transform: uppercase;
 }
 
@@ -207,13 +203,21 @@ footer p {
   margin: 1em 0;
 }
 
+@media screen and (max-width: 720px) {
+  #about {
+    background: #4c489e;
+  }
+}
 @media screen and (min-width: 720px) {
+  .videos ul {
+    padding: 0 1.19%;
+  }
   .videos li {
     display: inline;
     float: left;
     width: 47.619%;
     margin: 0 1.19%;
-    margin-bottom: 30px !important;
+    margin-bottom: 2.38% !important;
     position: relative;
   }
   .videos li:hover aside {
@@ -243,6 +247,10 @@ footer p {
     bottom: 15px;
     position: absolute;
     width: 100%;
+  }
+
+  #about, #contact {
+    display: none;
   }
 
   /* fancyBox v2.0.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -516,18 +524,5 @@ footer p {
     float: left;
     width: 30.952%;
     margin: 0 1.19%;
-  }
-
-  #about, #contact {
-    display: none;
-  }
-
-  footer {
-    clear: both;
-    padding: 60px 0;
-  }
-
-  .fancybox-outer {
-    background: #000;
   }
 }

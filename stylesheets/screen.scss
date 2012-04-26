@@ -69,11 +69,20 @@ footer {
   p { margin: 1em 0; }
 }
 
+@media screen and (max-width: 720px) {
+  #about {
+    background: $purple;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .videos {
+    ul {
+      padding: 0 1.19%;
+    }
     li {
       @include column(3);
-      margin-bottom: 30px !important;
+      margin-bottom: 2.38% !important;
       position: relative;
       &:hover {
         aside { opacity: 1; }
@@ -102,6 +111,7 @@ footer {
       width: 100%;
     }
   }
+  #about, #contact { display: none; }
   @import "modules/jquery.fancybox";
   .fancybox-close {
     position: fixed;
@@ -138,16 +148,6 @@ footer {
       margin: 0 auto;
       max-width: 1280px;
     }
-    li {
-      @include column(2);
-    }
-  }
-  #about, #contact { display: none; }
-  footer {
-    clear: both;
-    padding: 60px 0;
-  }
-  .fancybox-outer {
-    background: #000;
+    li { @include column(2); }
   }
 }
