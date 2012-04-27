@@ -70,7 +70,7 @@ body:after {
   clear: both;
 }
 
-.hidden, h1 span, h2 span {
+.hidden, h1 span, h2 span, .videos p {
   display: none;
 }
 
@@ -95,9 +95,7 @@ h2 {
   color: rgba(255, 255, 255, 0.2);
   font-family: BebasNeueRegular;
   font-size: 20px;
-  /*  line-height: 30px;*/
   text-transform: uppercase;
-  /*  text-shadow: 0 1px 3px #000;*/
 }
 
 h3 {
@@ -108,14 +106,11 @@ h3 {
   box-shadow: 0 0 3px black inset;
   clear: both;
   color: rgba(102, 98, 183, 0.6);
-  font-size: 13px;
   font-weight: bold;
   line-height: 30px;
   margin: 2.38% 0;
   padding: 15px;
   position: relative;
-  /*  text-shadow: 0 -1px #000;*/
-  /*  text-transform: uppercase;*/
 }
 
 h4 {
@@ -127,12 +122,11 @@ h4 {
 
 h5 {
   color: #aaa8d7;
-  font-size: 13px;
-  line-height: 16px;
 }
 
 p {
-  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 20px;
 }
 
 html, body {
@@ -143,8 +137,8 @@ body {
   background: url("/images/bg.png");
   color: #444;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 16px;
   text-align: center;
 }
 
@@ -217,13 +211,6 @@ nav a:hover {
   max-width: 100%;
 }
 
-footer {
-  font-size: 90%;
-}
-footer p {
-  margin: 1em 0;
-}
-
 @media screen and (max-width: 720px) {
   #about {
     background: #4c489e;
@@ -252,7 +239,6 @@ footer p {
     background-size: auto 30%;
     bottom: 0;
     left: 0;
-    line-height: 15px;
     opacity: 0;
     padding-top: 120px;
     position: absolute;
@@ -509,6 +495,13 @@ footer p {
 
   .fancybox-nav span {
     visibility: visible;
+  }
+
+  .fancybox-opened .fancybox-title {
+    line-height: 16px;
+  }
+  .fancybox-opened hgroup {
+    text-shadow: 0 1px 3px #000;
   }
 
   .cover .fancybox-outer {

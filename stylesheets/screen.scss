@@ -62,11 +62,7 @@ nav {
     display: block;
     max-width: 100%;
   }
-}
-
-footer {
-  font-size: 90%;
-  p { margin: 1em 0; }
+  p { @extend .hidden; }
 }
 
 @media screen and (max-width: 720px) {
@@ -96,7 +92,6 @@ footer {
       background-size: auto 30%;
       bottom: 0;
       left: 0;
-      line-height: 15px;
       opacity: 0;
       padding-top: 120px;
       position: absolute;
@@ -122,6 +117,12 @@ footer {
     position: fixed;
   }
   .fancybox-nav span { visibility: visible; }
+  .fancybox-opened {
+    .fancybox-title { line-height: $default-line-height; }
+    hgroup {
+      text-shadow: 0 1px 3px #000;
+    }
+  }
   .cover {
     .fancybox-outer {
       background: transparent;

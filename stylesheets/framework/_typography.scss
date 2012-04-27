@@ -24,9 +24,7 @@ h2 {
   color: fade_out(#fff, .8);
   font-family: $custom-font;
   font-size: 20px;
-/*  line-height: 30px;*/
   text-transform: uppercase;
-/*  text-shadow: 0 1px 3px #000;*/
   span { @extend .hidden; }
 }
 
@@ -35,14 +33,11 @@ h3 {
   @include box-shadow(0 0 3px #000 inset);
   clear: both;
   color: rgba(lighten($purple, 10%), .6);
-  font-size: 13px;
   font-weight: bold;
   line-height: 30px;
   margin: 2.38% 0;
   padding: 15px;
   position: relative;
-/*  text-shadow: 0 -1px #000;*/
-/*  text-transform: uppercase;*/
 }
 
 h4 {
@@ -52,10 +47,9 @@ h4 {
   line-height: 25px;
 }
 
-h5 {
-  color: lighten($purple, 30%);
-  font-size: 13px;
-  line-height: 16px;
-}
+h5 { color: lighten($purple, 30%); }
 
-p { margin: 20px 0; }
+p {
+  color: rgba(255, 255, 255, .5);
+  line-height: 20px;
+}
