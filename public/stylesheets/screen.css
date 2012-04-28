@@ -490,17 +490,35 @@ nav a:hover {
   }
 
   .fancybox-nav {
+    background: #4c489e;
+    height: 36px;
+    margin-top: -18px;
     position: fixed;
+    top: 50%;
+    width: 36px;
   }
-
   .fancybox-nav span {
+    display: block;
+    height: auto;
+    margin: 0;
+    position: static;
+    top: auto;
     visibility: visible;
+    width: auto;
   }
 
-  .fancybox-opened .fancybox-title {
+  .fancybox-prev {
+    left: 30px;
+  }
+
+  .fancybox-next {
+    right: 30px;
+  }
+
+  .fancybox-title {
     line-height: 16px;
   }
-  .fancybox-opened hgroup {
+  .fancybox-title hgroup {
     text-shadow: 0 1px 3px #000;
   }
 

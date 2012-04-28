@@ -114,11 +114,27 @@ nav {
     right: 30px;
   }
   .fancybox-nav {
+    background: $purple;
+    height: 36px;
+    margin-top: -18px;
     position: fixed;
+    top: 50%;
+    width: 36px;
+    span {
+      display: block;
+      // Nuking Defaults //
+      height: auto;
+      margin: 0;
+      position: static;
+      top: auto;
+      visibility: visible;
+      width: auto;
+    }
   }
-  .fancybox-nav span { visibility: visible; }
-  .fancybox-opened {
-    .fancybox-title { line-height: $default-line-height; }
+  .fancybox-prev { left: 30px; }
+  .fancybox-next { right: 30px; }
+  .fancybox-title {
+    line-height: $default-line-height;
     hgroup {
       text-shadow: 0 1px 3px #000;
     }
