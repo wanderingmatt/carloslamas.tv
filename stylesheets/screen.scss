@@ -57,21 +57,26 @@ nav {
       z-index: 10;
     }
   }
-  img {
-    @include box-shadow;
-    display: block;
-    max-width: 100%;
-  }
+
   p { @extend .hidden; }
 }
 
-@media screen and (max-width: 720px) {
+// @media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
   #about {
     background: $purple;
   }
+  .videos {
+    li { @include row; }
+    img { @include column(4); }
+    aside {
+      @include column(8);
+      text-align: left;
+    }
+  }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 769px) {
   .videos {
     ul {
       padding: 0 1.19%;
@@ -86,6 +91,11 @@ nav {
       &:active {
         aside { background-color: darken(fade_out($purple, .1), 20%); }
       }
+    }
+    img {
+      @include box-shadow;
+      display: block;
+      max-width: 100%;
     }
     aside {
       background: fade_out($purple, .1) url('/images/play.png') 50% no-repeat;
