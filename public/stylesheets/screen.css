@@ -75,27 +75,27 @@ body:after {
 }
 
 @font-face {
-  font-family: 'BebasNeueRegular';
-  src: url("/fonts/BebasNeue-webfont.eot");
-  src: url("/fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/BebasNeue-webfont.woff") format("woff"), url("/fonts/BebasNeue-webfont.ttf") format("truetype"), url("/fonts/BebasNeue-webfont.svg#BebasNeueRegular") format("svg");
+  font-family: 'UniversLTStd39ThinUltraCnRg';
+  src: url("/fonts/universltstd-thinultracn-webfont.eot");
+  src: url("/fonts/universltstd-thinultracn-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/universltstd-thinultracn-webfont.woff") format("woff"), url("/fonts/universltstd-thinultracn-webfont.ttf") format("truetype"), url("/fonts/universltstd-thinultracn-webfont.svg#UniversLTStd39ThinUltraCnRg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 h1 {
   color: #fff;
-  font-family: BebasNeueRegular;
-  font-size: 40px;
-  line-height: 30px;
+  font-family: UniversLTStd39ThinUltraCnRg;
+  font-size: 70px;
+  line-height: 60px;
   text-transform: uppercase;
   text-shadow: 0 1px 3px #000;
 }
 
 h2 {
   color: rgba(255, 255, 255, 0.2);
-  font-family: BebasNeueRegular;
-  font-size: 20px;
-  text-transform: uppercase;
+  font-family: UniversLTStd39ThinUltraCnRg;
+  font-size: 40px;
+  text-transform: lowercase;
 }
 
 h3 {

@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'BebasNeueRegular';
-  src: url('/fonts/BebasNeue-webfont.eot');
-  src: url('/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/BebasNeue-webfont.woff') format('woff'),
-       url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
-       url('/fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'UniversLTStd39ThinUltraCnRg';
+    src: url('/fonts/universltstd-thinultracn-webfont.eot');
+    src: url('/fonts/universltstd-thinultracn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/universltstd-thinultracn-webfont.woff') format('woff'),
+         url('/fonts/universltstd-thinultracn-webfont.ttf') format('truetype'),
+         url('/fonts/universltstd-thinultracn-webfont.svg#UniversLTStd39ThinUltraCnRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-$custom-font: BebasNeueRegular;
+$custom-font: UniversLTStd39ThinUltraCnRg;
 
 h1 {
   color: #fff;
   font-family: $custom-font;
-  font-size: 40px;
-  line-height: 30px;
+  font-size: 70px;
+  line-height: 60px;
   text-transform: uppercase;
   text-shadow: 0 1px 3px #000;
   span { @extend .hidden; }
@@ -23,8 +23,8 @@ h1 {
 h2 {
   color: fade_out(#fff, .8);
   font-family: $custom-font;
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 40px;
+  text-transform: lowercase;
   span { @extend .hidden; }
 }
 
