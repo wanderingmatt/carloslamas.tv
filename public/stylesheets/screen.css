@@ -70,7 +70,7 @@ body:after {
   clear: both;
 }
 
-.hidden, h1 span, h2 span, .videos p {
+.hidden, h1 span, h2 span, .videos h6 {
   display: none;
 }
 
@@ -124,7 +124,7 @@ h5 {
   color: #aaa8d7;
 }
 
-p {
+h6 {
   color: rgba(255, 255, 255, 0.5);
   line-height: 20px;
 }

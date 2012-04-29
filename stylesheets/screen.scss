@@ -57,8 +57,7 @@ nav {
       z-index: 10;
     }
   }
-
-  p { @extend .hidden; }
+  h6 { @extend .hidden; }
 }
 
 // @media screen and (max-width: 480px) {
