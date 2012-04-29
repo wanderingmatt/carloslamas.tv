@@ -517,29 +517,63 @@ nav a:hover {
   }
 
   .fancybox-nav {
-    background: #4c489e;
-    height: 36px;
-    margin-top: -18px;
+    height: 41px;
+    margin-top: -33px;
     position: fixed;
     top: 50%;
+    min-width: 36px;
     width: 36px;
   }
-  .fancybox-nav span {
-    display: block;
-    height: auto;
-    margin: 0;
-    position: static;
-    top: auto;
-    visibility: visible;
+  .fancybox-nav em {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: red;
+  }
+  .fancybox-nav hgroup {
+    background: #4c489e;
+    opacity: 0;
+    padding: 15px 30px;
+    position: absolute;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    white-space: nowrap;
+  }
+  .fancybox-nav:hover {
     width: auto;
+  }
+  .fancybox-nav:hover hgroup {
+    opacity: 1;
   }
 
   .fancybox-prev {
-    left: 30px;
+    left: 0;
+    text-align: left;
+  }
+  .fancybox-prev em {
+    left: 0;
+  }
+  .fancybox-prev hgroup {
+    left: -500px;
+  }
+  .fancybox-prev:hover hgroup {
+    left: 0;
   }
 
   .fancybox-next {
-    right: 30px;
+    right: 0;
+    text-align: right;
+  }
+  .fancybox-next em {
+    right: 0;
+  }
+  .fancybox-next hgroup {
+    right: -500px;
+  }
+  .fancybox-next:hover hgroup {
+    right: 0;
   }
 
   .fancybox-title {
