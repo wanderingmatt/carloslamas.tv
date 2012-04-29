@@ -68,9 +68,9 @@ nav {
   }
   .videos {
     li { @include row; }
-    img { @include column(4); }
+    img { @include column(1); }
     aside {
-      @include column(8);
+      @include column(1);
       text-align: left;
     }
   }

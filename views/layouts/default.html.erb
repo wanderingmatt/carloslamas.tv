@@ -49,6 +49,7 @@
           this.title = $(this.element).children('aside').html();
           this.tpl.prev = "<a title='Previous' class='fancybox-nav fancybox-prev'>The Previous Title</a>";
           this.tpl.next = "<a title='Next' class='fancybox-nav fancybox-next'>The Next Title</a>";
+          console.log($(this.element).parent().next().$('aside'));
         },
   		  height: 540,
   		  loop: false,
