@@ -184,7 +184,7 @@ nav a:hover {
   }
 
   .videos li {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
   .videos a {
     display: table;
@@ -203,12 +203,16 @@ nav a:hover {
   .videos aside {
     display: table-cell;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 10px;
     text-align: left;
     vertical-align: middle;
     width: 70%;
   }
+  .videos h4 {
+    font-size: 13px;
+  }
   .videos h4, .videos h5 {
+    line-height: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -533,7 +537,11 @@ nav a:hover {
     z-index: 100;
   }
   .fancybox-nav hgroup {
-    background: #4c489e;
+    background: rgba(76, 72, 158, 0.9);
+    -moz-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     opacity: 0;
     padding: 15px 30px;
     position: absolute;
@@ -560,10 +568,6 @@ nav a:hover {
     left: 0;
   }
   .fancybox-prev hgroup {
-    -moz-box-shadow: 1px 1px black;
-    -webkit-box-shadow: 1px 1px black;
-    -o-box-shadow: 1px 1px black;
-    box-shadow: 1px 1px black;
     left: -500px;
     padding-left: 50px;
   }
@@ -580,10 +584,6 @@ nav a:hover {
     right: 0;
   }
   .fancybox-next hgroup {
-    -moz-box-shadow: -1px 1px black;
-    -webkit-box-shadow: -1px 1px black;
-    -o-box-shadow: -1px 1px black;
-    box-shadow: -1px 1px black;
     padding-right: 50px;
     right: -500px;
   }
