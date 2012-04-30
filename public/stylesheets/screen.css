@@ -100,12 +100,9 @@ h2 {
 
 h3 {
   background: rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 3px black inset;
-  -webkit-box-shadow: 0 0 3px black inset;
-  -o-box-shadow: 0 0 3px black inset;
-  box-shadow: 0 0 3px black inset;
+  background: #4c489e;
   clear: both;
-  color: rgba(102, 98, 183, 0.6);
+  color: #fff;
   font-weight: bold;
   line-height: 30px;
   margin: 2.38% 0;

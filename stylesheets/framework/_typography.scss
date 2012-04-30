@@ -21,18 +21,17 @@ h1 {
 
 h2 {
   color: rgba(255, 255, 255, .4);
-  // font-family: $custom-font;
   font-size: 16px;
-  // font-weight: 500;
   text-shadow: 0 -1px rgba(0, 0, 0, .6);
   text-transform: lowercase;
 }
 
 h3 {
   background: rgba(0, 0, 0, .15);
-  @include box-shadow(0 0 3px #000 inset);
+  background: $purple;
+  // @include box-shadow(0 0 3px #000);
   clear: both;
-  color: rgba(lighten($purple, 10%), .6);
+  color: #fff;
   font-weight: bold;
   line-height: 30px;
   margin: 2.38% 0;
