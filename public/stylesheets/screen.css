@@ -100,11 +100,7 @@ h2 {
 
 h3 {
   background: rgba(0, 0, 0, 0.15);
-  background: rgba(68, 64, 140, 0.9);
-  -moz-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-  -webkit-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-  -o-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-  box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  background: rgba(76, 72, 158, 0.9);
   clear: both;
   color: #fff;
   font-size: 11px;
@@ -149,10 +145,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  padding: 80px 0 50px 0;
-}
-
 nav {
   display: none;
 }
@@ -180,15 +172,24 @@ nav a:hover {
 }
 
 @media screen and (max-width: 750px) {
-  #about {
-    background: #4c489e;
+  header {
+    padding: 80px 0 50px 0;
   }
 
-  .videos {
-    background: #fff;
+  h3 {
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -o-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
   }
+
   .videos li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .videos li:last-child {
+    border: 0;
   }
   .videos a {
     display: table;
@@ -220,9 +221,21 @@ nav a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  #about {
+    background: #4c489e;
+  }
 }
 @media screen and (min-width: 769px) {
+  header {
+    padding: 80px 0 20px 0;
+  }
+
   h3 {
+    -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -o-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
     margin: 2.38% 0;
   }
 

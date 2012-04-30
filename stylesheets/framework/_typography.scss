@@ -28,8 +28,7 @@ h2 {
 
 h3 {
   background: rgba(0, 0, 0, .15);
-  background: fade_out(darken($purple, 5%), .1);
-  @include box-shadow(0 0 4px #000, 0 0 1px rgba(255, 255, 255, .3) inset);
+  background: fade_out($purple, .1);
   clear: both;
   color: #fff;
   font-size: 11px;
