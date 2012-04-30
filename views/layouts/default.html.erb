@@ -23,45 +23,48 @@
     <%= yield %>
   </div>
   <script src="/javascripts/jquery-1.7.1.min.js"></script>
+  <script src="/javascripts/jquery.detectmobilebrowser.js"></script>
   <script src="/javascripts/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
-  	$(document).ready(function() {
-  	  jQuery.extend(jQuery.fancybox.defaults, {
+    if(jQuery.browser.mobile == false) {
+    	$(function() {
+    	  jQuery.extend(jQuery.fancybox.defaults, {
 
-      });
-  	  $("nav a").fancybox({
-  	    helpers: {
-          overlay: {
-            css: {'background-color': '#4c489e'},
-            opacity: 0.95
-          }
-        },
-        fitToView: false,
-        fixed: true,
-        maxWidth: '800',
-  		  padding: 0,
-        // width: '800',
-  		  wrapCSS: 'cover'
-      });
-  		$(".video").fancybox({
-  		  aspectRatio: true,
-  		  beforeLoad: function() {
-          this.title = $(this.element).children('aside').html();
-          this.tpl.prev = "<a title='Previous' class='fancybox-nav fancybox-prev'><em></em>" + $(this.element).parent().prev().find('a > aside').html() + "</a>";
-          this.tpl.next = "<a title='Next' class='fancybox-nav fancybox-next'><em></em>" + $(this.element).parent().next().find('a > aside').html() + "</a>";
-        },
-  		  height: 540,
-  		  loop: false,
-        margin: 50,
-  		  padding: 0,
-  		  width: 960,
-  		  helpers: {
-      		title: {
-      			type: 'outside'
-      		}
-      	}
-      });
-  	});
+        });
+    	  $("nav a").fancybox({
+    	    helpers: {
+            overlay: {
+              css: {'background-color': '#4c489e'},
+              opacity: 0.95
+            }
+          },
+          fitToView: false,
+          fixed: true,
+          maxWidth: '800',
+    		  padding: 0,
+          // width: '800',
+    		  wrapCSS: 'cover'
+        });
+    		$(".video").fancybox({
+    		  aspectRatio: true,
+    		  beforeLoad: function() {
+            this.title = $(this.element).children('aside').html();
+            this.tpl.prev = "<a title='Previous' class='fancybox-nav fancybox-prev'><em></em>" + $(this.element).parent().prev().find('a > aside').html() + "</a>";
+            this.tpl.next = "<a title='Next' class='fancybox-nav fancybox-next'><em></em>" + $(this.element).parent().next().find('a > aside').html() + "</a>";
+          },
+    		  height: 540,
+    		  loop: false,
+          margin: 50,
+    		  padding: 0,
+    		  width: 960,
+    		  helpers: {
+        		title: {
+        			type: 'outside'
+        		}
+        	}
+        });
+    	});
+    }
   </script>
 </body>
 </html>
