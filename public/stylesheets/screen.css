@@ -70,7 +70,7 @@ body:after {
   clear: both;
 }
 
-.hidden, h1 span, h2 span, .videos h6 {
+.hidden, h1 span, h2 span, h6 {
   display: none;
 }
 
@@ -149,6 +149,7 @@ a {
 
 header {
   padding: 80px 0 50px 0;
+  display: none;
 }
 
 nav {
@@ -177,62 +178,31 @@ nav a:hover {
   color: #fff;
 }
 
-.videos li {
-  margin-bottom: 30px;
-}
-.videos .thumbnail {
-  display: table;
-  position: relative;
-  -moz-transition: all 0.25s;
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.videos .thumbnail:after {
-  bottom: 0;
-  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
-  content: " ";
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
-}
-
 @media screen and (max-width: 750px) {
   #about {
     background: #4c489e;
   }
 
   .videos li {
-    display: block;
-    width: 102.381%;
-    margin: 0 -1.19%;
-    *zoom: 1;
+    border-bottom: 1px solid #000;
   }
-  .videos li:before, .videos li:after {
-    content: "";
+  .videos a {
     display: table;
+    width: 100%;
   }
-  .videos li:after {
-    clear: both;
+  .videos div {
+    display: table-cell;
+    width: 25%;
   }
   .videos img {
-    display: inline;
-    float: left;
-    width: 14.286%;
-    margin: 0 1.19%;
+    display: block;
+    width: 100%;
   }
   .videos aside {
-    display: inline;
-    float: left;
-    width: 14.286%;
-    margin: 0 1.19%;
+    display: table-cell;
     text-align: left;
+    vertical-align: middle;
+    width: 75%;
   }
 }
 @media screen and (min-width: 769px) {
@@ -252,6 +222,28 @@ nav a:hover {
   }
   .videos li:active aside {
     background-color: rgba(42, 40, 88, 0.9);
+  }
+  .videos .video {
+    display: table;
+    position: relative;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .videos .video:after {
+    bottom: 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+    -o-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+    content: " ";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
   }
   .videos img {
     -moz-box-shadow: 0px 1px 3px black;
