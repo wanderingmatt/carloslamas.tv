@@ -333,6 +333,7 @@ nav a:hover {
     padding-top: 120px;
     position: absolute;
     right: 0;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
     top: 0;
     -moz-transition: all 0.25s;
     -webkit-transition: all 0.25s;
@@ -584,6 +585,10 @@ nav a:hover {
     margin-top: -33px;
     position: fixed;
     top: 50%;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
     width: auto;
   }
   .fancybox-nav em {
@@ -604,10 +609,10 @@ nav a:hover {
     opacity: 0;
     padding: 15px 30px;
     position: absolute;
-    -moz-transition: opacity 0.25s;
-    -webkit-transition: opacity 0.25s;
-    -o-transition: opacity 0.25s;
-    transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s, background 0.25s;
+    -webkit-transition: opacity 0.25s, background 0.25s;
+    -o-transition: opacity 0.25s, background 0.25s;
+    transition: opacity 0.25s, background 0.25s;
     white-space: nowrap;
     z-index: 10;
   }
@@ -616,6 +621,9 @@ nav a:hover {
   }
   .fancybox-nav:hover hgroup {
     opacity: 1;
+  }
+  .fancybox-nav:active hgroup {
+    background-color: rgba(42, 40, 88, 0.9);
   }
 
   .fancybox-prev {
@@ -669,19 +677,6 @@ nav a:hover {
   }
 }
 @media screen and (min-width: 1025px) {
-  nav {
-    padding: 84px 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  nav li {
-    display: inline;
-    float: left;
-    width: 30.952%;
-    margin: 0 1.19%;
-  }
-
   .videos ul {
     margin: 0 auto;
     max-width: 1280px;

@@ -157,6 +157,7 @@ h6 { @extend .hidden; }
       padding-top: 120px;
       position: absolute;
       right: 0;
+      text-shadow: 0 -1px rgba(0, 0 ,0, .3);
       top: 0;
       @include transition;
       z-index: 100;
@@ -179,6 +180,7 @@ h6 { @extend .hidden; }
     margin-top: -33px;
     position: fixed;
     top: 50%;
+    @include transition;
     width: auto;
     em {
       padding: 15px 5px;
@@ -195,12 +197,17 @@ h6 { @extend .hidden; }
       opacity: 0;
       padding: 15px 30px;
       position: absolute;
-      @include transition(opacity .25s);
+      @include transition(opacity .25s, background .25s);
       white-space: nowrap;
       z-index: 10;
     }
-    &:hover { width: auto; }
-    &:hover hgroup { opacity: 1; }
+    &:hover {
+      width: auto;
+      hgroup { opacity: 1; }
+    }
+    &:active {
+      hgroup { background-color: darken(fade_out($purple, .1), 20%); }
+    }
   }
   .fancybox-prev {
     left: 0;
@@ -230,9 +237,7 @@ h6 { @extend .hidden; }
   }
   .fancybox-title {
     line-height: $default-line-height;
-    hgroup {
-      text-shadow: 0 1px 3px #000;
-    }
+    hgroup { text-shadow: 0 1px 3px #000; }
   }
   .cover {
     .fancybox-outer {
@@ -246,15 +251,6 @@ h6 { @extend .hidden; }
 }
 
 @media screen and (min-width: 1025px) {
-  nav {
-    padding: 84px 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    li {
-      @include column(2);
-    }
-  }
   .videos {
     ul {
       margin: 0 auto;
