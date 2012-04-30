@@ -3,7 +3,7 @@
 @include reset-html5;
 @import "framework/all";
 
-html, body { background: #fff; }
+html, body { background: #282b30; }
 
 body {
   background: url("/images/bg.png");
@@ -47,8 +47,12 @@ h6 { @extend .hidden; }
   h3 {
     border-top: 1px solid rgba(0, 0, 0, .3);
     border-bottom: 1px solid rgba(0, 0, 0, .3);
-    @include box-shadow(0 0 1px rgba(255, 255, 255, .3) inset);
+    @include box-shadow(none);
     text-align: left;
+  }
+  .commercial h3 {
+    border-top: 0;
+    @include box-shadow(0 -1px 3px rgba(0, 0 ,0, .8), 0 0 1px rgba(255, 255, 255, .3) inset);
   }
   .videos {
     ul { background: #fff; }
@@ -64,21 +68,19 @@ h6 { @extend .hidden; }
     }
     div {
       display: table-cell;
-      padding: 5px;
+      padding: 10px;
       position: relative;
       width: 30%;
       &:after {
-        bottom: 5px;
+        bottom: 10px;
         @include box-shadow(rgba(0, 0, 0, .15) 0 0 0 1px inset);
         content: " ";
         display: block;
-        left: 5px;
+        left: 10px;
         position: absolute;
-        right: 5px;
-        top: 5px;
-        z-index: 10;
+        right: 10px;
+        top: 10px;
       }
-
     }
     img {
       display: block;
@@ -87,7 +89,7 @@ h6 { @extend .hidden; }
     aside {
       display: table-cell;
       overflow: hidden;
-      padding: 10px 10px 10px 5px;
+      padding: 10px 10px 10px 0;
       text-align: left;
       vertical-align: middle;
       width: 70%;
@@ -111,10 +113,7 @@ h6 { @extend .hidden; }
 
 @media screen and (min-width: 769px) {
   header { padding: 80px 0 20px 0; }
-  h3 {
-    @include box-shadow(0 0 5px #000, 0 0 1px rgba(255, 255, 255, .3) inset);
-    margin: 2.38% 0;
-  }
+  h3 { margin: 2.38% 0; }
   .videos {
     ul { padding: 0 1.19%; }
     li {

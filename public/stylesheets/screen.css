@@ -101,6 +101,10 @@ h2 {
 h3 {
   background: rgba(0, 0, 0, 0.15);
   background: rgba(76, 72, 158, 0.9);
+  -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  -o-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   clear: both;
   color: #fff;
   font-weight: bold;
@@ -127,7 +131,7 @@ h6 {
 }
 
 html, body {
-  background: #fff;
+  background: #282b30;
 }
 
 body {
@@ -183,11 +187,19 @@ nav a:hover {
   h3 {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    -o-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
     text-align: left;
+  }
+
+  .commercial h3 {
+    border-top: 0;
+    -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -o-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
   }
 
   .videos ul {
@@ -207,23 +219,22 @@ nav a:hover {
   }
   .videos div {
     display: table-cell;
-    padding: 5px;
+    padding: 10px;
     position: relative;
     width: 30%;
   }
   .videos div:after {
-    bottom: 5px;
+    bottom: 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     -o-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     content: " ";
     display: block;
-    left: 5px;
+    left: 10px;
     position: absolute;
-    right: 5px;
-    top: 5px;
-    z-index: 10;
+    right: 10px;
+    top: 10px;
   }
   .videos img {
     display: block;
@@ -232,7 +243,7 @@ nav a:hover {
   .videos aside {
     display: table-cell;
     overflow: hidden;
-    padding: 10px 10px 10px 5px;
+    padding: 10px 10px 10px 0;
     text-align: left;
     vertical-align: middle;
     width: 70%;
@@ -261,10 +272,6 @@ nav a:hover {
   }
 
   h3 {
-    -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    -webkit-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    -o-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
     margin: 2.38% 0;
   }
 
