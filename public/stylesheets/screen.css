@@ -103,12 +103,11 @@ h3 {
   background: rgba(76, 72, 158, 0.9);
   clear: both;
   color: #fff;
-  font-size: 11px;
   font-weight: bold;
   line-height: 30px;
   padding: 15px;
   position: relative;
-  text-transform: uppercase;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 
 h4 {
@@ -171,27 +170,36 @@ nav a:hover {
   color: #fff;
 }
 
-@media screen and (max-width: 750px) {
+#about {
+  color: #fff;
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
   header {
     padding: 80px 0 50px 0;
   }
 
   h3 {
-    border-top: 1px solid rgba(0, 0, 0, 0.6);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
     -o-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
     box-shadow: 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    text-align: left;
   }
 
+  .videos ul {
+    background: #fff;
+  }
   .videos li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
   .videos li:last-child {
     border: 0;
   }
-  .videos a {
+  .videos .video {
     display: table;
     table-layout: fixed;
     white-space: nowrap;
@@ -199,7 +207,23 @@ nav a:hover {
   }
   .videos div {
     display: table-cell;
+    padding: 5px;
+    position: relative;
     width: 30%;
+  }
+  .videos div:after {
+    bottom: 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    -o-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    content: " ";
+    display: block;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 10;
   }
   .videos img {
     display: block;
@@ -208,22 +232,27 @@ nav a:hover {
   .videos aside {
     display: table-cell;
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 10px 10px 5px;
     text-align: left;
     vertical-align: middle;
     width: 70%;
-  }
-  .videos h4 {
-    font-size: 13px;
   }
   .videos h4, .videos h5 {
     line-height: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .videos h4 {
+    color: #333;
+    font-size: 13px;
+  }
+  .videos h5 {
+    color: #999;
+  }
 
   #about {
     background: #4c489e;
+    padding: 30px;
   }
 }
 @media screen and (min-width: 769px) {
