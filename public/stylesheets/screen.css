@@ -100,14 +100,19 @@ h2 {
 
 h3 {
   background: rgba(0, 0, 0, 0.15);
-  background: #4c489e;
+  background: rgba(68, 64, 140, 0.9);
+  -moz-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  -o-box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 4px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   clear: both;
   color: #fff;
+  font-size: 11px;
   font-weight: bold;
   line-height: 30px;
-  margin: 2.38% 0;
   padding: 15px;
   position: relative;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -179,6 +184,9 @@ nav a:hover {
     background: #4c489e;
   }
 
+  .videos {
+    background: #fff;
+  }
   .videos li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
@@ -214,6 +222,10 @@ nav a:hover {
   }
 }
 @media screen and (min-width: 769px) {
+  h3 {
+    margin: 2.38% 0;
+  }
+
   .videos ul {
     padding: 0 1.19%;
   }
@@ -253,11 +265,13 @@ nav a:hover {
     top: 0;
     z-index: 10;
   }
-  .videos img {
+  .videos .thumbnail {
     -moz-box-shadow: 0px 1px 3px black;
     -webkit-box-shadow: 0px 1px 3px black;
     -o-box-shadow: 0px 1px 3px black;
     box-shadow: 0px 1px 3px black;
+  }
+  .videos img {
     display: block;
     max-width: 100%;
   }

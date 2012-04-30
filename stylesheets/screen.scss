@@ -45,6 +45,7 @@ h6 { @extend .hidden; }
     background: $purple;
   }
   .videos {
+    background: #fff;
     li {
       border-bottom: 1px solid rgba(0, 0, 0, .3);
     }
@@ -80,6 +81,7 @@ h6 { @extend .hidden; }
 }
 
 @media screen and (min-width: 769px) {
+  h3 { margin: 2.38% 0; }
   .videos {
     ul { padding: 0 1.19%; }
     li {
@@ -109,8 +111,8 @@ h6 { @extend .hidden; }
         z-index: 10;
       }
     }
+    .thumbnail { @include box-shadow; }
     img {
-      @include box-shadow;
       display: block;
       max-width: 100%;
     }
