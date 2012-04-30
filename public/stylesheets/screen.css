@@ -517,29 +517,32 @@ nav a:hover {
   }
 
   .fancybox-nav {
-    height: 41px;
+    height: 70px;
     margin-top: -33px;
     position: fixed;
     top: 50%;
-    min-width: 36px;
-    width: 36px;
+    width: auto;
   }
   .fancybox-nav em {
+    padding: 15px 5px;
     position: absolute;
-    width: 36px;
-    height: 36px;
-    background: red;
+    width: 40px;
+    height: 40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    z-index: 100;
   }
   .fancybox-nav hgroup {
     background: #4c489e;
     opacity: 0;
     padding: 15px 30px;
     position: absolute;
-    -moz-transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -moz-transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
     white-space: nowrap;
+    z-index: 10;
   }
   .fancybox-nav:hover {
     width: auto;
@@ -553,10 +556,16 @@ nav a:hover {
     text-align: left;
   }
   .fancybox-prev em {
+    background-image: url("/images/prev.png");
     left: 0;
   }
   .fancybox-prev hgroup {
+    -moz-box-shadow: 1px 1px black;
+    -webkit-box-shadow: 1px 1px black;
+    -o-box-shadow: 1px 1px black;
+    box-shadow: 1px 1px black;
     left: -500px;
+    padding-left: 50px;
   }
   .fancybox-prev:hover hgroup {
     left: 0;
@@ -567,9 +576,15 @@ nav a:hover {
     text-align: right;
   }
   .fancybox-next em {
+    background-image: url("/images/next.png");
     right: 0;
   }
   .fancybox-next hgroup {
+    -moz-box-shadow: -1px 1px black;
+    -webkit-box-shadow: -1px 1px black;
+    -o-box-shadow: -1px 1px black;
+    box-shadow: -1px 1px black;
+    padding-right: 50px;
     right: -500px;
   }
   .fancybox-next:hover hgroup {

@@ -123,26 +123,28 @@ nav {
     right: 30px;
   }
   .fancybox-nav {
-    // background: red;
-    height: 41px;
+    height: 70px;
     margin-top: -33px;
     position: fixed;
     top: 50%;
-    min-width: 36px;
-    width: 36px;
+    width: auto;
     em {
+      padding: 15px 5px;
       position: absolute;
-      width: 36px;
-      height: 36px;
-      background: red;
+      width: 40px;
+      height: 40px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      z-index: 100;
     }
     hgroup {
       background: $purple;
       opacity: 0;
       padding: 15px 30px;
       position: absolute;
-      @include transition(opacity .5s);
+      @include transition(opacity .25s);
       white-space: nowrap;
+      z-index: 10;
     }
     &:hover { width: auto; }
     &:hover hgroup { opacity: 1; }
@@ -150,15 +152,29 @@ nav {
   .fancybox-prev {
     left: 0;
     text-align: left;
-    em { left: 0; }
-    hgroup { left: -500px; }
+    em {
+      background-image: url("/images/prev.png");
+      left: 0;
+    }
+    hgroup {
+      @include box-shadow(1px 1px #000);
+      left: -500px;
+      padding-left: 50px;
+    }
     &:hover hgroup { left: 0; }
   }
   .fancybox-next {
     right: 0;
     text-align: right;
-    em { right: 0; }
-    hgroup { right: -500px; }
+    em {
+      background-image: url("/images/next.png");
+      right: 0;
+    }
+    hgroup {
+      @include box-shadow(-1px 1px #000);
+      padding-right: 50px;
+      right: -500px;
+    }
     &:hover hgroup { right: 0; }
   }
   .fancybox-title {
