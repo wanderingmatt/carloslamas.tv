@@ -45,37 +45,34 @@ h6 { @extend .hidden; }
     background: $purple;
   }
   .videos {
-    // background: #fff;
     li {
-      border-bottom: 1px solid #000;
-      // display: table;
-      // width: 100%;
-      // @include row;
+      border-bottom: 1px solid #fff;
     }
     a {
       display: table;
+      table-layout: fixed;
+      white-space: nowrap;
       width: 100%;
     }
     div {
       display: table-cell;
-      width: 25%;
+      width: 30%;
     }
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
     }
     aside {
       display: table-cell;
+      overflow: hidden;
+      padding: 0 10px;
       text-align: left;
       vertical-align: middle;
-      // float: left;
-      // height: 100%;
-      width: 75%;
+      width: 70%;
     }
-    hgroup {
-      // display: table-cell;
-      // height: 100%;
-      // vertical-align: middle;
+    h4, h5 {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

@@ -184,25 +184,33 @@ nav a:hover {
   }
 
   .videos li {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
   }
   .videos a {
     display: table;
+    table-layout: fixed;
+    white-space: nowrap;
     width: 100%;
   }
   .videos div {
     display: table-cell;
-    width: 25%;
+    width: 30%;
   }
   .videos img {
     display: block;
-    width: 100%;
+    max-width: 100%;
   }
   .videos aside {
     display: table-cell;
+    overflow: hidden;
+    padding: 0 10px;
     text-align: left;
     vertical-align: middle;
-    width: 75%;
+    width: 70%;
+  }
+  .videos h4, .videos h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 @media screen and (min-width: 769px) {
