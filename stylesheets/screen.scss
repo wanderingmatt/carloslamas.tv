@@ -61,10 +61,13 @@ h6 { @extend .hidden; }
       &:last-child { border: 0; }
     }
     .video {
+      background: url("/images/select.png") 97% 50% no-repeat;
+      background-size: auto 30%;
       display: table;
       table-layout: fixed;
       white-space: nowrap;
       width: 100%;
+      &:active { background-color: blue; }
     }
     div {
       display: table-cell;
@@ -89,7 +92,7 @@ h6 { @extend .hidden; }
     aside {
       display: table-cell;
       overflow: hidden;
-      padding: 10px 10px 10px 0;
+      padding: 10px 10% 10px 0;
       text-align: left;
       vertical-align: middle;
       width: 70%;

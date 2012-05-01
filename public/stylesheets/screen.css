@@ -212,10 +212,15 @@ nav a:hover {
     border: 0;
   }
   .videos .video {
+    background: url("/images/select.png") 97% 50% no-repeat;
+    background-size: auto 30%;
     display: table;
     table-layout: fixed;
     white-space: nowrap;
     width: 100%;
+  }
+  .videos .video:active {
+    background-color: blue;
   }
   .videos div {
     display: table-cell;
@@ -243,7 +248,7 @@ nav a:hover {
   .videos aside {
     display: table-cell;
     overflow: hidden;
-    padding: 10px 10px 10px 0;
+    padding: 10px 10% 10px 0;
     text-align: left;
     vertical-align: middle;
     width: 70%;
