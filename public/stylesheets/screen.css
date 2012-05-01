@@ -70,7 +70,7 @@ body:after {
   clear: both;
 }
 
-.hidden, h6 {
+.hidden, .videos h6 {
   display: none;
 }
 
@@ -218,9 +218,6 @@ nav a:hover {
     table-layout: fixed;
     white-space: nowrap;
     width: 100%;
-  }
-  .videos .video:active {
-    background-color: blue;
   }
   .videos div {
     display: table-cell;
