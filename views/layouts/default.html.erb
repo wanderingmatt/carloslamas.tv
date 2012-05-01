@@ -23,9 +23,10 @@
     <%= yield %>
   </div>
   <script src="/javascripts/jquery-1.7.1.min.js"></script>
+  <script src="/javascripts/jquery.detectmobilebrowser.js"></script>
   <script src="/javascripts/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
-    if ($(window).width() > 768) {
+    if ($(window).width() > 767 && jQuery.browser.mobile == false) {
     	$(function() {
     	  jQuery.extend(jQuery.fancybox.defaults, {
 
