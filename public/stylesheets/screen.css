@@ -266,7 +266,7 @@ nav a:hover {
     padding: 30px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   header {
     padding: 80px 0 20px 0;
   }
@@ -580,6 +580,20 @@ nav a:hover {
     right: 30px;
   }
 
+  .fancybox-close {
+    background-image: url("/images/sprite-icons.png");
+    height: 26px;
+    opacity: .6;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    width: 26px;
+  }
+  .fancybox-close:hover {
+    opacity: 1;
+  }
+
   .fancybox-nav {
     height: 70px;
     margin-top: -33px;
@@ -589,15 +603,16 @@ nav a:hover {
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
-    width: auto;
+    width: 86px;
   }
   .fancybox-nav em {
-    padding: 15px 5px;
+    background-image: url("/images/sprite-icons.png");
+    height: 42px;
+    margin-top: -21px;
+    opacity: .6;
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-position: 50%;
-    background-repeat: no-repeat;
+    top: 50%;
+    width: 26px;
     z-index: 100;
   }
   .fancybox-nav hgroup {
@@ -619,7 +634,7 @@ nav a:hover {
   .fancybox-nav:hover {
     width: auto;
   }
-  .fancybox-nav:hover hgroup {
+  .fancybox-nav:hover em, .fancybox-nav:hover hgroup {
     opacity: 1;
   }
   .fancybox-nav:active hgroup {
@@ -631,12 +646,12 @@ nav a:hover {
     text-align: left;
   }
   .fancybox-prev em {
-    background-image: url("/images/prev.png");
-    left: 0;
+    background-position: 0 -50px;
+    left: 30px;
   }
   .fancybox-prev hgroup {
     left: -500px;
-    padding-left: 50px;
+    padding-left: 71px;
   }
   .fancybox-prev:hover hgroup {
     left: 0;
@@ -647,11 +662,11 @@ nav a:hover {
     text-align: right;
   }
   .fancybox-next em {
-    background-image: url("/images/next.png");
-    right: 0;
+    background-position: 0 -100px;
+    right: 30px;
   }
   .fancybox-next hgroup {
-    padding-right: 50px;
+    padding-right: 71px;
     right: -500px;
   }
   .fancybox-next:hover hgroup {
