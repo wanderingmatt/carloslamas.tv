@@ -6,3 +6,4 @@ pkg
 *.gem
 .rvmrc
 .bundle
+*.sublime-workspace
