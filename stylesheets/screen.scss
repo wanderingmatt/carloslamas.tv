@@ -29,9 +29,7 @@ nav {
     padding: 0 10px;
     text-transform: uppercase;
     @include transition;
-    &:hover {
-      color: #fff;
-    }
+    &:hover { color: #fff; }
   }
 }
 
@@ -173,8 +171,9 @@ nav {
     }
     hgroup {
       bottom: 15px;
+      left: 0;
       position: absolute;
-      width: 100%;
+      right: 0;
     }
   }
   #about, #contact { display: none; }

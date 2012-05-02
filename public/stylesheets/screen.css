@@ -363,8 +363,9 @@ nav a:hover {
   }
   .videos hgroup {
     bottom: 15px;
+    left: 0;
     position: absolute;
-    width: 100%;
+    right: 0;
   }
 
   #about, #contact {
