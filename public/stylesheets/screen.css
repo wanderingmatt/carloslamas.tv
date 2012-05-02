@@ -99,7 +99,7 @@ h2 {
 }
 
 h3 {
-  background: rgba(0, 0, 0, 0.15);
+  background: #4c489e;
   background: rgba(76, 72, 158, 0.9);
   -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   -webkit-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
@@ -185,7 +185,9 @@ nav a:hover {
   }
 
   h3 {
+    border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #336;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -206,6 +208,7 @@ nav a:hover {
     background: #fff;
   }
   .videos li {
+    border-bottom: 1px solid #d8d8d8;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
   .videos li:last-child {
@@ -213,6 +216,9 @@ nav a:hover {
   }
   .videos .video {
     background: url("/images/select.png") 97% 50% no-repeat;
+    -moz-background-size: auto 30%;
+    -webkit-background-size: auto 30%;
+    -o-background-size: auto 30%;
     background-size: auto 30%;
     display: table;
     table-layout: fixed;
@@ -245,10 +251,13 @@ nav a:hover {
   .videos aside {
     display: table-cell;
     overflow: hidden;
-    padding: 10px 10% 10px 0;
+    padding: 10px 0;
     text-align: left;
     vertical-align: middle;
     width: 70%;
+  }
+  .videos hgroup {
+    padding-right: 10%;
   }
   .videos h4, .videos h5 {
     line-height: 16px;
@@ -289,6 +298,7 @@ nav a:hover {
     position: relative;
   }
   .videos li:hover aside {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
   .videos li:active aside {
@@ -327,10 +337,18 @@ nav a:hover {
     max-width: 100%;
   }
   .videos aside {
-    background: rgba(76, 72, 158, 0.9) url("/images/play.png") 50% no-repeat;
+    background-color: #4c489e;
+    background-color: rgba(76, 72, 158, 0.9);
+    background-image: url("/images/play.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -moz-background-size: auto 30%;
+    -webkit-background-size: auto 30%;
+    -o-background-size: auto 30%;
     background-size: auto 30%;
     bottom: 0;
     left: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     padding-top: 120px;
     position: absolute;
@@ -585,7 +603,8 @@ nav a:hover {
   .fancybox-close {
     background-image: url("/images/sprite-icons.png");
     height: 26px;
-    opacity: .6;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
     -moz-transition: all 0.25s;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -593,6 +612,7 @@ nav a:hover {
     width: 26px;
   }
   .fancybox-close:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
 
@@ -611,18 +631,21 @@ nav a:hover {
     background-image: url("/images/sprite-icons.png");
     height: 42px;
     margin-top: -21px;
-    opacity: .6;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
     position: absolute;
     top: 50%;
     width: 26px;
     z-index: 100;
   }
   .fancybox-nav hgroup {
-    background: rgba(76, 72, 158, 0.9);
+    background-color: #4c489e;
+    background-color: rgba(76, 72, 158, 0.9);
     -moz-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     -o-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     padding: 15px 30px;
     position: absolute;
@@ -637,6 +660,7 @@ nav a:hover {
     width: auto;
   }
   .fancybox-nav:hover em, .fancybox-nav:hover hgroup {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
   .fancybox-nav:active hgroup {

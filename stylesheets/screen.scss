@@ -43,7 +43,9 @@ nav {
 @media screen and (max-width: 767px) {
   header { padding: 80px 0 50px 0; }
   h3 {
+    border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, .3);
+    border-bottom: 1px solid #336;
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     @include box-shadow(none);
     text-align: left;
@@ -55,12 +57,13 @@ nav {
   .videos {
     ul { background: #fff; }
     li {
+      border-bottom: 1px solid #d8d8d8;
       border-bottom: 1px solid rgba(0, 0, 0, .15);
       &:last-child { border: 0; }
     }
     .video {
       background: url("/images/select.png") 97% 50% no-repeat;
-      background-size: auto 30%;
+      @include background-size(auto 30%);
       display: table;
       table-layout: fixed;
       white-space: nowrap;
@@ -89,11 +92,12 @@ nav {
     aside {
       display: table-cell;
       overflow: hidden;
-      padding: 10px 10% 10px 0;
+      padding: 10px 0;
       text-align: left;
       vertical-align: middle;
       width: 70%;
     }
+    hgroup { padding-right: 10%; }
     h4, h5 {
       line-height: $default-line-height;
       overflow: hidden;
@@ -122,7 +126,7 @@ nav {
       margin-bottom: 2.38% !important;
       position: relative;
       &:hover {
-        aside { opacity: 1; }
+        aside { @include opacity(1); }
       }
       &:active {
         aside { background-color: darken(fade_out($purple, .1), 20%); }
@@ -150,11 +154,15 @@ nav {
       max-width: 100%;
     }
     aside {
-      background: fade_out($purple, .1) url('/images/play.png') 50% no-repeat;
-      background-size: auto 30%;
+      background-color: $purple;
+      background-color: fade_out($purple, .1);
+      background-image: url('/images/play.png');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      @include background-size(auto 30%);
       bottom: 0;
       left: 0;
-      opacity: 0;
+      @include opacity(0);
       padding-top: 120px;
       position: absolute;
       right: 0;
@@ -179,10 +187,10 @@ nav {
   .fancybox-close {
     background-image: url("/images/sprite-icons.png");
     height: 26px;
-    opacity: .6;
+    @include opacity(.6);
     @include transition;
     width: 26px;
-    &:hover { opacity: 1; }
+    &:hover { @include opacity(1); }
   }
   .fancybox-nav {
     height: 70px;
@@ -195,16 +203,17 @@ nav {
       background-image: url("/images/sprite-icons.png");
       height: 42px;
       margin-top: -21px;
-      opacity: .6;
+      @include opacity(.6);
       position: absolute;
       top: 50%;
       width: 26px;
       z-index: 100;
     }
     hgroup {
-      background: fade_out($purple, .1);
+      background-color: $purple;
+      background-color: fade_out($purple, .1);
       @include box-shadow(0 1px rgba(0, 0, 0, .8));
-      opacity: 0;
+      @include opacity(0);
       padding: 15px 30px;
       position: absolute;
       @include transition(opacity .25s, background .25s);
@@ -213,7 +222,7 @@ nav {
     }
     &:hover {
       width: auto;
-      em, hgroup { opacity: 1; }
+      em, hgroup { @include opacity(1); }
     }
     &:active {
       hgroup { background-color: darken(fade_out($purple, .1), 20%); }
