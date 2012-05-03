@@ -148,9 +148,6 @@ a {
   text-decoration: none;
 }
 
-nav {
-  display: none;
-}
 nav a {
   color: #9996cf;
   display: -moz-inline-box;

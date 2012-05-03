@@ -20,7 +20,6 @@ a {
 }
 
 nav {
-  display: none;
   a {
     color: lighten($purple, 25%);
     @include inline-block;
