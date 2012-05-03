@@ -12,7 +12,7 @@ $custom-font: UniversLTStd39ThinUltraCnRg;
 
 h1 {
   color: #fff;
-  font-family: $custom-font;
+  font-family: $custom-font, $default-font-family;
   font-size: 70px;
   line-height: 60px;
   text-transform: uppercase;
