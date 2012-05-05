@@ -16,13 +16,13 @@ h1 {
   font-size: 70px;
   line-height: 60px;
   text-transform: uppercase;
-  text-shadow: 0 1px 3px #000;
+  @include text-shadow(0 1px 3px #000);
 }
 
 h2 {
   color: rgba(255, 255, 255, .4);
   font-size: 16px;
-  text-shadow: 0 -1px rgba(0, 0, 0, .6);
+  @include text-shadow(0 -1px rgba(0, 0, 0, .6));
   text-transform: lowercase;
 }
 
@@ -34,9 +34,9 @@ h3 {
   color: #fff;
   font-weight: bold;
   line-height: 30px;
-  padding: 15px;
+  padding: 10px;
   position: relative;
-  text-shadow: 0 -1px rgba(0, 0, 0, .3);
+  @include text-shadow(0 -1px rgba(0, 0, 0, .3));
 }
 
 h4 {
