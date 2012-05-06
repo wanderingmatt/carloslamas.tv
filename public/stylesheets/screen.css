@@ -74,6 +74,10 @@ body:after {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 @font-face {
   font-family: 'UniversLTStd39ThinUltraCnRg';
   src: url("/fonts/universltstd-thinultracn-webfont.eot");
@@ -86,7 +90,8 @@ h1 {
   color: #fff;
   font-family: UniversLTStd39ThinUltraCnRg, "Helvetica Neue", Arial, sans-serif;
   font-size: 70px;
-  line-height: 60px;
+  line-height: 70px;
+  position: relative;
   text-transform: uppercase;
   text-shadow: 0 1px 3px black;
 }
@@ -94,6 +99,7 @@ h1 {
 h2 {
   color: rgba(255, 255, 255, 0.4);
   font-size: 16px;
+  margin-top: -5px;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
   text-transform: lowercase;
 }
@@ -142,10 +148,17 @@ body {
   line-height: 16px;
   text-align: center;
 }
+body.fixed {
+  overflow: hidden;
+}
 
 a {
   color: #fff;
   text-decoration: none;
+}
+
+header {
+  padding: 75px 0 50px 0;
 }
 
 nav {
@@ -181,10 +194,6 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  header {
-    padding: 80px 0 50px 0;
-  }
-
   h3 {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -286,7 +295,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   header {
-    padding: 80px 0 30px 0;
+    padding-bottom: 30px;
   }
 
   h3 {
@@ -725,6 +734,16 @@ p {
   .cover .fancybox-inner {
     display: table-cell;
     vertical-align: middle;
+  }
+  .cover h3 {
+    display: none;
+  }
+  .cover p {
+    font-size: 16px;
+  }
+
+  h1.raised {
+    z-index: 1002;
   }
 }
 @media screen and (min-width: 1025px) {

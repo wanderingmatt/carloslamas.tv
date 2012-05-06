@@ -32,9 +32,21 @@
     if ($(window).width() > 767 && jQuery.browser.mobile == false) {
     	$(function() {
     	  jQuery.extend(jQuery.fancybox.defaults, {
-
+          afterShow: function() {
+            $('body').toggleClass('fixed');
+          },
+          beforeClose: function() {
+            $('body').toggleClass('fixed');
+          }
         });
     	  $("nav a").fancybox({
+          autoSize: false,
+          beforeShow: function() {
+            $('header h1').toggleClass('raised');
+          },
+          afterClose: function() {
+            $('header h1').toggleClass('raised');
+          },
     	    helpers: {
             overlay: {
               css: {'background-color': '#4c489e'},
@@ -42,7 +54,8 @@
             }
           },
           height: '100%',
-          margin: 86,
+          fixed: true,
+          margin: 172,
           maxWidth: '800',
     		  padding: 0,
     		  wrapCSS: 'cover'
