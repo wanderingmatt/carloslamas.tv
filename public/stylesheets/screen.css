@@ -159,20 +159,18 @@ a {
 
 header {
   padding: 75px 0 50px 0;
-}
-
-nav {
   position: relative;
 }
+
 nav a {
   color: #9996cf;
   font-size: 11px;
   font-weight: bold;
   padding: 0 10px;
   position: absolute;
-  right: 0;
+  right: 1.19%;
   text-transform: uppercase;
-  top: 0;
+  top: 50%;
   -moz-transition: all 0.25s;
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -190,7 +188,7 @@ nav a:hover {
 
 p {
   line-height: 1.5em;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 @media screen and (max-width: 767px) {
@@ -290,7 +288,7 @@ p {
   }
 
   p {
-    padding: 0 10px;
+    padding: 0 10px 1em 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -733,10 +731,18 @@ p {
   }
   .cover .fancybox-inner {
     display: table-cell;
+    padding: 0 1.19%;
     vertical-align: middle;
   }
   .cover h3 {
     display: none;
+  }
+  .cover .bio {
+    display: inline;
+    float: left;
+    width: 47.619%;
+    margin: 0 1.19%;
+    margin-left: 26.19%;
   }
   .cover p {
     font-size: 16px;
@@ -747,7 +753,7 @@ p {
   }
 }
 @media screen and (min-width: 1025px) {
-  nav {
+  header {
     margin: 0 auto;
     max-width: 1280px;
   }
@@ -761,5 +767,16 @@ p {
     float: left;
     width: 30.952%;
     margin: 0 1.19%;
+  }
+
+  .cover .fancybox-inner {
+    padding: 0;
+  }
+  .cover .bio {
+    display: inline;
+    float: left;
+    width: 30.952%;
+    margin: 0 1.19%;
+    margin-left: 34.524%;
   }
 }
