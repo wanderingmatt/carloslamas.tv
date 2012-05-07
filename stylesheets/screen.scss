@@ -21,7 +21,7 @@ a {
 }
 
 header {
-  padding: 75px 10px 50px 10px;
+  padding: 80px 10px 50px 10px;
   position: relative;
   text-align: left;
 }
@@ -143,11 +143,10 @@ p {
 @media screen and (min-width: 768px) {
   header {
     @include box-sizing(padding-box);
-    padding: 75px 1.19% 20px 1.19%;
+    padding: 80px 1.19% 20px 1.19%;
     margin: 0 auto;
   }
   h1 { margin: 0 1.19%; }
-  h2 { margin: -5px 1.19% 0 1.19%; }
   .ribbon {
     margin: 2.38% 0;
     span {

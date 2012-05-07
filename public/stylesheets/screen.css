@@ -97,6 +97,7 @@ h1 {
 }
 
 h2 {
+  display: none;
   color: rgba(255, 255, 255, 0.4);
   font-size: 16px;
   margin-top: -5px;
@@ -149,7 +150,7 @@ a {
 }
 
 header {
-  padding: 75px 10px 50px 10px;
+  padding: 80px 10px 50px 10px;
   position: relative;
   text-align: left;
 }
@@ -304,16 +305,12 @@ p {
     -webkit-box-sizing: padding-box;
     -ms-box-sizing: padding-box;
     box-sizing: padding-box;
-    padding: 75px 1.19% 20px 1.19%;
+    padding: 80px 1.19% 20px 1.19%;
     margin: 0 auto;
   }
 
   h1 {
     margin: 0 1.19%;
-  }
-
-  h2 {
-    margin: -5px 1.19% 0 1.19%;
   }
 
   .ribbon {
