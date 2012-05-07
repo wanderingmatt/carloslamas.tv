@@ -214,7 +214,6 @@ p {
       right: 0;
     }
   }
-  #about, #contact { display: none; }
   @import "modules/jquery.fancybox";
   .fancybox-close {
     position: fixed;
@@ -295,20 +294,20 @@ p {
     line-height: $default-line-height;
     hgroup { @include text-shadow(0 1px 3px #000); }
   }
+  #about {
+    display: none;
+    padding: 0 1.19%;
+  }
   .cover {
     .fancybox-outer {
       background: transparent;
       @include box-shadow(none);
     }
-    .fancybox-inner {
-      // display: table-cell;
-      // padding: 0 1.19%;
-      // vertical-align: middle;
-    }
+    .fancybox-inner { @include box-sizing(padding-box); }
     h3 { display: none; }
     .bio {
       @include column(3);
-      padding-top: 150px;
+      padding-top: 200px;
     }
     p { font-size: 16px; }
   }
@@ -327,9 +326,5 @@ p {
   }
   .cover {
     .fancybox-inner { padding: 0; }
-    .bio {
-      // @include column(2);
-      // @include push(2);
-    }
   }
 }

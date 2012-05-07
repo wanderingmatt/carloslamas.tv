@@ -411,10 +411,6 @@ p {
     right: 0;
   }
 
-  #about, #contact {
-    display: none;
-  }
-
   /* fancyBox v2.0.5 fancyapps.com | fancyapps.com/fancybox/#license */
   .fancybox-tmp iframe, .fancybox-tmp object {
     vertical-align: top;
@@ -750,12 +746,24 @@ p {
     text-shadow: 0 1px 3px black;
   }
 
+  #about {
+    display: none;
+    padding: 0 1.19%;
+  }
+
   .cover .fancybox-outer {
     background: transparent;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
+  }
+  .cover .fancybox-inner {
+    -moz-box-sizing: padding-box;
+    -webkit-box-sizing: padding-box;
+    -ms-box-sizing: padding-box;
+    box-sizing: padding-box;
+    vertical-align: top;
   }
   .cover h3 {
     display: none;
