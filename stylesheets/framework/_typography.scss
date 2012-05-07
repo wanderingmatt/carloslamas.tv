@@ -29,15 +29,9 @@ h2 {
 }
 
 h3 {
-  background: $purple;
-  background: fade_out($purple, .1);
-  @include box-shadow(0 0 5px #000, 0 0 1px rgba(255, 255, 255, .3) inset);
-  clear: both;
   color: #fff;
   font-weight: bold;
   line-height: 30px;
-  padding: 10px;
-  position: relative;
   @include text-shadow(0 -1px rgba(0, 0, 0, .3));
 }
 
