@@ -109,6 +109,7 @@ h3 {
   color: #fff;
   font-weight: bold;
   line-height: 30px;
+  padding: 10px;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 
@@ -185,7 +186,6 @@ nav a:hover {
 }
 .ribbon span {
   display: block;
-  padding: 10px;
 }
 
 #about {
@@ -200,7 +200,7 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  h3 {
+  .ribbon {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #336;
@@ -209,10 +209,9 @@ p {
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    text-align: left;
   }
 
-  .commercial h3 {
+  .commercial .ribbon {
     border-top: 0;
     -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
     -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
@@ -241,13 +240,13 @@ p {
     white-space: nowrap;
     width: 100%;
   }
-  .videos div {
+  .videos .thumbnail {
     display: table-cell;
     padding: 10px;
     position: relative;
     width: 30%;
   }
-  .videos div:after {
+  .videos .thumbnail:after {
     bottom: 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
@@ -291,7 +290,7 @@ p {
   #about {
     background: #4c489e;
   }
-  #about h3 {
+  #about .ribbon {
     border-bottom: 0;
   }
 
@@ -322,11 +321,12 @@ p {
     -ms-box-sizing: padding-box;
     box-sizing: padding-box;
     margin: 0 auto;
-    padding: 15px 1.19%;
+    padding: 0 1.19%;
   }
 
   h3 {
     margin: 0 1.19%;
+    padding: 15px 0;
   }
 
   .videos ul {

@@ -33,6 +33,7 @@ h3 {
   color: #fff;
   font-weight: bold;
   line-height: 30px;
+  padding: 10px;
   @include text-shadow(0 -1px rgba(0, 0, 0, .3));
 }
 

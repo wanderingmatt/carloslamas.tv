@@ -47,10 +47,7 @@ nav {
   @include box-shadow(0 0 5px #000, 0 0 1px rgba(255, 255, 255, .3) inset);
   clear: both;
   text-align: left;
-  span {
-    display: block;
-    padding: 10px;
-  }
+  span { display: block; }
 }
 
 #about {
@@ -65,15 +62,14 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  h3 {
+  .ribbon {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, .3);
     border-bottom: 1px solid #336;
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     @include box-shadow(none);
-    text-align: left;
   }
-  .commercial h3 {
+  .commercial .ribbon {
     border-top: 0;
     @include box-shadow(0 -1px 3px rgba(0, 0 ,0, .8), 0 0 1px rgba(255, 255, 255, .3) inset);
   }
@@ -92,7 +88,7 @@ p {
       white-space: nowrap;
       width: 100%;
     }
-    div {
+    .thumbnail {
       display: table-cell;
       padding: 10px;
       position: relative;
@@ -135,7 +131,7 @@ p {
   }
   #about {
     background: $purple;
-    h3 { border-bottom: 0; }
+    .ribbon { border-bottom: 0; }
   }
   p { padding: 0 10px 1em 10px; }
 }
@@ -152,10 +148,13 @@ p {
     span {
       @include box-sizing(padding-box);
       margin: 0 auto;
-      padding: 15px 1.19%;
+      padding: 0 1.19%;
     }
   }
-  h3 { margin: 0 1.19%; }
+  h3 {
+    margin: 0 1.19%;
+    padding: 15px 0;
+  }
   .videos {
     ul { padding: 0 1.19%; }
     li {
