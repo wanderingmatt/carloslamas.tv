@@ -78,6 +78,17 @@ body:after {
   visibility: hidden;
 }
 
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
 @font-face {
   font-family: 'UniversLTStd39ThinUltraCnRg';
   src: url("/fonts/universltstd-thinultracn-webfont.eot");
@@ -97,12 +108,12 @@ h1 {
 }
 
 h2 {
-  display: none;
   color: rgba(255, 255, 255, 0.4);
   font-size: 16px;
-  margin-top: -5px;
+  position: absolute;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
   text-transform: lowercase;
+  top: 55px;
 }
 
 h3 {
@@ -151,27 +162,22 @@ a {
 }
 
 header {
-  padding: 80px 10px 50px 10px;
+  padding: 80px 10px 60px 10px;
   position: relative;
   text-align: left;
 }
 
-nav a {
-  color: #9996cf;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 0 10px;
-  position: absolute;
-  right: 1.19%;
-  text-transform: uppercase;
-  top: 50%;
-  -moz-transition: all 0.25s;
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
+nav {
+  display: none;
 }
-nav a:hover {
+nav a {
   color: #fff;
+  font-family: UniversLTStd39ThinUltraCnRg, "Helvetica Neue", Arial, sans-serif;
+  font-size: 35px;
+  line-height: 35px;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px black;
 }
 
 .ribbon {
@@ -197,6 +203,10 @@ nav a:hover {
 p {
   line-height: 1.5em;
   padding-bottom: 1em;
+}
+
+li {
+  line-height: 3em;
 }
 
 @media screen and (max-width: 767px) {
@@ -272,7 +282,7 @@ p {
     width: 70%;
   }
   .videos hgroup {
-    padding-right: 10%;
+    padding-right: 13%;
   }
   .videos h4, .videos h5 {
     line-height: 16px;
@@ -304,16 +314,21 @@ p {
     -webkit-box-sizing: padding-box;
     -ms-box-sizing: padding-box;
     box-sizing: padding-box;
-    padding: 80px 1.19% 20px 1.19%;
+    padding-left: 1.19%;
+    padding-right: 1.19%;
+    position: relative;
     margin: 0 auto;
   }
 
-  h1 {
+  h1, h2 {
     margin: 0 1.19%;
   }
 
   .ribbon {
     margin: 2.38% 0;
+  }
+  .ribbon:first-child {
+    margin-top: 0;
   }
   .ribbon span {
     -moz-box-sizing: padding-box;
@@ -775,7 +790,14 @@ p {
     width: 47.619%;
     margin: 0 1.19%;
   }
-  .cover p {
+  .cover ul {
+    display: inline;
+    float: left;
+    width: 30.952%;
+    margin: 0 1.19%;
+    margin-left: 17.857%;
+  }
+  .cover p, .cover li {
     font-size: 16px;
   }
 
