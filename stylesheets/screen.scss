@@ -21,21 +21,26 @@ a {
 }
 
 header {
+  @include clearfix;
   padding: 80px 10px 60px 10px;
   position: relative;
   text-align: left;
-}
-
-nav {
-  display: none;
-  a {
-    color: #fff;
-    font-family: $custom-font, $default-font-family;
-    font-size: 35px;
-    line-height: 35px;
+  hgroup {
+    float: left;
     position: relative;
+    width: 200px;
+  }
+  ul {
+    float: right;
+    margin-top: 38px;
+  }
+  a {
+    font-size: 13px;
+    font-weight: bold;
     text-transform: uppercase;
-    @include text-shadow(0 1px 3px #000);
+  }
+  .about a {
+    color: lighten($purple, 25%);
   }
 }
 
@@ -59,9 +64,10 @@ p {
   padding-bottom: 1em;
 }
 
-li { line-height: 3em; }
+// li { line-height: 3em; }
 
 @media screen and (max-width: 767px) {
+  header li:not(:last-child) { display: none; }
   .ribbon {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, .3);
@@ -127,7 +133,7 @@ li { line-height: 3em; }
       font-size: $default-font-size;
     }
     h5 { color: #999; }
-    h6 { @extend .hidden; }
+    h6 { display: none; }
   }
   #about {
     background: $purple;
@@ -143,8 +149,37 @@ li { line-height: 3em; }
     padding-right: 1.19%;
     position: relative;
     margin: 0 auto;
+    hgroup {
+      float: left;
+      margin-left: 1.19%;
+      position: relative;
+      width: 200px;
+    }
+    ul {
+      float: right;
+      margin-right: 1.19%;
+    }
+    li {
+      color: lighten($purple, 25%);
+      font-size: 13px;
+      font-weight: bold;
+      display: inline;
+      @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+      text-transform: uppercase;
+      // &:not(:last-child):after { content: ' /'; }
+    }
+    a {
+      color: rgba(255, 255, 255, .25);
+      @include transition;
+    }
+    .about { display: none; }
+    &:hover {
+      a {
+        color: lighten($purple, 25%);
+        &:hover { color: #fff; }
+      }
+    }
   }
-  h1, h2 { margin: 0 1.19%; }
   .ribbon {
     margin: 2.38% 0;
     &:first-child { margin-top: 0; }

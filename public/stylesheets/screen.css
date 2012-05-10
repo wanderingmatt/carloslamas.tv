@@ -70,25 +70,6 @@ body:after {
   clear: both;
 }
 
-.hidden, .videos h6 {
-  display: none;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
 @font-face {
   font-family: 'UniversLTStd39ThinUltraCnRg';
   src: url("/fonts/universltstd-thinultracn-webfont.eot");
@@ -108,12 +89,12 @@ h1 {
 }
 
 h2 {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   position: absolute;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
   text-transform: lowercase;
-  top: 55px;
+  top: -25px;
 }
 
 h3 {
@@ -163,22 +144,34 @@ a {
 }
 
 header {
+  *zoom: 1;
   padding: 80px 10px 60px 10px;
   position: relative;
   text-align: left;
 }
-
-nav {
-  display: none;
+header:before, header:after {
+  content: "";
+  display: table;
 }
-nav a {
-  color: #fff;
-  font-family: UniversLTStd39ThinUltraCnRg, "Helvetica Neue", Arial, sans-serif;
-  font-size: 35px;
-  line-height: 35px;
+header:after {
+  clear: both;
+}
+header hgroup {
+  float: left;
   position: relative;
+  width: 200px;
+}
+header ul {
+  float: right;
+  margin-top: 38px;
+}
+header a {
+  font-size: 13px;
+  font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 1px 3px black;
+}
+header .about a {
+  color: #9996cf;
 }
 
 .ribbon {
@@ -206,11 +199,11 @@ p {
   padding-bottom: 1em;
 }
 
-li {
-  line-height: 3em;
-}
-
 @media screen and (max-width: 767px) {
+  header li:not(:last-child) {
+    display: none;
+  }
+
   .ribbon {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -297,6 +290,9 @@ li {
   .videos h5 {
     color: #999;
   }
+  .videos h6 {
+    display: none;
+  }
 
   #about {
     background: #4c489e;
@@ -320,9 +316,39 @@ li {
     position: relative;
     margin: 0 auto;
   }
-
-  h1, h2 {
-    margin: 0 1.19%;
+  header hgroup {
+    float: left;
+    margin-left: 1.19%;
+    position: relative;
+    width: 200px;
+  }
+  header ul {
+    float: right;
+    margin-right: 1.19%;
+  }
+  header li {
+    color: #9996cf;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+  }
+  header a {
+    color: rgba(255, 255, 255, 0.25);
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  header .about {
+    display: none;
+  }
+  header:hover a {
+    color: #9996cf;
+  }
+  header:hover a:hover {
+    color: #fff;
   }
 
   .ribbon {

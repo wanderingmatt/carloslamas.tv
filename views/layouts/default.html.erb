@@ -14,16 +14,16 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
+    <header itemscope itemtype="http://schema.org/Person">
       <hgroup>
-        <h1>Carlos Lamas</h1>
-        <h2>Editor</h2>
+        <h1 itemprop="name">Carlos Lamas</h1>
+        <h2 itemprop="jobTitle">Editor</h2>
       </hgroup>
-      <nav>
-        <ul>
-          <li class="about"><a href="#about">About</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="mailto:carlos@carloslamas.tv" itemprop="email">carlos@carloslamas.tv</a> / </li>
+        <li itemprop="telephone"><a href="tel:1-612-424-5143">612.424.5143</a></li>
+        <li class="about"><a href="#about">About</a></li>
+      </ul>
     </header>
     <%= yield %>
   </div>
