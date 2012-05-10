@@ -35,7 +35,7 @@ header {
     margin-top: 38px;
   }
   a {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -133,7 +133,6 @@ p {
       font-size: $default-font-size;
     }
     h5 { color: #999; }
-    h6 { display: none; }
   }
   #about {
     background: $purple;
@@ -169,7 +168,7 @@ p {
       // &:not(:last-child):after { content: ' /'; }
     }
     a {
-      color: rgba(255, 255, 255, .25);
+      color: rgba(255, 255, 255, .3);
       @include transition;
     }
     .about { display: none; }

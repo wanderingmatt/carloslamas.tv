@@ -89,7 +89,7 @@ h1 {
 }
 
 h2 {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
   position: absolute;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
@@ -119,6 +119,7 @@ h5 {
 
 h6 {
   color: rgba(255, 255, 255, 0.5);
+  display: none;
   line-height: 20px;
 }
 
@@ -166,7 +167,7 @@ header ul {
   margin-top: 38px;
 }
 header a {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -290,9 +291,6 @@ p {
   .videos h5 {
     color: #999;
   }
-  .videos h6 {
-    display: none;
-  }
 
   #about {
     background: #4c489e;
@@ -335,7 +333,7 @@ p {
     text-transform: uppercase;
   }
   header a {
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.3);
     -moz-transition: all 0.25s;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;

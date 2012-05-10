@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .3);
   font-size: 16px;
   position: absolute;
   @include text-shadow(0 -1px rgba(0, 0, 0, .6));
@@ -51,5 +51,6 @@ h5 {
 
 h6 {
   color: rgba(255, 255, 255, .5);
+  display: none;
   line-height: 20px;
 }
