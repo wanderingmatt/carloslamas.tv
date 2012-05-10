@@ -167,7 +167,7 @@ header ul {
   margin-top: 38px;
 }
 header a {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -326,11 +326,8 @@ p {
   }
   header li {
     color: #9996cf;
-    font-size: 13px;
-    font-weight: bold;
     display: inline;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
-    text-transform: uppercase;
   }
   header a {
     color: rgba(255, 255, 255, 0.3);

@@ -35,7 +35,7 @@ header {
     margin-top: 38px;
   }
   a {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -160,11 +160,8 @@ p {
     }
     li {
       color: lighten($purple, 25%);
-      font-size: 13px;
-      font-weight: bold;
       display: inline;
       @include text-shadow(0 -1px rgba(0, 0, 0, .6));
-      text-transform: uppercase;
       // &:not(:last-child):after { content: ' /'; }
     }
     a {
