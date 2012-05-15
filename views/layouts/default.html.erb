@@ -34,12 +34,12 @@
     if ($(window).width() > 767 && jQuery.browser.mobile == false) {
     	$(function() {
     	  jQuery.extend(jQuery.fancybox.defaults, {
-          afterShow: function() {
-            $('body').toggleClass('fixed');
-          },
-          beforeClose: function() {
-            $('body').toggleClass('fixed');
-          }
+          // afterShow: function() {
+          //   $('body').toggleClass('fixed');
+          // },
+          // beforeClose: function() {
+          //   $('body').toggleClass('fixed');
+          // }
         });
     	  $("nav a").fancybox({
           autoSize: false,
