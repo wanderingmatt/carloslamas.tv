@@ -19,11 +19,11 @@
         <h1 itemprop="name">Carlos Lamas</h1>
         <h2 itemprop="jobTitle">Editor</h2>
       </hgroup>
-      <ul>
+      <a href="#about" class="toggle"><h3>Hire Me</h3></a>
+<!--       <ul>
         <li><a href="mailto:carlos@carloslamas.tv" itemprop="email">carlos@carloslamas.tv</a> / </li>
         <li itemprop="telephone"><a href="tel:1-612-424-5143">612.424.5143</a></li>
-        <li class="about"><a href="#about">About</a></li>
-      </ul>
+      </ul> -->
     </header>
     <%= yield %>
   </div>
@@ -41,7 +41,7 @@
           //   $('body').toggleClass('fixed');
           // }
         });
-    	  $("nav a").fancybox({
+    	  $(".toggle").fancybox({
           autoSize: false,
           beforeShow: function() {
             $('header h1').toggleClass('raised');
@@ -53,7 +53,7 @@
     	    helpers: {
             overlay: {
               css: {'background-color': '#4c489e'},
-              opacity: 0.95
+              opacity: 0.98
             }
           },
           margin: 0,
@@ -75,6 +75,9 @@
     		  padding: 0,
     		  width: 960,
     		  helpers: {
+            overlay: {
+              opacity: 0.9
+            },
         		title: {
         			type: 'outside'
         		}
