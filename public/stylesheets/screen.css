@@ -192,6 +192,11 @@ header ul {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 
+.videos img {
+  display: block;
+  width: 100%;
+}
+
 #about {
   color: #cccbe7;
   text-align: justify;
@@ -266,10 +271,6 @@ p, li {
     position: absolute;
     right: 10px;
     top: 10px;
-  }
-  .videos img {
-    display: block;
-    max-width: 100%;
   }
   .videos aside {
     display: table-cell;
@@ -420,10 +421,6 @@ p, li {
     -webkit-box-shadow: 0px 1px 3px black;
     -o-box-shadow: 0px 1px 3px black;
     box-shadow: 0px 1px 3px black;
-  }
-  .videos img {
-    display: block;
-    max-width: 100%;
   }
   .videos aside {
     background-color: #4c489e;

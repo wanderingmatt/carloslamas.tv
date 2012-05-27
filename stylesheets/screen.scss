@@ -64,6 +64,13 @@ header {
   }
 }
 
+.videos {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
 #about {
   color: lighten($purple, 40%);
   text-align: justify;
@@ -118,10 +125,6 @@ p, li {
         right: 10px;
         top: 10px;
       }
-    }
-    img {
-      display: block;
-      max-width: 100%;
     }
     aside {
       display: table-cell;
@@ -231,10 +234,6 @@ p, li {
       }
     }
     .thumbnail { @include box-shadow; }
-    img {
-      display: block;
-      max-width: 100%;
-    }
     aside {
       background-color: $purple;
       background-color: fade_out($purple, .1);
