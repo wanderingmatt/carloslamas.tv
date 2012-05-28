@@ -16,10 +16,10 @@
   <div class="wrapper">
     <header itemscope itemtype="http://schema.org/Person">
       <hgroup>
-        <h1 itemprop="name">Carlos Lamas</h1>
+        <a href="/"><h1 itemprop="name">Carlos Lamas</h1></a>
         <h2 itemprop="jobTitle">Editor</h2>
       </hgroup>
-      <a href="#about" class="toggle"><h3>Hire Me</h3></a>
+      <a href="#about" class="hire-me"><h3>Hire Me</h3></a>
 <!--       <ul>
         <li><a href="mailto:carlos@carloslamas.tv" itemprop="email">carlos@carloslamas.tv</a> / </li>
         <li itemprop="telephone"><a href="tel:1-612-424-5143">612.424.5143</a></li>
@@ -41,7 +41,7 @@
           //   $('body').toggleClass('fixed');
           // }
         });
-    	  $(".toggle").fancybox({
+    	  $(".hire-me").fancybox({
           autoSize: false,
           beforeShow: function() {
             $('header h1').toggleClass('raised');
@@ -49,7 +49,7 @@
           beforeClose: function() {
             $('header h1').toggleClass('raised');
           },
-          height: '100%',
+          // height: '100%',
     	    helpers: {
             overlay: {
               css: {'background-color': '#4c489e'},
