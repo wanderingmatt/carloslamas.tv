@@ -18,9 +18,49 @@ body {
 
 a {
   color: inherit;
+  font-weight: bold;
   text-decoration: none;
   @include transition;
   &:hover { color: #fff; }
+}
+
+h1 {
+  color: #fff;
+  font-family: $custom-font, $default-font-family;
+  font-size: 70px;
+  font-weight: normal;
+  line-height: 70px;
+  position: relative;
+  text-transform: uppercase;
+  @include text-shadow(0 1px 3px #000);
+}
+
+h2 {
+  color: rgba(255, 255, 255, .3);
+  font-size: 16px;
+  position: absolute;
+  @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+  text-transform: lowercase;
+  top: -25px;
+}
+
+h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+h5 {
+  color: lighten($purple, 30%);
+  font-weight: normal;
+  line-height: 16px;
+}
+
+h6 {
+  color: rgba(255, 255, 255, .5);
+  display: none;
+  line-height: 20px;
 }
 
 header {
@@ -33,34 +73,20 @@ header {
     position: relative;
     width: 200px;
   }
-  .hire-me {
-    // background-color: lighten($purple, 25%);
-    border: 1px solid lighten($purple, 25%);
-    // @include border-radius;
-    color: lighten($purple, 25%);
-    float: right;
-    line-height: 50px;
-    margin-right: 1.19%;
-    @include opacity(.5);
-    padding: 0 25px;
-    text-align: right;
-    @include text-shadow(0 -1px rgba(0, 0, 0, .6));
-    &:hover {
-      background-color: lighten($purple, 25%);
-      color: #fff;
-      @include opacity(1);
-    }
-  }
   h3 {
-    // font-family: $custom-font, $default-font-family;
-    // font-size: 50px;
-    font-weight: bold;
-    // line-height: 70px;
-    text-transform: uppercase;
-  }
-  ul {
+    @extend h1;
+    color: rgba(255, 255, 255, .3);
     float: right;
-    margin-top: 38px;
+    margin-right: 1.19%;
+    @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+    a {
+      color: rgba(255, 255, 255, .3);
+      font-weight: normal;
+      &:hover { color: lighten($purple, 30%); }
+    }
+    &:before {
+      content: '/ ';
+    }
   }
 }
 
@@ -96,6 +122,12 @@ header {
 p, li {
   line-height: 25px;
   margin-bottom: 25px;
+}
+
+footer {
+  // background: rgba(255, 255, 255, .5);
+  margin-top: 60px;
+  padding: 2.38%;
 }
 
 @media screen and (max-width: 767px) {
@@ -181,27 +213,6 @@ p, li {
       margin-left: 1.19%;
       position: relative;
       width: 200px;
-    }
-    ul {
-      float: right;
-      margin-right: 1.19%;
-    }
-    li {
-      color: lighten($purple, 25%);
-      display: inline;
-      @include text-shadow(0 -1px rgba(0, 0, 0, .6));
-      // &:not(:last-child):after { content: ' /'; }
-    }
-    a {
-      // color: rgba(255, 255, 255, .3);
-      @include transition;
-    }
-    .about { display: none; }
-    &:hover {
-      a {
-        color: lighten($purple, 25%);
-        &:hover { color: #fff; }
-      }
     }
   }
   .ribbon {
@@ -386,8 +397,8 @@ p, li {
       a {
         // background-repeat: no-repeat;
         // color: lighten($purple, 20%);
-        // display: block;
-        // @include opacity(.4);
+        display: block;
+        @include opacity(.4);
         padding-left: 24px;
         @include transition;
         &:hover { opacity: 1; }

@@ -19,13 +19,16 @@
         <a href="/"><h1 itemprop="name">Carlos Lamas</h1></a>
         <h2 itemprop="jobTitle">Editor</h2>
       </hgroup>
-      <a href="#about" class="hire-me"><h3>Hire Me</h3></a>
+      <h3><a href="#about" class="about">About</a></h3>
 <!--       <ul>
         <li><a href="mailto:carlos@carloslamas.tv" itemprop="email">carlos@carloslamas.tv</a> / </li>
         <li itemprop="telephone"><a href="tel:1-612-424-5143">612.424.5143</a></li>
       </ul> -->
     </header>
     <%= yield %>
+    <footer>
+      &copy; Copyright <%= Time.new.year %> Carlos Lamas &bull; <a href="spanish">en Español</a> &bull; Design with love by <a href="http://matthew-anderson.net">Matthew Anderson</a>
+    </footer>
   </div>
   <script src="/javascripts/jquery-1.7.1.min.js"></script>
   <script src="/javascripts/jquery.detectmobilebrowser.js"></script>
@@ -41,7 +44,7 @@
           //   $('body').toggleClass('fixed');
           // }
         });
-    	  $(".hire-me").fancybox({
+    	  $(".about").fancybox({
           autoSize: false,
           beforeShow: function() {
             $('header h1').toggleClass('raised');

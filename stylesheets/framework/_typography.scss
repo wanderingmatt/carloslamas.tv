@@ -1,3 +1,7 @@
+$default-font-family: 'Helvetica Neue', Arial, sans-serif;
+$default-font-size: 13px;
+$default-line-height: 16px;
+
 @font-face {
     font-family: 'UniversLTStd39ThinUltraCnRg';
     src: url('/fonts/universltstd-thinultracn-webfont.eot');
@@ -9,40 +13,3 @@
     font-style: normal;
 }
 $custom-font: UniversLTStd39ThinUltraCnRg;
-
-h1 {
-  color: #fff;
-  font-family: $custom-font, $default-font-family;
-  font-size: 70px;
-  line-height: 70px;
-  position: relative;
-  text-transform: uppercase;
-  @include text-shadow(0 1px 3px #000);
-}
-
-h2 {
-  color: rgba(255, 255, 255, .3);
-  font-size: 16px;
-  position: absolute;
-  @include text-shadow(0 -1px rgba(0, 0, 0, .6));
-  text-transform: lowercase;
-  top: -25px;
-}
-
-h4 {
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 25px;
-}
-
-h5 {
-  color: lighten($purple, 30%);
-  line-height: 16px;
-}
-
-h6 {
-  color: rgba(255, 255, 255, .5);
-  display: none;
-  line-height: 20px;
-}
