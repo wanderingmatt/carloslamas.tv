@@ -1,7 +1,6 @@
 html, body, div, span, applet, object, iframe,
 h1,
-header h3, header
-h3, h2, h3, h4, h5, h6, p, blockquote, pre,
+header h3, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -80,8 +79,23 @@ body:after {
   font-style: normal;
 }
 
-.icons-sprite, .cover .twitter, .cover .email, .cover .phone {
-  background: url('../images/icons-sda63deacd8.png') no-repeat;
+.icons-sprite, .twitter, .email, .phone {
+  background: url('../images/icons-s05b8ee23f8.png') no-repeat;
+}
+
+.twitter {
+  background-position: 0 0;
+  background-position: 0 2px;
+}
+
+.email {
+  background-position: 0 -52px;
+  background-position: 0 -48px;
+}
+
+.phone {
+  background-position: 0 -26px;
+  background-position: 0 -23px;
 }
 
 html, body {
@@ -104,10 +118,11 @@ a {
   color: inherit;
   font-weight: bold;
   text-decoration: none;
+  -webkit-transition: all, 0.25s;
   -moz-transition: all 0.25s;
-  -webkit-transition: all 0.25s;
+  -ms-transition: all 0.25s;
   -o-transition: all 0.25s;
-  transition: all 0.25s;
+  transition: all, 0.25s;
 }
 a:hover {
   color: #fff;
@@ -168,7 +183,7 @@ header:after {
 header hgroup {
   float: left;
   position: relative;
-  width: 200px;
+  width: 50%;
 }
 header h3 {
   color: rgba(255, 255, 255, 0.3);
@@ -190,9 +205,8 @@ header h3:before {
 .ribbon {
   background: #4c489e;
   background: rgba(76, 72, 158, 0.9);
-  -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   -webkit-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
-  -o-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  -moz-box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   box-shadow: 0 0 5px black, 0 0 1px rgba(255, 255, 255, 0.3) inset;
   clear: both;
   text-align: left;
@@ -221,11 +235,15 @@ header h3:before {
 
 p, li {
   line-height: 25px;
+}
+
+p {
   margin-bottom: 25px;
 }
 
 footer {
-  margin-top: 60px;
+  border-top: 3px double #000;
+  border-bottom: 15px dashed #000;
   padding: 2.38%;
 }
 
@@ -239,17 +257,15 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #336;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: none;
     -webkit-box-shadow: none;
-    -o-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
   }
 
   .commercial .ribbon {
     border-top: 0;
-    -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
     -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    -o-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255, 255, 255, 0.3) inset;
   }
 
@@ -265,8 +281,8 @@ footer {
   }
   .videos .video {
     background: url("/images/select.png") 97% 50% no-repeat;
-    -moz-background-size: auto 30%;
     -webkit-background-size: auto 30%;
+    -moz-background-size: auto 30%;
     -o-background-size: auto 30%;
     background-size: auto 30%;
     display: table;
@@ -282,9 +298,8 @@ footer {
   }
   .videos .thumbnail:after {
     bottom: 10px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
-    -o-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
     content: " ";
     display: block;
@@ -330,9 +345,8 @@ footer {
 }
 @media screen and (min-width: 768px) {
   header {
-    -moz-box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
-    -ms-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     box-sizing: padding-box;
     padding-left: 1.19%;
     padding-right: 1.19%;
@@ -353,9 +367,8 @@ footer {
     margin-top: 0;
   }
   .ribbon span {
-    -moz-box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
-    -ms-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     box-sizing: padding-box;
     margin: 0 auto;
     padding: 0 1.19%;
@@ -394,16 +407,16 @@ footer {
   .videos .video {
     display: block;
     position: relative;
+    -webkit-transition: all, 0.25s;
     -moz-transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
-    transition: all 0.25s;
+    transition: all, 0.25s;
   }
   .videos .video:after {
     bottom: 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
     -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
-    -o-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+    -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
     box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
     content: " ";
     display: block;
@@ -414,9 +427,8 @@ footer {
     z-index: 10;
   }
   .videos .thumbnail {
-    -moz-box-shadow: 0px 1px 3px black;
     -webkit-box-shadow: 0px 1px 3px black;
-    -o-box-shadow: 0px 1px 3px black;
+    -moz-box-shadow: 0px 1px 3px black;
     box-shadow: 0px 1px 3px black;
   }
   .videos aside {
@@ -425,8 +437,8 @@ footer {
     background-image: url("/images/play.png");
     background-position: 50%;
     background-repeat: no-repeat;
-    -moz-background-size: auto 30%;
     -webkit-background-size: auto 30%;
+    -moz-background-size: auto 30%;
     -o-background-size: auto 30%;
     background-size: auto 30%;
     bottom: 0;
@@ -438,10 +450,11 @@ footer {
     right: 0;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
     top: 0;
+    -webkit-transition: all, 0.25s;
     -moz-transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
-    transition: all 0.25s;
+    transition: all, 0.25s;
     z-index: 100;
   }
   .videos hgroup {
@@ -685,10 +698,11 @@ footer {
     height: 26px;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
+    -webkit-transition: all, 0.25s;
     -moz-transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
-    transition: all 0.25s;
+    transition: all, 0.25s;
     width: 26px;
   }
   .fancybox-close:hover {
@@ -701,10 +715,11 @@ footer {
     margin-top: -33px;
     position: fixed;
     top: 50%;
+    -webkit-transition: all, 0.25s;
     -moz-transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
-    transition: all 0.25s;
+    transition: all, 0.25s;
     width: 86px;
   }
   .fancybox-nav em {
@@ -721,16 +736,16 @@ footer {
   .fancybox-nav hgroup {
     background-color: #4c489e;
     background-color: rgba(76, 72, 158, 0.9);
-    -moz-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
-    -o-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     box-shadow: 0 1px rgba(0, 0, 0, 0.8);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     padding: 15px 30px;
     position: absolute;
-    -moz-transition: opacity 0.25s, background 0.25s;
     -webkit-transition: opacity 0.25s, background 0.25s;
+    -moz-transition: opacity 0.25s, background 0.25s;
+    -ms-transition: opacity 0.25s, background 0.25s;
     -o-transition: opacity 0.25s, background 0.25s;
     transition: opacity 0.25s, background 0.25s;
     white-space: nowrap;
@@ -796,15 +811,13 @@ footer {
 
   .cover .fancybox-outer {
     background: transparent;
-    -moz-box-shadow: none;
     -webkit-box-shadow: none;
-    -o-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
   }
   .cover .fancybox-inner {
-    -moz-box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
-    -ms-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
     box-sizing: padding-box;
     display: table-cell;
     vertical-align: middle;
@@ -823,7 +836,7 @@ footer {
     float: left;
     width: 30.952%;
     margin: 0 1.19%;
-    margin-left: 34.524%;
+    margin-left: 17.857%;
   }
   .cover p, .cover li {
     font-size: 16px;
@@ -834,26 +847,16 @@ footer {
     padding: 1px 3px;
   }
   .cover li a {
-    display: block;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-    opacity: 0.4;
+    color: #8885c7;
     padding-left: 24px;
+    -webkit-transition: all, 0.25s;
     -moz-transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
-    transition: all 0.25s;
+    transition: all, 0.25s;
   }
   .cover li a:hover {
-    opacity: 1;
-  }
-  .cover .twitter {
-    background-position: 0 -32px;
-  }
-  .cover .email {
-    background-position: 0 0;
-  }
-  .cover .phone {
-    background-position: 0 -16px;
+    color: #fff;
   }
 
   h1.raised, header h3.raised {
