@@ -98,7 +98,7 @@ body:after {
 }
 
 html, body {
-  background: #282b30;
+  background: #000;
 }
 
 body {
@@ -342,9 +342,11 @@ footer {
   #about .ribbon {
     border-bottom: 0;
   }
-
-  p, li {
+  #about p, #about li {
     padding: 0 10px 0 10px;
+  }
+  #about .contact a {
+    padding-left: 24px;
   }
 }
 @media screen and (min-width: 768px) {
