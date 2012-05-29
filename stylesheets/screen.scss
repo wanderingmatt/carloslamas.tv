@@ -93,19 +93,22 @@ header {
     float: left;
     position: relative;
   }
-  .about {
-    color: rgba(255, 255, 255, .3);
+  aside {
+    color: rgba(255, 255, 255, .1);
     float: right;
     font-family: $custom-font, $default-font-family;
     font-size: 70px;
-    font-weight: normal;
-    line-height: 70px;
-    margin-right: 1.19%;
-    @include text-shadow(0 -1px rgba(0, 0, 0, .6));
-    &:hover { color: lighten($purple, 30%); }
-  }
-  &:before {
-    content: '/ ';
+    .about {
+      color: rgba(255, 255, 255, .3);
+      font-weight: normal;
+      line-height: 70px;
+      margin-right: 1.19%;
+      @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+      &:hover { color: lighten($purple, 30%); }
+    }
+    &:before {
+      content: '/ ';
+    }    
   }
 }
 

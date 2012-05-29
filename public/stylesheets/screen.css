@@ -191,20 +191,23 @@ header hgroup {
   float: left;
   position: relative;
 }
-header .about {
-  color: rgba(255, 255, 255, 0.3);
+header aside {
+  color: rgba(255, 255, 255, 0.1);
   float: right;
   font-family: UniversLTStd39ThinUltraCnRg, "Helvetica Neue", Arial, sans-serif;
   font-size: 70px;
+}
+header aside .about {
+  color: rgba(255, 255, 255, 0.3);
   font-weight: normal;
   line-height: 70px;
   margin-right: 1.19%;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
 }
-header .about:hover {
+header aside .about:hover {
   color: #aaa8d7;
 }
-header:before {
+header aside:before {
   content: '/ ';
 }
 
