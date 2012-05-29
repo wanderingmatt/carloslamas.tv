@@ -16,10 +16,10 @@
   <div class="wrapper">
     <header itemscope itemtype="http://schema.org/Person">
       <hgroup>
-        <a href="/"><h1 itemprop="name">Carlos Lamas</h1></a>
+        <h1 itemprop="name">Carlos Lamas</h1>
         <h2 itemprop="jobTitle">Editor</h2>
       </hgroup>
-      <h3><a href="#about" class="about">About</a></h3>
+      <a href="#about" class="about">About</a>
 <!--       <ul>
         <li><a href="mailto:carlos@carloslamas.tv" itemprop="email">carlos@carloslamas.tv</a> / </li>
         <li itemprop="telephone"><a href="tel:1-612-424-5143">612.424.5143</a></li>
@@ -45,18 +45,18 @@
           // }
         });
     	  $(".about").fancybox({
-          autoSize: false,
           beforeShow: function() {
             $('header h1').toggleClass('raised');
           },
-          beforeClose: function() {
+          afterClose: function() {
             $('header h1').toggleClass('raised');
           },
-          // height: '100%',
+          autoSize: false,
+          height: '100%',
     	    helpers: {
             overlay: {
               css: {'background-color': '#4c489e'},
-              opacity: 0.98
+              opacity: 1
             }
           },
           margin: 0,
@@ -66,12 +66,12 @@
     		  wrapCSS: 'cover'
         });
     		$(".video").fancybox({
-    		  aspectRatio: true,
     		  beforeLoad: function() {
             this.title = $(this.element).children('aside').html();
             this.tpl.prev = "<a title='Previous' class='fancybox-nav fancybox-prev'><em></em>" + $(this.element).parent().prev().find('a > aside').html() + "</a>";
             this.tpl.next = "<a title='Next' class='fancybox-nav fancybox-next'><em></em>" + $(this.element).parent().next().find('a > aside').html() + "</a>";
           },
+          aspectRatio: true,
     		  height: 540,
     		  loop: false,
           margin: 86,
