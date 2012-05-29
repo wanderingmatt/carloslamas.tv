@@ -151,7 +151,7 @@ h3 {
   color: #fff;
   font-weight: bold;
   line-height: 30px;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 
 h4 {
@@ -236,16 +236,15 @@ header:before {
 }
 
 p, li {
-  line-height: 25px;
+  line-height: 20px;
 }
 
 p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 footer {
-  border-top: 3px double #000;
-  border-bottom: 15px dashed #000;
+  background: rgba(0, 0, 0, 0.9);
   padding: 2.38%;
 }
 
@@ -341,8 +340,8 @@ footer {
     border-bottom: 0;
   }
 
-  p {
-    padding: 0 10px 1em 10px;
+  p, li {
+    padding: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -360,6 +359,18 @@ footer {
     margin-left: 1.19%;
     position: relative;
     width: 200px;
+  }
+
+  h3 {
+    padding: 15px 0;
+  }
+
+  p, li {
+    line-height: 25px;
+  }
+
+  p {
+    margin-bottom: 25px;
   }
 
   .ribbon {
