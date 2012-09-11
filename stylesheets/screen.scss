@@ -108,7 +108,7 @@ header {
     }
     &:before {
       content: '/ ';
-    }    
+    }
   }
 }
 
@@ -139,10 +139,8 @@ p, li { line-height: 20px; }
 p { margin-bottom: 20px; }
 
 footer {
-  background: fade_out(#000, .1);
-  // border-top: 3px double #000;
-  // border-bottom: 15px dashed #000;
-  padding: 2.38%;
+  background: fade_out(#000, .3);
+  border-top: 1px solid #000;
 }
 
 @media screen and (max-width: 767px) {
@@ -211,10 +209,12 @@ footer {
   }
   #about {
     background: $purple;
+    padding-bottom: 20px;
     .ribbon { border-bottom: 0; }
     p, li { padding: 0 10px 0 10px; }
     .contact a { padding-left: 24px; }
   }
+  footer { padding: 20px 10px; }
 }
 
 @media screen and (min-width: 768px) {
@@ -390,6 +390,7 @@ footer {
     display: none;
     padding: 0 1.19%;
   }
+  footer { padding: 2.38%; }
   .cover {
     .fancybox-outer {
       background: transparent;

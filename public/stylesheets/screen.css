@@ -247,8 +247,8 @@ p {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 2.38%;
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid #000;
 }
 
 @media screen and (max-width: 767px) {
@@ -338,6 +338,7 @@ footer {
 
   #about {
     background: #4c489e;
+    padding-bottom: 20px;
   }
   #about .ribbon {
     border-bottom: 0;
@@ -347,6 +348,10 @@ footer {
   }
   #about .contact a {
     padding-left: 24px;
+  }
+
+  footer {
+    padding: 20px 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -826,6 +831,10 @@ footer {
   #about {
     display: none;
     padding: 0 1.19%;
+  }
+
+  footer {
+    padding: 2.38%;
   }
 
   .cover .fancybox-outer {
