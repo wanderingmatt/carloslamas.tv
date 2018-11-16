@@ -79,9 +79,11 @@ Where "project" is the path to the project and "output" is the path to the
 directory where you would like your HTML and CSS generated.
 
 
-Learning More
--------------
+Making Changes and Deploying
+----------------------------
 
-You can learn more about Serve on the GitHub project page:
-
-<http://github.com/jlong/serve>
+- Update files and thumbnails.
+- Verify it looks correct by running `$ serve` in the folder and looking locally.
+- `$ git add [untracked files]`
+- `$ git commit -v -a`
+- `$ git push production master`
