@@ -31,8 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass
-  rack (~> 1.6.11)
-  serve
+  serve (= 1.5.1)
 
 BUNDLED WITH
    1.16.2

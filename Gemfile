@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'serve'
+gem 'serve', '1.5.1'
 
 # Use edge instead:
 # gem 'serve', :git => 'git://github.com/jlong/serve.git'
@@ -24,6 +24,3 @@ gem 'compass'
 
 # Use mongrel for the Web server
 # gem 'mongrel'
-
-# Force newer Rack version
-gem 'rack', '~> 1.6.11'
