@@ -1,5 +1,7 @@
 source :rubygems
 
+gem 'rack', '~> 1.6.11'
+
 gem 'serve', '1.5.1'
 
 # Use edge instead:
