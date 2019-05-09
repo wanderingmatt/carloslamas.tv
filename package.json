@@ -1,0 +1,22 @@
+{
+  "name": "carloslamas.tv",
+  "version": "1.0.0",
+  "description": "Portfolio site for video editor Carlos Lamas.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WanderingMatt/carloslamas.tv.git"
+  },
+  "author": "Matthew Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WanderingMatt/carloslamas.tv/issues"
+  },
+  "homepage": "https://github.com/WanderingMatt/carloslamas.tv#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
