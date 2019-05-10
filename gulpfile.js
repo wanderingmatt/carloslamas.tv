@@ -1,23 +1,47 @@
-var gulp         = require('gulp');
+const gulp        = require('gulp'),
 
-var connect      = require('gulp-connect');
-var glob         = require('gulp-sass-glob');
-var sass         = require('gulp-sass');
+      connect     = require('gulp-connect'),
+      del         = require('del'),
+      glob        = require('gulp-sass-glob'),
+      sass        = require('gulp-sass');
 
-gulp.task('connect', function() {
+var paths = {
+  stylesheets: {
+    src: './src/stylesheets/**/*.scss',
+    dest: './dist/stylesheets'
+  }
+};
+
+function serve(done) {
   connect.server({
     root: './dist',
     livereload: true
   });
-});
+  done();
+};
 
-gulp.task('watch', function () {
-  gulp.watch('src/stylesheets/**/*.scss', ['scss']);
-});
+function clean() {
+  return del(['./dist/stylesheets']);
+}
 
-gulp.task('sass', function(){
-  return gulp.src('src/stylesheets/**/*.scss')
+function watch() {
+  gulp.watch(paths.stylesheets.src, stylesheets);
+};
+
+function stylesheets() {
+  return gulp
+    .src(paths.stylesheets.src)
     .pipe(glob())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/stylesheets'))
-});
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(gulp.dest(paths.stylesheets.dest))
+    .pipe(connect.reload())
+};
+
+const build = gulp.series(clean, gulp.parallel(stylesheets));
+
+exports.build = build;
+exports.clean = clean;
+exports.serve = serve
+
+exports.default = gulp.series(build, serve, watch);
