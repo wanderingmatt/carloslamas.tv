@@ -1,6 +1,4 @@
-// @import "compass";
 // @include global-reset;
-// @include reset-html5;
 @import "framework/*";
 // @import "icons/*.png";
 
@@ -33,7 +31,7 @@ a {
   color: inherit;
   font-weight: bold;
   text-decoration: none;
-  // @include transition;
+  transition: all .25s;
   &:hover { color: #fff; }
 }
 
@@ -45,14 +43,14 @@ h1 {
   line-height: 70px;
   position: relative;
   text-transform: uppercase;
-  // @include text-shadow(0 1px 3px #000);
+  text-shadow: 0 1px 3px #000;
 }
 
 h2 {
   color: rgba(255, 255, 255, .3);
   font-size: 16px;
   position: absolute;
-  // @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+  text-shadow: 0 -1px rgba(0, 0, 0, .6);
   text-transform: lowercase;
   top: -25px;
 }
@@ -103,7 +101,7 @@ header {
       font-weight: normal;
       line-height: 70px;
       margin-right: 1.19%;
-      // @include text-shadow(0 -1px rgba(0, 0, 0, .6));
+      text-shadow: 0 -1px rgba(0, 0, 0, .6);
       &:hover { color: lighten($purple, 30%); }
     }
     &:before {
@@ -115,11 +113,11 @@ header {
 .ribbon {
   background: $purple;
   background: fade_out($purple, .1);
-  // @include box-shadow(0 0 5px #000, 0 0 1px rgba(255, 255, 255, .3) inset);
+  box-shadow: 0 0 5px #000, inset 0 0 1px rgba(255, 255, 255, .3);
   clear: both;
   text-align: left;
   span { display: block; }
-  // h3 { @include text-shadow(0 -1px rgba(0, 0, 0, .3)); }
+  h3 { text-shadow: 0 -1px rgba(0, 0, 0, .3); }
 }
 
 .videos {
@@ -132,7 +130,7 @@ header {
 #about {
   color: lighten($purple, 40%);
   text-align: justify;
-  // @include text-shadow(0 -1px rgba(0, 0, 0, .3));
+  text-shadow: 0 -1px rgba(0, 0, 0, .3);
 }
 
 p, li { line-height: 20px; }
@@ -150,11 +148,11 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, .3);
     border-bottom: 1px solid #336;
     border-bottom: 1px solid rgba(0, 0, 0, .3);
-    // @include box-shadow(none);
+    box-shadow: none;
   }
   .commercial .ribbon {
     border-top: 0;
-    // @include box-shadow(0 -1px 3px rgba(0, 0 ,0, .8), 0 0 1px rgba(255, 255, 255, .3) inset);
+    box-shadow: 0 -1px 3px rgba(0, 0 ,0, .8), inset 0 0 1px rgba(255, 255, 255, .3);
   }
   .videos {
     ul { background: #fff; }
@@ -165,7 +163,7 @@ footer {
     }
     .video {
       background: url("/images/select.png") 97% 50% no-repeat;
-      // @include background-size(auto 30%);
+      background-size: auto 30%;
       display: table;
       table-layout: fixed;
       white-space: nowrap;
@@ -178,7 +176,7 @@ footer {
       width: 30%;
       &:after {
         bottom: 10px;
-        // @include box-shadow(rgba(0, 0, 0, .15) 0 0 0 1px inset);
+        box-shadow: inset rgba(0, 0, 0, .15) 0 0 0 1px;
         content: " ";
         display: block;
         left: 10px;
@@ -219,7 +217,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   header {
-    // @include box-sizing(padding-box);
+    box-sizing: padding-box;
     padding-left: 1.19%;
     padding-right: 1.19%;
     position: relative;
@@ -241,7 +239,7 @@ footer {
     margin: 2.38% 0;
     &:first-child { margin-top: 0; }
     span {
-      // @include box-sizing(padding-box);
+      box-sizing: padding-box;
       margin: 0 auto;
       padding: 0 1.19%;
     }
@@ -257,7 +255,7 @@ footer {
       margin-bottom: 2.38% !important;
       position: relative;
       &:hover {
-        // aside { @include opacity(1); }
+        aside { opacity: 1; }
       }
       &:active {
         aside { background-color: darken(fade_out($purple, .1), 20%); }
@@ -266,10 +264,10 @@ footer {
     .video {
       display: block;
       position: relative;
-      // @include transition;
+      transition: all .25s;
       &:after {
         bottom: 0;
-        // @include box-shadow(rgba(255, 255, 255, .1) 0 0 0 1px inset);
+        box-shadow: inset rgba(255, 255, 255, .1) 0 0 0 1px;
         content: " ";
         display: block;
         left: 0;
@@ -279,23 +277,23 @@ footer {
         z-index: 10;
       }
     }
-    // .thumbnail { @include box-shadow; }
+    .thumbnail {  box-shadow: #000 0 1px 3px; }
     aside {
       background-color: $purple;
       background-color: fade_out($purple, .1);
       background-image: url('/images/play.png');
       background-position: 50%;
       background-repeat: no-repeat;
-      // @include background-size(auto 30%);
+      background-size: auto 30%;
       bottom: 0;
       left: 0;
-      // @include opacity(0);
+      opacity: 0;
       padding-top: 120px;
       position: absolute;
       right: 0;
-      // @include text-shadow(0 -1px rgba(0, 0, 0, .3));
+      text-shadow: 0 -1px rgba(0, 0, 0, .3);
       top: 0;
-      // @include transition;
+      transition: all .25s;
       z-index: 100;
     }
     hgroup {
@@ -314,23 +312,23 @@ footer {
   .fancybox-close {
     background-image: url("/images/sprite-icons.png");
     height: 26px;
-    // @include opacity(.6);
-    // @include transition;
+    opacity: .6;
+    transition: all .25s;
     width: 26px;
-    // &:hover { @include opacity(1); }
+    &:hover { opacity: 1; }
   }
   .fancybox-nav {
     height: 70px;
     margin-top: -33px;
     position: fixed;
     top: 50%;
-    // @include transition;
+    transition: all .25s;
     width: 86px;
     em {
       background-image: url("/images/sprite-icons.png");
       height: 42px;
       margin-top: -21px;
-      // @include opacity(.6);
+      opacity: .6;
       position: absolute;
       top: 50%;
       width: 26px;
@@ -339,17 +337,17 @@ footer {
     hgroup {
       background-color: $purple;
       background-color: fade_out($purple, .1);
-      // @include box-shadow(0 1px rgba(0, 0, 0, .8));
-      // @include opacity(0);
+      box-shadow: 0 1px rgba(0, 0, 0, .8);
+      opacity: 0;
       padding: 15px 30px;
       position: absolute;
-      // @include transition(opacity .25s, background .25s);
+      transition: opacity .25s, background .25s;
       white-space: nowrap;
       z-index: 10;
     }
     &:hover {
       width: auto;
-      // em, hgroup { @include opacity(1); }
+      em, hgroup { opacity: 1; }
     }
     &:active {
       hgroup { background-color: darken(fade_out($purple, .1), 20%); }
@@ -383,7 +381,7 @@ footer {
   }
   .fancybox-title {
     line-height: $default-line-height;
-    // hgroup { @include text-shadow(0 1px 3px #000); }
+    hgroup { text-shadow: 0 1px 3px #000; }
     h6 { display: block; }
   }
   #about {
@@ -394,9 +392,9 @@ footer {
   .cover {
     .fancybox-outer {
       background: transparent;
-      // @include box-shadow(none);
+      box-shadow: none;
     }
-    // .fancybox-inner { @include box-sizing(padding-box); }
+    .fancybox-inner { box-sizing: padding-box; }
     h3 {
       border-top: 1px solid rgba(255, 255, 255, .2);
       margin-bottom: 30px;
@@ -413,7 +411,7 @@ footer {
       a {
         color: lighten($purple, 20%);
         padding-left: 24px;
-        // @include transition;
+        transition: all .25s;
         &:hover { color: #fff; }
       }
     }
@@ -422,11 +420,11 @@ footer {
 }
 
 @media screen and (min-width: 1025px) {
-  header, .ribbon span { max-width: $max-width; }
+  // header, .ribbon span { max-width: $max-width; }
   .videos {
     ul {
       margin: 0 auto;
-      max-width: $max-width;
+      // max-width: $max-width;
     }
     // li { @include column(2); }
   }

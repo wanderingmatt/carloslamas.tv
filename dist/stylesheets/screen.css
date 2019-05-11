@@ -46,7 +46,8 @@ body {
 a {
   color: inherit;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all .25s; }
   a:hover {
     color: #fff; }
 
@@ -57,12 +58,14 @@ h1 {
   font-weight: normal;
   line-height: 70px;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px #000; }
 
 h2 {
   color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
   position: absolute;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
   text-transform: lowercase;
   top: -25px; }
 
@@ -105,7 +108,8 @@ header {
       color: rgba(255, 255, 255, 0.3);
       font-weight: normal;
       line-height: 70px;
-      margin-right: 1.19%; }
+      margin-right: 1.19%;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.6); }
       header aside .about:hover {
         color: #aaa8d7; }
     header aside:before {
@@ -114,10 +118,13 @@ header {
 .ribbon {
   background: #4c489e;
   background: rgba(76, 72, 158, 0.9);
+  box-shadow: 0 0 5px #000, inset 0 0 1px rgba(255, 255, 255, 0.3);
   clear: both;
   text-align: left; }
   .ribbon span {
     display: block; }
+  .ribbon h3 {
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3); }
 
 .videos img {
   display: block;
@@ -125,7 +132,8 @@ header {
 
 #about {
   color: #cccbe7;
-  text-align: justify; }
+  text-align: justify;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3); }
 
 p, li {
   line-height: 20px; }
@@ -144,9 +152,11 @@ footer {
     border-top: 1px solid #336;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #336;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: none; }
   .commercial .ribbon {
-    border-top: 0; }
+    border-top: 0;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.8), inset 0 0 1px rgba(255, 255, 255, 0.3); }
   .videos ul {
     background: #fff; }
   .videos li {
@@ -156,6 +166,7 @@ footer {
       border: 0; }
   .videos .video {
     background: url("/images/select.png") 97% 50% no-repeat;
+    background-size: auto 30%;
     display: table;
     table-layout: fixed;
     white-space: nowrap;
@@ -167,6 +178,7 @@ footer {
     width: 30%; }
     .videos .thumbnail:after {
       bottom: 10px;
+      box-shadow: inset rgba(0, 0, 0, 0.15) 0 0 0 1px;
       content: " ";
       display: block;
       left: 10px;
@@ -205,6 +217,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   header {
+    box-sizing: padding-box;
     padding-left: 1.19%;
     padding-right: 1.19%;
     position: relative;
@@ -226,6 +239,7 @@ footer {
     .ribbon:first-child {
       margin-top: 0; }
     .ribbon span {
+      box-sizing: padding-box;
       margin: 0 auto;
       padding: 0 1.19%; }
     .ribbon h3 {
@@ -235,13 +249,17 @@ footer {
   .videos li {
     margin-bottom: 2.38% !important;
     position: relative; }
+    .videos li:hover aside {
+      opacity: 1; }
     .videos li:active aside {
       background-color: rgba(42, 40, 88, 0.9); }
   .videos .video {
     display: block;
-    position: relative; }
+    position: relative;
+    transition: all .25s; }
     .videos .video:after {
       bottom: 0;
+      box-shadow: inset rgba(255, 255, 255, 0.1) 0 0 0 1px;
       content: " ";
       display: block;
       left: 0;
@@ -249,18 +267,24 @@ footer {
       right: 0;
       top: 0;
       z-index: 10; }
+  .videos .thumbnail {
+    box-shadow: #000 0 1px 3px; }
   .videos aside {
     background-color: #4c489e;
     background-color: rgba(76, 72, 158, 0.9);
     background-image: url("/images/play.png");
     background-position: 50%;
     background-repeat: no-repeat;
+    background-size: auto 30%;
     bottom: 0;
     left: 0;
+    opacity: 0;
     padding-top: 120px;
     position: absolute;
     right: 0;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
     top: 0;
+    transition: all .25s;
     z-index: 100; }
   .videos hgroup {
     bottom: 15px;
@@ -284,14 +308,10 @@ footer {
     background: #f9f9f9;
     color: #444;
     text-shadow: none;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px; }
   .fancybox-opened {
     z-index: 1003; }
   .fancybox-opened .fancybox-outer {
-    -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
   .fancybox-inner {
     width: 100%;
@@ -410,8 +430,6 @@ footer {
     background: transparent;
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgba(0, 0, 0, 0.8);
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
     border-radius: 15px;
     text-shadow: 0 1px 2px #222;
     color: #FFF;
@@ -439,17 +457,23 @@ footer {
   .fancybox-close {
     background-image: url("/images/sprite-icons.png");
     height: 26px;
+    opacity: .6;
+    transition: all .25s;
     width: 26px; }
+    .fancybox-close:hover {
+      opacity: 1; }
   .fancybox-nav {
     height: 70px;
     margin-top: -33px;
     position: fixed;
     top: 50%;
+    transition: all .25s;
     width: 86px; }
     .fancybox-nav em {
       background-image: url("/images/sprite-icons.png");
       height: 42px;
       margin-top: -21px;
+      opacity: .6;
       position: absolute;
       top: 50%;
       width: 26px;
@@ -457,12 +481,17 @@ footer {
     .fancybox-nav hgroup {
       background-color: #4c489e;
       background-color: rgba(76, 72, 158, 0.9);
+      box-shadow: 0 1px rgba(0, 0, 0, 0.8);
+      opacity: 0;
       padding: 15px 30px;
       position: absolute;
+      transition: opacity .25s, background .25s;
       white-space: nowrap;
       z-index: 10; }
     .fancybox-nav:hover {
       width: auto; }
+      .fancybox-nav:hover em, .fancybox-nav:hover hgroup {
+        opacity: 1; }
     .fancybox-nav:active hgroup {
       background-color: rgba(42, 40, 88, 0.9); }
   .fancybox-prev {
@@ -489,6 +518,8 @@ footer {
       right: 0; }
   .fancybox-title {
     line-height: 16px; }
+    .fancybox-title hgroup {
+      text-shadow: 0 1px 3px #000; }
     .fancybox-title h6 {
       display: block; }
   #about {
@@ -497,7 +528,10 @@ footer {
   footer {
     padding: 2.38%; }
   .cover .fancybox-outer {
-    background: transparent; }
+    background: transparent;
+    box-shadow: none; }
+  .cover .fancybox-inner {
+    box-sizing: padding-box; }
   .cover h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 30px; }
@@ -511,15 +545,13 @@ footer {
     padding: 1px 3px; }
   .cover li a {
     color: #8885c7;
-    padding-left: 24px; }
+    padding-left: 24px;
+    transition: all .25s; }
     .cover li a:hover {
       color: #fff; }
   h1.raised {
     z-index: 1002; } }
 
 @media screen and (min-width: 1025px) {
-  header, .ribbon span {
-    max-width: 1600px; }
   .videos ul {
-    margin: 0 auto;
-    max-width: 1600px; } }
+    margin: 0 auto; } }

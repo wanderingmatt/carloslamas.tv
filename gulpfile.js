@@ -1,9 +1,10 @@
-const gulp        = require('gulp'),
+const gulp         = require('gulp'),
 
-      connect     = require('gulp-connect'),
-      del         = require('del'),
-      glob        = require('gulp-sass-glob'),
-      sass        = require('gulp-sass');
+      autoprefixer = require('gulp-autoprefixer');
+      connect      = require('gulp-connect'),
+      del          = require('del'),
+      glob         = require('gulp-sass-glob'),
+      sass         = require('gulp-sass');
 
 var paths = {
   stylesheets: {
@@ -32,8 +33,8 @@ function stylesheets() {
   return gulp
     .src(paths.stylesheets.src)
     .pipe(glob())
-    .pipe(sass())
-    .on('error', sass.logError)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(paths.stylesheets.dest))
     .pipe(connect.reload())
 };
