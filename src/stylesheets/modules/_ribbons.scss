@@ -1,6 +1,10 @@
 .ribbon {
   background: $purple;
   background: fade_out($purple, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+  border-top: 1px solid rgba(0, 0, 0, .3);
   box-shadow: 0 0 2px #000, inset 0 0 1px rgba(255, 255, 255, .15);
   padding: 23px 10px;
+  position: relative;
+  z-index: -1; // Hides box shadow beneath children.
 }

@@ -1,0 +1,45 @@
+.videos {
+  ul {
+    background: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    &:last-child { border: 0; }
+  }
+  .video {
+    // background: url("/images/select.png") 97% 50% no-repeat;
+    // background-size: auto 30%;
+    display: flex;
+    padding: 10px;
+  }
+  .thumbnail {
+    flex: 0 0 92px;
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+    &::after {
+      bottom: 0;
+      box-shadow: inset rgba(0, 0, 0, .15) 0 0 0 1px;
+      content: " ";
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  aside {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 10px;
+  }
+  h4, h5 { @include ellipsis; }
+}

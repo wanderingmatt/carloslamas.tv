@@ -19,23 +19,13 @@
 //   @include icons-sprite-position(phone, 0, 3px);
 // }
 
-
-
-.videos {
-  ul { overflow: hidden; }
-  img {
-    display: block;
-    width: 100%;
-  }
-}
-
 #about {
   color: lighten($purple, 40%);
   text-align: justify;
   text-shadow: 0 -1px rgba(0, 0, 0, .3);
 }
 
-p, li { line-height: 20px; }
+// p, li { line-height: 20px; }
 p { margin-bottom: 20px; }
 
 footer {
@@ -56,57 +46,7 @@ footer {
   //   border-top: 0;
   //   box-shadow: 0 -1px 3px rgba(0, 0 ,0, .8), inset 0 0 1px rgba(255, 255, 255, .3);
   // }
-  .videos {
-    ul { background: #fff; }
-    li {
-      border-bottom: 1px solid #d8d8d8;
-      border-bottom: 1px solid rgba(0, 0, 0, .15);
-      &:last-child { border: 0; }
-    }
-    .video {
-      background: url("/images/select.png") 97% 50% no-repeat;
-      background-size: auto 30%;
-      display: table;
-      table-layout: fixed;
-      white-space: nowrap;
-      width: 100%;
-    }
-    .thumbnail {
-      display: table-cell;
-      padding: 10px;
-      position: relative;
-      width: 30%;
-      &:after {
-        bottom: 10px;
-        box-shadow: inset rgba(0, 0, 0, .15) 0 0 0 1px;
-        content: " ";
-        display: block;
-        left: 10px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-    }
-    aside {
-      display: table-cell;
-      overflow: hidden;
-      padding: 10px 0;
-      text-align: left;
-      vertical-align: middle;
-      width: 70%;
-    }
-    hgroup { padding-right: 13%; }
-    h4, h5 {
-      // line-height: $default-line-height;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    h4 {
-      color: #333;
-      // font-size: $default-font-size;
-    }
-    h5 { color: #999; }
-  }
+
   #about {
     background: $purple;
     padding-bottom: 20px;

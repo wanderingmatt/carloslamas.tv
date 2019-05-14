@@ -1,0 +1,9 @@
+// Mixin for truncating a block of text. The element you are tuncating must be either a block or inline-block element.
+//
+// No styleguide reference.
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
