@@ -1,0 +1,6 @@
+.ribbon {
+  background: $purple;
+  background: fade_out($purple, .1);
+  box-shadow: 0 0 2px #000, inset 0 0 1px rgba(255, 255, 255, .15);
+  padding: 23px 10px;
+}

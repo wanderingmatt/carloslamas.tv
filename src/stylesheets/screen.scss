@@ -3,6 +3,7 @@
 
 @import 'framework/*';
 @import 'regions/*';
+@import 'modules/*';
 // @import "icons/*.png";
 
 // .twitter {
@@ -18,15 +19,7 @@
 //   @include icons-sprite-position(phone, 0, 3px);
 // }
 
-.ribbon {
-  background: $purple;
-  background: fade_out($purple, .1);
-  box-shadow: 0 0 5px #000, inset 0 0 1px rgba(255, 255, 255, .3);
-  clear: both;
-  text-align: left;
-  span { display: block; }
-  h3 { text-shadow: 0 -1px rgba(0, 0, 0, .3); }
-}
+
 
 .videos {
   ul { overflow: hidden; }
@@ -52,17 +45,17 @@ footer {
 
 @media screen and (max-width: 767px) {
   header li:not(:last-child) { display: none; }
-  .ribbon {
-    border-top: 1px solid #336;
-    border-top: 1px solid rgba(0, 0, 0, .3);
-    border-bottom: 1px solid #336;
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
-    box-shadow: none;
-  }
-  .commercial .ribbon {
-    border-top: 0;
-    box-shadow: 0 -1px 3px rgba(0, 0 ,0, .8), inset 0 0 1px rgba(255, 255, 255, .3);
-  }
+  // .ribbon {
+  //   border-top: 1px solid #336;
+  //   border-top: 1px solid rgba(0, 0, 0, .3);
+  //   border-bottom: 1px solid #336;
+  //   border-bottom: 1px solid rgba(0, 0, 0, .3);
+  //   box-shadow: none;
+  // }
+  // .commercial .ribbon {
+  //   border-top: 0;
+  //   box-shadow: 0 -1px 3px rgba(0, 0 ,0, .8), inset 0 0 1px rgba(255, 255, 255, .3);
+  // }
   .videos {
     ul { background: #fff; }
     li {
