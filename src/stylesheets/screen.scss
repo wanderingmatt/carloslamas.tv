@@ -17,7 +17,7 @@
 //   @include icons-sprite-position(phone, 0, 3px);
 // }
 
-html, body { background: #000; }
+html, body { background: #222; }
 
 body {
   background: url("/images/bg.png");
@@ -305,7 +305,7 @@ footer {
       right: 0;
     }
   }
-  @import "modules/jquery.fancybox";
+  // @import "modules/jquery.fancybox";
   .fancybox-close {
     position: fixed;
     top: 95px;
