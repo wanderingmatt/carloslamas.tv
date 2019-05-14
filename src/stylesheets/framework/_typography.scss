@@ -1,16 +1,20 @@
-$default-font-family: 'Helvetica Neue', Arial, sans-serif;
+$default-font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $default-font-size: 13px;
 $default-line-height: 16px;
 
-// @font-face {
-//     font-family: Univers LT Std';
-//     src: url('/fonts/universltstd-thinultracn-webfont.eot');
-//     src: url('/fonts/universltstd-thinultracn-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/fonts/universltstd-thinultracn-webfont.woff') format('woff'),
-//          url('/fonts/universltstd-thinultracn-webfont.ttf') format('truetype'),
-//          url('/fonts/universltstd-thinultracn-webfont.svg#UniversLTStd39ThinUltraCnRg') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
 $custom-font: 'Univers LT Std';
+
+body {
+  color: #444;
+  font: 14px/1 $default-font-family;
+}
+
+h1 {
+  color: #fff;
+  font-family: $custom-font, $default-font-family;
+  font-size: 70px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px #000;
+}

@@ -17,16 +17,11 @@
 //   @include icons-sprite-position(phone, 0, 3px);
 // }
 
-html, body { background: #222; }
-
 body {
-  background: url("/images/bg.png");
+  background: #222 url("/images/bg.png");
   color: #444;
-  font-family: $default-font-family;
-  font-size: $default-font-size;
-  line-height: $default-line-height;
-  text-align: center;
-  &.fixed { overflow: hidden; }
+  overflow: hidden;
+  // &.fixed { overflow: hidden; }
 }
 
 a {
@@ -37,16 +32,7 @@ a {
   &:hover { color: #fff; }
 }
 
-h1 {
-  color: #fff;
-  font-family: $custom-font, $default-font-family;
-  font-size: 70px;
-  font-weight: normal;
-  line-height: 70px;
-  position: relative;
-  text-transform: uppercase;
-  text-shadow: 0 1px 3px #000;
-}
+
 
 h2 {
   color: rgba(255, 255, 255, .3);
@@ -123,6 +109,7 @@ header {
 }
 
 .videos {
+  ul { overflow: hidden; }
   img {
     display: block;
     width: 100%;

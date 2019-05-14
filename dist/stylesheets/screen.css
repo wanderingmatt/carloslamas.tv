@@ -336,18 +336,23 @@ header {
     .videos ul:after {
       clear: both; } }
 
-html, body {
-  background: #222; }
+body {
+  color: #444;
+  font: 14px/1 system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h1 {
+  color: #fff;
+  font-family: "Univers LT Std", system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 70px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px #000; }
 
 body {
-  background: url("/images/bg.png");
+  background: #222 url("/images/bg.png");
   color: #444;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 16px;
-  text-align: center; }
-  body.fixed {
-    overflow: hidden; }
+  overflow: hidden; }
 
 a {
   color: inherit;
@@ -356,16 +361,6 @@ a {
   transition: all .25s; }
   a:hover {
     color: #fff; }
-
-h1 {
-  color: #fff;
-  font-family: "Univers LT Std", "Helvetica Neue", Arial, sans-serif;
-  font-size: 70px;
-  font-weight: normal;
-  line-height: 70px;
-  position: relative;
-  text-transform: uppercase;
-  text-shadow: 0 1px 3px #000; }
 
 h2 {
   color: rgba(255, 255, 255, 0.3);
@@ -408,7 +403,7 @@ header {
   header aside {
     color: rgba(255, 255, 255, 0.1);
     float: right;
-    font-family: "Univers LT Std", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Univers LT Std", system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 70px; }
     header aside .about {
       color: rgba(255, 255, 255, 0.3);
@@ -431,6 +426,9 @@ header {
     display: block; }
   .ribbon h3 {
     text-shadow: 0 -1px rgba(0, 0, 0, 0.3); }
+
+.videos ul {
+  overflow: hidden; }
 
 .videos img {
   display: block;
