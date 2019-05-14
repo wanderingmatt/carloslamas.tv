@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  padding: 70px 10px;
+  text-transform: uppercase;
+  hgroup { position: relative; }
+  h2 {
+    position: absolute;
+    top: -20px;
+  }
+  aside {
+    color: rgba(255, 255, 255, .15);
+    flex: auto;
+    font-family: $custom-font, $default-font-family;
+    font-size: 70px;
+    text-align: right;
+    &:before { content: '/ '; }
+  }
+}

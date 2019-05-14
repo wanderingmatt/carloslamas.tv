@@ -1,20 +1,65 @@
-$default-font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$default-font-size: 13px;
-$default-line-height: 16px;
-
 $custom-font: 'Univers LT Std';
+$default-font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 body {
   color: #444;
   font: 14px/1 $default-font-family;
 }
 
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1, h2 { font-weight: normal; }
+
 h1 {
   color: #fff;
   font-family: $custom-font, $default-font-family;
   font-size: 70px;
-  font-weight: normal;
-  margin: 0;
   text-transform: uppercase;
-  text-shadow: 0 1px 3px #000;
+  text-shadow: 0 1px 2px #000;
+}
+
+h2 {
+  color: rgba(255, 255, 255, .3);
+  font-size: 16px;
+  text-shadow: 0 -1px rgba(0, 0, 0, .3);
+  text-transform: lowercase;
+}
+
+h3 {
+  color: #fff;
+  line-height: 30px;
+  padding: 15px 10px;
+}
+
+// h4 {
+//   color: #fff;
+//   font-size: 15px;
+//   font-weight: bold;
+//   line-height: 25px;
+// }
+
+// h5 {
+//   color: lighten($purple, 30%);
+//   font-weight: normal;
+//   line-height: 16px;
+// }
+
+// h6 {
+//   color: rgba(255, 255, 255, .5);
+//   display: none;
+//   line-height: 20px;
+// }
+
+.info {
+  color: rgba(255, 255, 255, .3);
+  font-weight: normal;
+  text-shadow: 0 -1px rgba(0, 0, 0, .3);
+  &:hover { color: lighten($purple, 30%); }
+}
+
+a {
+  // color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .25s;
+  &:hover { color: #fff; }
 }

@@ -319,14 +319,6 @@ body {
   body:after {
     clear: both; }
 
-header {
-  *zoom: 1; }
-  header:before, header:after {
-    content: "";
-    display: table; }
-  header:after {
-    clear: both; }
-
 @media (min-width: 768px) {
   .videos ul {
     *zoom: 1; }
@@ -340,81 +332,65 @@ body {
   color: #444;
   font: 14px/1 system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+h1, h2 {
+  font-weight: normal; }
+
 h1 {
   color: #fff;
   font-family: "Univers LT Std", system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 70px;
-  font-weight: normal;
-  margin: 0;
   text-transform: uppercase;
-  text-shadow: 0 1px 3px #000; }
+  text-shadow: 0 1px 2px #000; }
 
-body {
-  background: #222 url("/images/bg.png");
-  color: #444;
-  overflow: hidden; }
+h2 {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  text-transform: lowercase; }
+
+h3 {
+  color: #fff;
+  line-height: 30px;
+  padding: 15px 10px; }
+
+.info {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: normal;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3); }
+  .info:hover {
+    color: #aaa8d7; }
 
 a {
-  color: inherit;
   font-weight: bold;
   text-decoration: none;
   transition: all .25s; }
   a:hover {
     color: #fff; }
 
-h2 {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 16px;
-  position: absolute;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.6);
-  text-transform: lowercase;
-  top: -25px; }
-
-h3 {
-  color: #fff;
-  font-weight: bold;
-  line-height: 30px;
-  padding: 15px 10px; }
-
-h4 {
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 25px; }
-
-h5 {
-  color: #aaa8d7;
-  font-weight: normal;
-  line-height: 16px; }
-
-h6 {
-  color: rgba(255, 255, 255, 0.5);
-  display: none;
-  line-height: 20px; }
-
 header {
-  padding: 80px 10px 60px 10px;
-  position: relative;
-  text-align: left;
+  display: flex;
+  padding: 70px 10px;
   text-transform: uppercase; }
   header hgroup {
-    float: left;
     position: relative; }
+  header h2 {
+    position: absolute;
+    top: -20px; }
   header aside {
-    color: rgba(255, 255, 255, 0.1);
-    float: right;
+    color: rgba(255, 255, 255, 0.15);
+    flex: auto;
     font-family: "Univers LT Std", system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 70px; }
-    header aside .about {
-      color: rgba(255, 255, 255, 0.3);
-      font-weight: normal;
-      line-height: 70px;
-      margin-right: 1.19%;
-      text-shadow: 0 -1px rgba(0, 0, 0, 0.6); }
-      header aside .about:hover {
-        color: #aaa8d7; }
+    font-size: 70px;
+    text-align: right; }
     header aside:before {
       content: '/ '; }
+
+body {
+  background: #222 url("/images/bg.png");
+  color: #444; }
 
 .ribbon {
   background: #4c489e;
@@ -499,12 +475,10 @@ footer {
   .videos hgroup {
     padding-right: 13%; }
   .videos h4, .videos h5 {
-    line-height: 16px;
     overflow: hidden;
     text-overflow: ellipsis; }
   .videos h4 {
-    color: #333;
-    font-size: 13px; }
+    color: #333; }
   .videos h5 {
     color: #999; }
   #about {
@@ -661,12 +635,10 @@ footer {
       right: -500px; }
     .fancybox-next:hover hgroup {
       right: 0; }
-  .fancybox-title {
-    line-height: 16px; }
-    .fancybox-title hgroup {
-      text-shadow: 0 1px 3px #000; }
-    .fancybox-title h6 {
-      display: block; }
+  .fancybox-title hgroup {
+    text-shadow: 0 1px 3px #000; }
+  .fancybox-title h6 {
+    display: block; }
   #about {
     display: none;
     padding: 0 1.19%; }
