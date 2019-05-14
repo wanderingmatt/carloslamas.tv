@@ -9,10 +9,6 @@
 %visible { visibility: visible; }
 %clearfix { @include clearfix; }
 
-@include breakpoint($breakpoint-mobile) {
-  %clearfix-mobile { @include clearfix; }
-}
-
 @include breakpoint($breakpoint-tablet) {
   %clearfix-tablet { @include clearfix; }
 }

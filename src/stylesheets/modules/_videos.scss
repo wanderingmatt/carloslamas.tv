@@ -42,4 +42,5 @@
     padding: 0 10px;
   }
   h4, h5 { @include ellipsis; }
+  h6 { @extend %hidden; }
 }
