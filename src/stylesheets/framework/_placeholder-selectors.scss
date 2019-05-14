@@ -1,0 +1,18 @@
+// Shared placeholder selectors used throughout the product and included at the top of the payload.
+//
+// No styleguide reference.
+
+%hidden { display: none; }
+%shown { display: inline; }
+%inherited { display: inherit; }
+%invisible { visibility: hidden; }
+%visible { visibility: visible; }
+%clearfix { @include clearfix; }
+
+@include breakpoint($breakpoint-mobile) {
+  %clearfix-mobile { @include clearfix; }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  %clearfix-tablet { @include clearfix; }
+}

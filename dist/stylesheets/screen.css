@@ -320,22 +320,6 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  width: 100%;
-  *zoom: 1; }
-  body:before, body:after {
-    content: "";
-    display: table; }
-  body:after {
-    clear: both; }
-
-@font-face {
-  font-family: 'UniversLTStd39ThinUltraCnRg';
-  src: url("/fonts/universltstd-thinultracn-webfont.eot");
-  src: url("/fonts/universltstd-thinultracn-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/universltstd-thinultracn-webfont.woff") format("woff"), url("/fonts/universltstd-thinultracn-webfont.ttf") format("truetype"), url("/fonts/universltstd-thinultracn-webfont.svg#UniversLTStd39ThinUltraCnRg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 html, body {
   background: #000; }
 

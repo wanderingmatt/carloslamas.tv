@@ -84,7 +84,7 @@ h6 {
 }
 
 header {
-  // @include clearfix;
+  @extend %clearfix;
   padding: 80px 10px 60px 10px;
   position: relative;
   text-align: left;
@@ -217,7 +217,7 @@ footer {
   footer { padding: 20px 10px; }
 }
 
-@media screen and (min-width: 768px) {
+@include breakpoint($breakpoint-tablet) {
   header {
     box-sizing: padding-box;
     padding-left: 1.19%;
@@ -249,7 +249,7 @@ footer {
   }
   .videos {
     ul {
-      // @include clearfix;
+      @extend %clearfix-tablet;
       padding: 0 1.19%;
     }
     li {
