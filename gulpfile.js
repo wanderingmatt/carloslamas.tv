@@ -18,6 +18,10 @@ var paths = {
   stylesheets: {
     src: './src/stylesheets/**/*.scss',
     dest: './dist/stylesheets'
+  },
+  javascripts: {
+    src: './src/javascripts/scripts.js',
+    dest: './dist/javascripts'
   }
 };
 
@@ -37,6 +41,7 @@ function watch(done) {
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
+  gulp.watch(paths.javascripts.src, javascripts);
   done();
 };
 
@@ -64,7 +69,14 @@ function stylesheets() {
     .pipe(connect.reload())
 };
 
-const build = gulp.series(clean, gulp.parallel(html, images, stylesheets));
+function javascripts() {
+  return gulp
+    .src(paths.javascripts.src)
+    .pipe(gulp.dest(paths.javascripts.dest))
+    .pipe(connect.reload())
+};
+
+const build = gulp.series(clean, gulp.parallel(html, images, stylesheets, javascripts));
 
 exports.build = build;
 exports.clean = clean;
