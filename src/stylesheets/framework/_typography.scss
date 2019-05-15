@@ -54,10 +54,11 @@ h5 {
   &:hover { color: lighten($purple, 30%); }
 }
 
+p { line-height: 1.5; }
+
 a {
-  // color: inherit;
+  color: inherit;
   font-weight: bold;
-  text-decoration: none;
   transition: all .25s;
   &:hover { color: #fff; }
 }
