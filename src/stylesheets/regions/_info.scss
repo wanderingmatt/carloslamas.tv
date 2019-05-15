@@ -6,4 +6,8 @@
   // .ribbon { border-bottom: 0; }
   // p, li { padding: 0 10px 0 10px; }
   // .contact a { padding-left: 24px; }
+
+  @include breakpoint($breakpoint-tablet) {
+    padding: 40px;
+  }
 }
