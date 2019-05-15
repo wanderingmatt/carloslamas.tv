@@ -47,13 +47,6 @@ h5 {
 //   line-height: 20px;
 // }
 
-.info {
-  color: rgba(255, 255, 255, .3);
-  font-weight: normal;
-  text-shadow: 0 -1px rgba(0, 0, 0, .3);
-  &:hover { color: lighten($purple, 30%); }
-}
-
 p { line-height: 1.5; }
 
 a {
