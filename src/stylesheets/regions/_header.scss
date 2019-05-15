@@ -1,5 +1,8 @@
 header {
+  box-sizing: border-box;
   display: flex;
+  margin: 0 auto;
+  max-width: 1680px;
   padding: 60px 10px;
   text-transform: uppercase;
   hgroup { position: relative; }
@@ -24,4 +27,5 @@ header {
 
   @include breakpoint($breakpoint-tablet) { padding: 80px 40px; }
   @include breakpoint($breakpoint-desktop) { padding: 100px 60px; }
+  @include breakpoint($breakpoint-widescreen) { padding: 120px 60px; }
 }

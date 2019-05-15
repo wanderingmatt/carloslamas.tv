@@ -60,9 +60,14 @@ a {
   body { font-size: 16px;}
 }
 
-@include breakpoint($breakpoint-tablet) {
+@include breakpoint($breakpoint-desktop) {
   body { font-size: 18px; }
   h1, .info-text { font-size: 100px; }
   h2 { font-size: inherit; }
   h3 { font-size: inherit; }
+}
+
+@include breakpoint($breakpoint-widescreen) {
+  body { font-size: 20px; }
+  h1, .info-text { font-size: 120px; }
 }
