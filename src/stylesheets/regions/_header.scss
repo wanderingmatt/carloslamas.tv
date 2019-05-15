@@ -7,11 +7,10 @@ header {
     position: absolute;
     top: -20px;
   }
-  aside {
+  .info-text {
     color: rgba(255, 255, 255, .15);
     flex: auto;
     font-family: $custom-font, $default-font-family;
-    font-size: 70px;
     text-align: right;
     &:before { content: '/ '; }
   }
@@ -23,7 +22,6 @@ header {
     &:hover { color: lighten($purple, 30%); }
   }
 
-  @include breakpoint($breakpoint-tablet) {
-    padding: 80px 40px;
-  }
+  @include breakpoint($breakpoint-tablet) { padding: 80px 40px; }
+  @include breakpoint($breakpoint-desktop) { padding: 100px 60px; }
 }

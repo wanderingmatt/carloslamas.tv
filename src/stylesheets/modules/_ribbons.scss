@@ -9,6 +9,9 @@
   z-index: -1; // Hides box shadow beneath children.
 
   @include breakpoint($breakpoint-tablet) {
+    border: 0;
     padding: 26px 40px;
   }
+
+  @include breakpoint($breakpoint-desktop) { padding: 26px 60px; }
 }

@@ -9,7 +9,7 @@ body {
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 h1, h2, h5 { font-weight: normal; }
 
-h1 {
+h1, .info-text {
   color: #fff;
   font-family: $custom-font, $default-font-family;
   font-size: 70px;
@@ -57,8 +57,12 @@ a {
 }
 
 @include breakpoint($breakpoint-tablet) {
-  h3 {
-    font-size: 16px;
-  }
+  body { font-size: 16px;}
 }
 
+@include breakpoint($breakpoint-tablet) {
+  body { font-size: 18px; }
+  h1, .info-text { font-size: 100px; }
+  h2 { font-size: inherit; }
+  h3 { font-size: inherit; }
+}

@@ -105,4 +105,12 @@
       right: 0;
     }
   }
+
+  @include breakpoint($breakpoint-desktop) {
+    ul {
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 60px;
+    }
+  }
 }

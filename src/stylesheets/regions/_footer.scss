@@ -3,7 +3,6 @@ footer {
   overflow: auto;
   padding: 5px 10px;
 
-  @include breakpoint($breakpoint-tablet) {
-    padding: 20px 40px;
-  }
+  @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
+  @include breakpoint($breakpoint-tablet) { padding: 30px 60px; }
 }
