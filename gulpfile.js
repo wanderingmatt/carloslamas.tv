@@ -5,6 +5,7 @@ const gulp         = require('gulp'),
       connect      = require('gulp-connect'),
       del          = require('del'),
       glob         = require('gulp-sass-glob'),
+      merge        = require('merge-stream'),
       partials     = require('gulp-html-partial');
       sass         = require('gulp-sass');
 
@@ -23,8 +24,15 @@ var paths = {
     src: './src/stylesheets/**/*.scss',
     dest: './dist/stylesheets'
   },
+  fancybox: {
+    src: './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+  },
   javascripts: {
-    src: ['./node_modules/jquery/dist/jquery.js', './src/javascripts/scripts.js'],
+    src: [
+      './node_modules/jquery/dist/jquery.js',
+      './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+      './src/javascripts/scripts.js'
+    ],
     dest: './dist/javascripts'
   }
 };
@@ -67,14 +75,28 @@ function images() {
 };
 
 function stylesheets() {
-  return gulp
+  var parsedStream = gulp
     .src(paths.stylesheets.src)
     .pipe(glob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
+  ;
+
+  var unparsedStream = gulp
+    .src(paths.fancybox.src)
+  ;
+
+  var mergedStream = merge(parsedStream, unparsedStream)
+    .pipe(concat('styles.css'))
     .pipe(gulp.dest(paths.stylesheets.dest))
     .pipe(connect.reload())
+  ;
+
+  return mergedStream;
 };
+
+      // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+
 
 function javascripts() {
   return gulp

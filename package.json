@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/WanderingMatt/carloslamas.tv#readme",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "breakpoint-sass": "^2.7.1",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
@@ -27,6 +28,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
     "jquery": "^3.4.1",
+    "merge-stream": "^1.0.1",
     "normalize.css": "^8.0.1"
   }
 }
