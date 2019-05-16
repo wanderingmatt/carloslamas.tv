@@ -55,21 +55,40 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 40px;
     }
-    li {
-      position: relative;
-      &:hover {
-        aside { opacity: 1; }
-      }
-      &:active {
-        aside { background-color: darken(fade_out($purple, .1), 20%); }
-      }
-    }
+    // li {
+    //   position: relative;
+    //   &:hover {
+    //     aside { opacity: 1; }
+    //   }
+    //   &:active {
+    //     aside { background-color: darken(fade_out($purple, .1), 20%); }
+    //   }
+    // }
     .video {
       display: block;
       padding: 0;
       position: relative;
       transition: all .25s;
-      &:after {
+      .thumbnail { box-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
+      aside {
+        background: linear-gradient(to bottom, fade_out($purple, .5), $purple);
+        // background-image: url('/images/play.png');
+        // background-position: 50%;
+        // background-repeat: no-repeat;
+        // background-size: auto 30%;
+        bottom: 0;
+        justify-content: flex-end;
+        left: 0;
+        // opacity: 0;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        transition: all .25s;
+        z-index: 100;
+      }
+      &::after {
         bottom: 0;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
         content: " ";
@@ -80,31 +99,6 @@
         top: 0;
         z-index: 10;
       }
-    }
-    .thumbnail { box-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
-    aside {
-      background-color: $purple;
-      background-color: fade_out($purple, .1);
-      background-image: url('/images/play.png');
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-size: auto 30%;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      padding-top: 120px;
-      position: absolute;
-      right: 0;
-      text-shadow: 0 -1px rgba(0, 0, 0, .3);
-      top: 0;
-      transition: all .25s;
-      z-index: 100;
-    }
-    hgroup {
-      bottom: 15px;
-      left: 0;
-      position: absolute;
-      right: 0;
     }
   }
 

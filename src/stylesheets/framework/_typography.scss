@@ -58,7 +58,18 @@ a {
 }
 
 @include breakpoint($breakpoint-tablet) {
-  body { font-size: 16px;}
+  body { font-size: 16px; }
+  h4 {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    text-shadow: 0 -1px rgba(0, 0, 0, .3);
+  }
+  h5 {
+    color: lighten($purple, 30%);
+    font-size: 14px;
+    text-shadow: 0 -1px rgba(0, 0, 0, .3);
+  }
 }
 
 @include breakpoint($breakpoint-desktop) {
@@ -72,4 +83,5 @@ a {
   }
   h2 { font-size: inherit; }
   h3 { font-size: inherit; }
+  h4 { font-size: 16px; }
 }
