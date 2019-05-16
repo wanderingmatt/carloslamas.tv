@@ -1,6 +1,7 @@
 const gulp         = require('gulp'),
 
       autoprefixer = require('gulp-autoprefixer');
+      concat       = require('gulp-concat');
       connect      = require('gulp-connect'),
       del          = require('del'),
       glob         = require('gulp-sass-glob'),
@@ -23,7 +24,7 @@ var paths = {
     dest: './dist/stylesheets'
   },
   javascripts: {
-    src: './src/javascripts/scripts.js',
+    src: ['./node_modules/jquery/dist/jquery.js', './src/javascripts/scripts.js'],
     dest: './dist/javascripts'
   }
 };
@@ -78,6 +79,7 @@ function stylesheets() {
 function javascripts() {
   return gulp
     .src(paths.javascripts.src)
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest(paths.javascripts.dest))
     .pipe(connect.reload())
 };
