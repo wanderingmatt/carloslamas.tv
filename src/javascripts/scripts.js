@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $('[data-fancybox]').fancybox({
     animationEffect: "fade",
-    caption : function(instance, item) {
+    caption: function(instance, item) {
       return $(this).find('aside').html();
     },
     infobar: false,
