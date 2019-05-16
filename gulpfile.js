@@ -4,11 +4,14 @@ const gulp         = require('gulp'),
       connect      = require('gulp-connect'),
       del          = require('del'),
       glob         = require('gulp-sass-glob'),
+      partials     = require('gulp-inject-partials'),
       sass         = require('gulp-sass');
 
 var paths = {
   html: {
     src: './src/**/*.html',
+    partials: 'partials/',
+    partialsExclude: '!src/partials/*',
     dest: './dist'
   },
   images: {
@@ -47,7 +50,16 @@ function watch(done) {
 
 function html() {
   return gulp
-    .src(paths.html.src)
+    .src([
+      paths.html.src,
+      paths.html.partialsExclude
+    ])
+    .pipe(partials({
+      end: '</@>',
+      prefix: paths.html.partials,
+      removeTags: true,
+      start: '<@partial {{path}}>'
+    }))
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 };
