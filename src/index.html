@@ -1,17 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <@ partial _meta.html></@>
+  <@partial _meta.html></@>
 </head>
 <body>
   <div class="wrapper">
-    <header itemscope itemtype="http://schema.org/Person">
-      <hgroup>
-        <h1 itemprop="name">Carlos Lamas</h1>
-        <h2 itemprop="jobTitle">Editor</h2>
-      </hgroup>
-      <aside class="info-text"><a href="#info" class="info">Info</a></aside>
-    </header>
+    <@partial _header.html></@>
     <section class="commercial videos">
       <div class="ribbon"><h3>Commercial</h3></div>
       <ul>
@@ -231,24 +225,7 @@
         </li>
       </ul>
     </section>
-    <section id="info">
-      <article class="bio">
-        <h3>Bio</h3>
-        <p>Carlos Lamas is a freelance video editor from Minneapolis, working in post-production since 2005.</p>
-        <p>He has edited television spots for national brands including Target, Kmart, Capital One, and Best Buy. He has also edited several music videos, and has had his work featured on MTVU, Pitchfork, and Kanye West's blog.</p>
-        <p>Carlos is a ridiculously dedicated fan of the Minnesota Timberwolves, and once co-hosted a podcast about the team.
-        <p>Carlos was raised bi-lingual, and loves to edit <a href="/spanish">in Spanish</a>.</p>
-        <p>You can book Carlos directly, by emailing <a href="mailtp:carlos@carloslamas.tv">carlos@carloslamas.tv</a>.
-      </article>
-      <article class="contact">
-        <h3>Contact</h3>
-        <ul>
-          <li><%= link_to 'losdelfuego', 'https://twitter.com/#!/losdelfuego', :class => 'twitter' %></li>
-          <li><%= link_to 'carlos@carloslamas.tv', 'mailto:carlos@carloslamas.tv', :class => 'email' %></li>
-          <li><%= link_to '(612) 424-5143', 'tel:1-612-424-5143', :class => 'phone' %></li>
-        </ul>
-      </article>
-    </section>
+    <@partial _info.html></@>
     <footer>
       <p>&copy; Copyright <span id="js-current-year"></span> Carlos Lamas &bull; <a href="spanish">en Español</a> &bull; Designed with love by <a href="http://matthew-anderson.com">Matthew Anderson</a></p>
     </footer>

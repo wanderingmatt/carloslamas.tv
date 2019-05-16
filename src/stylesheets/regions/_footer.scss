@@ -6,14 +6,8 @@ footer {
   @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
 
   @include breakpoint($breakpoint-desktop) {
-    padding: 30px 60px;
+    padding: 23px 60px;
     text-align: center;
-  }
-
-  @include breakpoint($breakpoint-widescreen) {
-    p {
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
+    p { line-height: 1; }
   }
 }

@@ -4,6 +4,7 @@ $default-font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue
 body {
   color: #666;
   font: 14px/1 $default-font-family;
+  text-rendering: optimizeSpeed;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -61,13 +62,14 @@ a {
 }
 
 @include breakpoint($breakpoint-desktop) {
-  body { font-size: 18px; }
-  h1, .info-text { font-size: 100px; }
+  body {
+    font-size: 18px;
+    text-rendering: auto;
+  }
+  h1, .info-text {
+    font-size: 100px;
+    text-rendering: geometricPrecision;
+  }
   h2 { font-size: inherit; }
   h3 { font-size: inherit; }
-}
-
-@include breakpoint($breakpoint-widescreen) {
-  body { font-size: 20px; }
-  h1, .info-text { font-size: 120px; }
 }
