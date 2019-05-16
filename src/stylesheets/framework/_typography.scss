@@ -53,12 +53,14 @@ a {
 
 @include breakpoint($breakpoint-tablet) {
   body { font-size: 16px; }
+
   h4 {
     color: #fff;
     font-size: 14px;
     line-height: 1.5;
     text-shadow: 0 -1px rgba(0, 0, 0, .3);
   }
+
   h5 {
     color: lighten($purple, 30%);
     font-size: 14px;
@@ -71,6 +73,7 @@ a {
     font-size: 18px;
     text-rendering: auto;
   }
+
   h1, .info-text { text-rendering: geometricPrecision; }
   h1 { font-size: 100px; }
   h2 { font-size: inherit; }

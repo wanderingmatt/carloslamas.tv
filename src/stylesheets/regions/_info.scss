@@ -1,9 +1,18 @@
 #info {
   background: $purple;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, .15);
   color: lighten($purple, 40%);
   padding: 20px 10px;
   text-shadow: 0 -1px rgba(0, 0, 0, .3);
 
-  @include breakpoint($breakpoint-tablet) { padding: 40px; }
+  @include breakpoint($breakpoint-mobile-only) {
+    border-top: 1px solid rgba(0, 0, 0, .3);
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .6), inset 0 0 1px rgba(255, 255, 255, .15);
+    padding: 40px;
+  }
+
   @include breakpoint($breakpoint-desktop) { padding: 60px; }
 }
