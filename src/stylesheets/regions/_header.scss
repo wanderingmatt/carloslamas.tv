@@ -6,7 +6,7 @@ header {
   max-width: 1680px;
   padding: 60px 10px;
   text-transform: uppercase;
-  hgroup { position: relative; }
+  .name-and-title { position: relative; }
   h2 {
     position: absolute;
     top: -20px;
@@ -17,13 +17,13 @@ header {
     font-family: $custom-font, $default-font-family;
     text-align: right;
     &:before { content: '/ '; }
-  }
-  .info {
-    color: rgba(255, 255, 255, .3);
-    font-weight: normal;
-    text-decoration: none;
-    text-shadow: 0 -1px rgba(0, 0, 0, .3);
-    &:hover { color: lighten($purple, 30%); }
+    a {
+      color: rgba(255, 255, 255, .3);
+      font-weight: normal;
+      text-decoration: none;
+      text-shadow: 0 -1px rgba(0, 0, 0, .3);
+      &:hover { color: lighten($purple, 30%); }
+    }
   }
 
   @include breakpoint($breakpoint-tablet) { padding: 80px 40px; }
