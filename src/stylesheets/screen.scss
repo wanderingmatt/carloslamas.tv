@@ -139,17 +139,3 @@
   }
   h1.raised { z-index: 1002; }
 }
-
-@media screen and (min-width: 1025px) {
-  // header, .ribbon span { max-width: $max-width; }
-  .videos {
-    ul {
-      margin: 0 auto;
-      // max-width: $max-width;
-    }
-    // li { @include column(2); }
-  }
-  .cover {
-    // article { @include column(2); }
-  }
-}

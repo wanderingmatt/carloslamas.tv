@@ -48,7 +48,7 @@ h5 {
 //   line-height: 20px;
 // }
 
-p { line-height: 1.5; }
+p, li { line-height: 1.5; }
 
 a {
   color: inherit;
@@ -77,10 +77,8 @@ a {
     font-size: 18px;
     text-rendering: auto;
   }
-  h1, .info-text {
-    font-size: 100px;
-    text-rendering: geometricPrecision;
-  }
+  h1, .info-text { text-rendering: geometricPrecision; }
+  h1 { font-size: 100px; }
   h2 { font-size: inherit; }
   h3 { font-size: inherit; }
   h4 { font-size: 16px; }

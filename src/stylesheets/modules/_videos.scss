@@ -78,7 +78,7 @@
         bottom: 0;
         justify-content: flex-end;
         left: 0;
-        // opacity: 0;
+        opacity: 0;
         padding: 15px;
         position: absolute;
         right: 0;
@@ -91,7 +91,7 @@
         }
       }
       &::after {
-        background-image: linear-gradient(to bottom, fade_out($purple, .5), $purple);
+        // background-image: linear-gradient(to bottom, fade_out($purple, .5), $purple);
         bottom: 0;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
         content: " ";
