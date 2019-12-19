@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rack', '~> 1.6.11'
+gem 'rack', '~> 1.6.12'
 
 gem 'serve', '1.5.1'
 
