@@ -79,4 +79,11 @@ a {
   h2 { font-size: inherit; }
   h3 { font-size: inherit; }
   h4 { font-size: 16px; }
+
+  a {
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
 }
