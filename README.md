@@ -1,4 +1,4 @@
-# carlos-lama.tv
+# carlos-lamas.tv
 
 Portfolio site for video editor Carlos Lamas.
 
@@ -8,15 +8,15 @@ The site is compiled and deployed via Gulp functions. You will need [Homebrew](h
 
 #### Install Homebrew
 
-`$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+`$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 #### Install Node via Homebrew
 
 `$ brew install node`
 
-#### Install Gulp Globally
+#### Install Gulp
 
-`$ npm install -g gulp`
+`$ npm install gulp`
 
 #### Install Remaining Development Dependencies
 
