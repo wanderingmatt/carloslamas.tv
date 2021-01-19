@@ -1,19 +1,21 @@
-const gulp         = require('gulp'),
+const gulp             = require('gulp'),
 
-      autoprefixer = require('gulp-autoprefixer');
-      concat       = require('gulp-concat');
-      connect      = require('gulp-connect'),
-      del          = require('del'),
-      glob         = require('gulp-sass-glob'),
-      merge        = require('merge-stream'),
-      partials     = require('gulp-html-partial');
-      sass         = require('gulp-sass');
+      autoprefixer     = require('gulp-autoprefixer'),
+      cache            = require('gulp-cache'),
+      concat           = require('gulp-concat'),
+      connect          = require('gulp-connect'),
+      del              = require('del'),
+      ghPages          = require('gulp-gh-pages'),
+      imagemin         = require('gulp-imagemin'),
+      imageminPngquant = require('imagemin-pngquant'),
+      merge            = require('merge-stream'),
+      partials         = require('gulp-html-partial');
+      sassGlob         = require('gulp-sass-glob'),
+      sass             = require('gulp-sass');
 
 var paths = {
   html: {
-    src: './src/**/*.html',
-    partials: './src/partials/',
-    excludePartials: '!src/partials/*',
+    src: ['./src/**/*.html', '!./src/partials/*'],
     dest: './dist'
   },
   images: {
@@ -27,15 +29,23 @@ var paths = {
   fancybox: {
     src: './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
   },
-  javascripts: {
-    src: [
-      './node_modules/jquery/dist/jquery.js',
-      './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-      './src/javascripts/scripts.js'
-    ],
-    dest: './dist/javascripts'
-  }
+  // javascripts: {
+  //   src: [
+  //     './node_modules/jquery/dist/jquery.js',
+  //     './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+  //     './src/javascripts/scripts.js'
+  //   ],
+  //   dest: './dist/javascripts'
+  // }
 };
+
+function clean() {
+  return del(['./dist/**/*', '!./dist/CNAME']);
+}
+
+function clear() { // Busts the image cache, if necessary.
+  return cache.clearAll();
+}
 
 function serve(done) {
   connect.server({
@@ -45,23 +55,19 @@ function serve(done) {
   done();
 };
 
-function clean() {
-  return del(['./dist']);
-}
-
 function watch(done) {
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
-  gulp.watch(paths.javascripts.src, javascripts);
+  // gulp.watch(paths.javascripts.src, javascripts);
   done();
 };
 
 function html() {
   return gulp
-    .src([paths.html.src, paths.html.excludePartials])
+    .src(paths.html.src)
     .pipe(partials({
-      basePath: paths.html.partials
+      basePath: 'src/partials/'
     }))
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
@@ -70,6 +76,17 @@ function html() {
 function images() {
   return gulp
     .src(paths.images.src)
+    .pipe(cache(imagemin([
+      imageminPngquant({
+        speed: 1,
+        quality: [0.7, 0.95]
+      }),
+      imagemin.svgo({
+        plugins: [{
+          removeViewBox: false
+        }]
+      }),
+    ])))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 };
@@ -77,7 +94,7 @@ function images() {
 function stylesheets() {
   var parsedStream = gulp
     .src(paths.stylesheets.src)
-    .pipe(glob())
+    .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
   ;
@@ -95,21 +112,43 @@ function stylesheets() {
   return mergedStream;
 };
 
-      // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+// function javascripts() {
+//   return gulp
+//     .src(paths.javascripts.src)
+//     .pipe(concat('scripts.js'))
+//     .pipe(gulp.dest(paths.javascripts.dest))
+//     .pipe(connect.reload())
+// };
 
-
-function javascripts() {
+function deploy() {
   return gulp
-    .src(paths.javascripts.src)
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(paths.javascripts.dest))
-    .pipe(connect.reload())
+    .src('./dist/**/*')
+    .pipe(ghPages())
 };
 
-const build = gulp.series(clean, gulp.parallel(html, images, stylesheets, javascripts));
+exports.clean = clean;
+exports.clear = clear;
+
+exports.html = html;
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    html,
+    images,
+    stylesheets
+  )
+);
 
 exports.build = build;
-exports.clean = clean;
-exports.serve = serve
 
-exports.default = gulp.series(build, serve, watch);
+exports.deploy = gulp.series(
+  build,
+  deploy
+);
+
+exports.default = gulp.series(
+  build,
+  serve,
+  watch
+);
