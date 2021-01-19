@@ -34,5 +34,9 @@
     "imagemin-pngquant": "^9.0.1",
     "merge-stream": "^2.0.0",
     "normalize.css": "^8.0.1"
+  },
+  "dependencies": {
+    "braces": "^3.0.2",
+    "jquery": "^3.5.1"
   }
 }
