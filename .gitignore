@@ -1,9 +1,0 @@
-.DS_Store
-.sass-cache
-coverage
-rdoc
-pkg
-*.gem
-.rvmrc
-.bundle
-*.sublime-workspace
