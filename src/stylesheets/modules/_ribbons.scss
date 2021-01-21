@@ -1,22 +1,18 @@
 .ribbon {
+  backdrop-filter: blur(14px);
   background: $purple;
   background: fade_out($purple, .1);
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
-  border-top: 1px solid rgba(0, 0, 0, .3);
-  box-sizing: border-box;
-  margin: 0 auto;
+  // box-sizing: border-box;
+  // margin: 0 auto;
   max-width: $breakpoint-widescreen;
-  padding: 22px 10px;
-  position: relative;
-  z-index: -1; // Hides box shadow beneath children.
-
-  @include breakpoint($breakpoint-legacy) {
-    .commercial & { border-top: 0; }
-  }
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  @include z-index(default);
+  .commercial & { border-top-color: rgba(0, 0, 0, .5); }
 
   @include breakpoint($breakpoint-tablet) {
     border: 0;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .6), inset 0 0 1px rgba(255, 255, 255, .15);
     padding: 26px 40px;
   }
 
