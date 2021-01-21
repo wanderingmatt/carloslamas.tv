@@ -1,10 +1,14 @@
-$custom-font: 'Univers LT Std';
-$default-font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$default-font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$custom-font: 'Univers LT Std', $default-font-family;
+
+html, body { font-size: 14px; }
 
 body {
   color: #666;
-  font: 14px/1 $default-font-family;
+  font-family: $default-font-family;
+  line-height: 1.5;
   text-rendering: optimizeSpeed;
+  text-size-adjust: none;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -12,7 +16,7 @@ h1, h2, h5 { font-weight: normal; }
 
 h1, .info-text {
   color: #fff;
-  font-family: $custom-font, $default-font-family;
+  font-family: $custom-font;
   font-size: 70px;
   text-transform: uppercase;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -52,7 +56,7 @@ a {
 }
 
 @include breakpoint($breakpoint-tablet) {
-  body { font-size: 16px; }
+  html, body { font-size: 16px; }
 
   h4 {
     color: #fff;
@@ -69,11 +73,7 @@ a {
 }
 
 @include breakpoint($breakpoint-desktop) {
-  body {
-    font-size: 18px;
-    text-rendering: auto;
-  }
-
+  body { text-rendering: auto; }
   h1, .info-text { text-rendering: geometricPrecision; }
   h1 { font-size: 100px; }
   h2 { font-size: inherit; }
