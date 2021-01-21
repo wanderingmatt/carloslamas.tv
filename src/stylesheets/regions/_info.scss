@@ -5,7 +5,7 @@
   padding: 20px 10px;
   text-shadow: 0 -1px rgba(0, 0, 0, .3);
 
-  @include breakpoint($breakpoint-mobile-only) {
+  @include breakpoint($breakpoint-legacy) {
     border-top: 1px solid rgba(0, 0, 0, .3);
   }
 

@@ -11,7 +11,7 @@
   position: relative;
   z-index: -1; // Hides box shadow beneath children.
 
-  @include breakpoint($breakpoint-mobile-only) {
+  @include breakpoint($breakpoint-legacy) {
     .commercial & { border-top: 0; }
   }
 
