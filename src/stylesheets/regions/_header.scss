@@ -3,13 +3,13 @@ header {
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  max-width: 1680px;
-  padding: 60px 10px;
+  // max-width: 1680px;
+  padding: 4rem 1rem;
   text-transform: uppercase;
   .name-and-title { position: relative; }
   h2 {
     position: absolute;
-    top: -20px;
+    top: -.5rem;
   }
   .info-text {
     color: rgba(255, 255, 255, .15);
