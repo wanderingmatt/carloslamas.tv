@@ -2,8 +2,6 @@
   backdrop-filter: blur(14px);
   background: $purple;
   background: fade_out($purple, .1);
-  // box-sizing: border-box;
-  // margin: 0 auto;
   max-width: $breakpoint-widescreen;
   padding: 1rem;
   position: sticky;

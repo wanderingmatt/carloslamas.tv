@@ -1,0 +1,19 @@
+$z-index: (
+  back: -1,
+  navigation: 0,
+  default: 1,
+  overlay: 101,
+  modal: 102
+);
+
+@function z-index($layer) {
+  @if not map-has-key($z-index, $layer) {
+    @warn "No stack level found for `#{$layer}` in $z-index map.";
+  }
+
+  @return map-get($z-index, $layer);
+}
+
+@mixin z-index($layer) {
+  z-index: z-index($layer);
+}
