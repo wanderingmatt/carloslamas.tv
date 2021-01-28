@@ -29,14 +29,14 @@ var paths = {
   fancybox: {
     src: './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
   },
-  // javascripts: {
-  //   src: [
-  //     './node_modules/jquery/dist/jquery.js',
-  //     './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-  //     './src/javascripts/scripts.js'
-  //   ],
-  //   dest: './dist/javascripts'
-  // }
+  javascripts: {
+    src: [
+      './node_modules/jquery/dist/jquery.js',
+      './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+      './src/javascripts/scripts.js'
+    ],
+    dest: './dist/javascripts'
+  }
 };
 
 function clean() {
@@ -59,7 +59,7 @@ function watch(done) {
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
-  // gulp.watch(paths.javascripts.src, javascripts);
+  gulp.watch(paths.javascripts.src, javascripts);
   done();
 };
 
@@ -112,13 +112,13 @@ function stylesheets() {
   return mergedStream;
 };
 
-// function javascripts() {
-//   return gulp
-//     .src(paths.javascripts.src)
-//     .pipe(concat('scripts.js'))
-//     .pipe(gulp.dest(paths.javascripts.dest))
-//     .pipe(connect.reload())
-// };
+function javascripts() {
+  return gulp
+    .src(paths.javascripts.src)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(paths.javascripts.dest))
+    .pipe(connect.reload())
+};
 
 function deploy() {
   return gulp
@@ -136,6 +136,7 @@ const build = gulp.series(
   gulp.parallel(
     html,
     images,
+    javascripts,
     stylesheets
   )
 );
