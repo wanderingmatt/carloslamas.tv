@@ -1,11 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <partial src="_meta.html"></partial>
+  <title>Carlos Lamas — Editor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 <body>
   <div class="wrapper">
-    <partial src="_header.html"></partial>
+    <header itemscope itemtype="http://schema.org/Person">
+      <div class="name-and-title">
+        <h1 itemprop="name">Carlos Lamas</h1>
+        <h2 itemprop="jobTitle">Editor</h2>
+      </div>
+      <div class="info-text"><a href="#" id="info-trigger">Info</a></div>
+    </header>
     <section class="commercial videos">
       <div class="ribbon"><h3>Commercial</h3></div>
       <ul>
@@ -242,7 +251,21 @@
         </li>
       </ul>
     </section>
-    <partial src="_info.html"></partial>
+    <section id="info">
+      <article class="bio">
+        <h3>Bio</h3>
+        <p>Carlos Lamas is a freelance video editor from Minneapolis, working in post-production since 2005. He has edited for national brands including Target, Estée Lauder, Kmart, Capital One, and Best Buy. He has also edited feature films, music videos, and had his work featured on MTVU, Pitchfork, and Kanye West's blog. When he's not working, Carlos is either at the beach or skiing, depending on the season. Carlos was raised bi-lingual, and loves to edit <a href="/spanish">in Spanish</a>.</p>
+        <p>You can book Carlos directly, by emailing <a href="mailto:carlos@carloslamas.tv">carlos@carloslamas.tv</a>.
+      </article>
+      <article class="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="https://twitter.com/#!/losdelfuego" class="twitter">losdelfuego</a></li>
+          <li><a href="mailto:carlos@carloslamas.tv" class="email">carlos@carloslamas.tv</a></li>
+          <li><a href="tel:1-612-424-5143" class="phone">(612) 424-5143</a></li>
+        </ul>
+      </article>
+    </section>
     <footer>
       <p>&copy; Copyright <span id="js-current-year"></span> Carlos Lamas &bull; Designed with love by <a href="http://matthew-anderson.com">Matthew Anderson</a></p>
     </footer>

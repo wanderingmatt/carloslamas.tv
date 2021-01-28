@@ -1,56 +1,65 @@
 $(document).ready(function() {
   insertCurrentYear();
 
-  $('[data-fancybox]').fancybox({
-    animationEffect: "fade",
-    caption: function() {
-      return $(this).find('aside').html();
-    },
-    afterLoad: function(instance, current) {
+  function insertCurrentYear() {
+    document.getElementById('js-current-year').innerHTML = new Date().getFullYear();
+  }
 
-      // Tip: Each event passes useful information within the event object:
-
-      // Object containing references to interface elements
-      // (background, buttons, caption, etc)
-      // console.info( instance.$refs );
-
-      // Current slide options
-      // console.info( current.opts );
-
-      // Clicked element
-      // console.info( current.opts.$orig );
-
-      // Reference to DOM element of the slide
-      // console.info( current.$slide );
-
-      console.info(current.opts.btnTpl.arrowLeft);
-
-      instance.opts.btnTpl.arrowLeft = current.opts.$orig.parent().prev().find('a > aside').html();
-
-      console.info(instance.opts.btnTpl.arrowLeft);
-
-      console.info(current.opts.$orig);
-      console.info(current.opts.$orig.parent().prev().find('a > aside').html());
-
-      // if ( instance.group.length > 1 && current.$content ) {
-      //   current.$content.append('<a data-fancybox-next class="button-next" href="javascript:;">→</a><a data-fancybox-previous class="button-previous" href="javascript:;">←</a>');
-      // }
-    },
-    // btnTpl: {
-    //   arrowLeft: 'Previous'
-    // },
-    // arrows: false,
-    infobar: false,
-    smallBtn: true,
-    toolbar: false,
-    transitionEffect: "slide"
+  $('#info-trigger').fancybox({
+    src  : '#info',
+    type : 'inline',
+    opts : {
+      afterShow : function( instance, current ) {
+        console.info( 'done!' );
+      }
+    }
   });
+
+  // $('[data-fancybox]').fancybox({
+  //   animationEffect: "fade",
+  //   caption: function() {
+  //     return $(this).find('aside').html();
+  //   },
+  //   afterLoad: function(instance, current) {
+
+  //     // Tip: Each event passes useful information within the event object:
+
+  //     // Object containing references to interface elements
+  //     // (background, buttons, caption, etc)
+  //     // console.info( instance.$refs );
+
+  //     // Current slide options
+  //     // console.info( current.opts );
+
+  //     // Clicked element
+  //     // console.info( current.opts.$orig );
+
+  //     // Reference to DOM element of the slide
+  //     // console.info( current.$slide );
+
+  //     console.info(current.opts.btnTpl.arrowLeft);
+
+  //     instance.opts.btnTpl.arrowLeft = current.opts.$orig.parent().prev().find('a > aside').html();
+
+  //     console.info(instance.opts.btnTpl.arrowLeft);
+
+  //     console.info(current.opts.$orig);
+  //     console.info(current.opts.$orig.parent().prev().find('a > aside').html());
+
+  //     // if ( instance.group.length > 1 && current.$content ) {
+  //     //   current.$content.append('<a data-fancybox-next class="button-next" href="javascript:;">→</a><a data-fancybox-previous class="button-previous" href="javascript:;">←</a>');
+  //     // }
+  //   },
+  //   // btnTpl: {
+  //   //   arrowLeft: 'Previous'
+  //   // },
+  //   // arrows: false,
+  //   infobar: false,
+  //   smallBtn: true,
+  //   toolbar: false,
+  //   transitionEffect: "slide"
+  // });
 });
-
-function insertCurrentYear() {
-  document.getElementById('js-current-year').innerHTML = new Date().getFullYear();
-}
-
 
 // $(".video").fancybox({
 //   beforeLoad: function() {

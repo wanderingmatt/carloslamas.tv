@@ -9,13 +9,12 @@ const gulp             = require('gulp'),
       imagemin         = require('gulp-imagemin'),
       imageminPngquant = require('imagemin-pngquant'),
       merge            = require('merge-stream'),
-      partials         = require('gulp-html-partial');
       sassGlob         = require('gulp-sass-glob'),
       sass             = require('gulp-sass');
 
 var paths = {
   html: {
-    src: ['./src/**/*.html', '!./src/partials/*'],
+    src: './src/**/*.html',
     dest: './dist'
   },
   images: {
@@ -66,9 +65,6 @@ function watch(done) {
 function html() {
   return gulp
     .src(paths.html.src)
-    .pipe(partials({
-      basePath: 'src/partials/'
-    }))
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 };
