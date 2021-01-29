@@ -17,11 +17,10 @@ $(document).ready(function() {
     }
   });
 
-  // $('[data-fancybox]').fancybox({
-  //   animationEffect: "fade",
-  //   caption: function() {
-  //     return $(this).find('aside').html();
-  //   },
+  $('.video').fancybox({
+    caption: function() {
+      return $(this).find('aside').html();
+    },
   //   afterLoad: function(instance, current) {
 
   //     // Tip: Each event passes useful information within the event object:
@@ -56,11 +55,11 @@ $(document).ready(function() {
   //   //   arrowLeft: 'Previous'
   //   // },
   //   // arrows: false,
-  //   infobar: false,
-  //   smallBtn: true,
-  //   toolbar: false,
-  //   transitionEffect: "slide"
-  // });
+    infobar: false,
+    smallBtn: true,
+    toolbar: false,
+    transitionEffect: 'fade'
+  });
 });
 
 // $(".video").fancybox({
