@@ -6,7 +6,13 @@ header {
   // max-width: 1680px;
   padding: 4rem 1rem;
   text-transform: uppercase;
-  .name-and-title { position: relative; }
+  .name-and-title {
+    position: relative;
+    h1 {
+      position: relative;
+      @include z-index(top);
+    }
+  }
   h2 {
     position: absolute;
     top: -.5rem;

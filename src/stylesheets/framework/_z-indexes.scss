@@ -2,8 +2,8 @@ $z-index: (
   back: -1,
   navigation: 0,
   default: 1,
-  overlay: 101,
-  modal: 102
+  modal: 100,
+  top: 101
 );
 
 @function z-index($layer) {

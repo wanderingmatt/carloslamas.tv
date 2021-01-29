@@ -6,13 +6,8 @@ $(document).ready(function() {
   }
 
   $('#info-trigger').fancybox({
-    src  : '#info',
-    type : 'inline',
-    opts : {
-      afterShow : function( instance, current ) {
-        console.info( 'done!' );
-      }
-    }
+    src: '#info',
+    baseClass: "info-box",
   });
 
   // $('[data-fancybox]').fancybox({
