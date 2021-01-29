@@ -1,7 +1,7 @@
 .ribbon {
   backdrop-filter: blur(14px);
-  background: $purple;
-  background: fade_out($purple, .1);
+  background-color: $purple;
+  background-color: fade_out($purple, .1);
   max-width: $breakpoint-widescreen;
   padding: 1rem;
   position: sticky;
@@ -10,10 +10,10 @@
   .commercial & { border-top-color: rgba(0, 0, 0, .5); }
 
   @include breakpoint($breakpoint-tablet) {
-    border: 0;
-    padding: 26px 40px;
+    backdrop-filter: none;
+    background: none;
+    padding: 0;
+    position: static;
   }
-
-  @include breakpoint($breakpoint-desktop) { padding: 26px 60px; }
-  @include breakpoint($breakpoint-widescreen) { padding: 30px; }
+  // @include breakpoint($breakpoint-widescreen) { padding: 30px; }
 }

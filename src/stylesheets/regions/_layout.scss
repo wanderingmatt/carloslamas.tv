@@ -6,3 +6,9 @@ body {
   color: #444;
   &.fixed { overflow: hidden; }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .wrapper {
+    padding: 0 3rem;
+  }
+}

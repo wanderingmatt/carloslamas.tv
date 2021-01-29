@@ -51,9 +51,9 @@
     ul {
       background: none;
       display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 40px;
+      grid-gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      // padding: 40px;
     }
     // li {
     //   position: relative;
@@ -66,76 +66,77 @@
     // }
     .video {
       display: block;
+      margin: 3rem 0;
       padding: 0;
       position: relative;
       transition: all .25s;
-      .thumbnail {
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-        &::after {
-          bottom: 0;
-          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
-          box-shadow: inset 0 0 0 1px red;
-          content: " ";
-          display: block;
-          left: 0;
-          position: absolute;
-          right: 0;
-          top: 0;
-          z-index: 1;
-        }
-      }
-      aside {
-        background-image: url('/images/play.png');
-        background-position: 50%;
-        background-size: 48px auto;
-        bottom: 0;
-        justify-content: flex-end;
-        left: 0;
-        // opacity: 0;
-        padding: 15px;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        top: 0;
-        transition: all .25s;
-        z-index: 2;
-        @include breakpoint($breakpoint-retina) {
-          background-image: url('/images/play@2x.png');
-        }
-        &::after {
-          background-image: linear-gradient(to bottom, fade_out($purple, .5), $purple);
-          bottom: 0;
-          content: " ";
-          display: block;
-          left: 0;
-          position: absolute;
-          right: 0;
-          transition: all .25s;
-          top: 0;
-          z-index: 10;
-        }
-      }
-      &:hover {
-        background-color: none;
-        aside { opacity: 1; }
-      }
+    //   .thumbnail {
+    //     box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    //     &::after {
+    //       bottom: 0;
+    //       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
+    //       box-shadow: inset 0 0 0 1px red;
+    //       content: " ";
+    //       display: block;
+    //       left: 0;
+    //       position: absolute;
+    //       right: 0;
+    //       top: 0;
+    //       z-index: 1;
+    //     }
+    //   }
+    //   aside {
+    //     background-image: url('/images/play.png');
+    //     background-position: 50%;
+    //     background-size: 48px auto;
+    //     bottom: 0;
+    //     justify-content: flex-end;
+    //     left: 0;
+    //     // opacity: 0;
+    //     padding: 15px;
+    //     position: absolute;
+    //     right: 0;
+    //     text-align: center;
+    //     top: 0;
+    //     transition: all .25s;
+    //     z-index: 2;
+    //     @include breakpoint($breakpoint-retina) {
+    //       background-image: url('/images/play@2x.png');
+    //     }
+    //     &::after {
+    //       background-image: linear-gradient(to bottom, fade_out($purple, .5), $purple);
+    //       bottom: 0;
+    //       content: " ";
+    //       display: block;
+    //       left: 0;
+    //       position: absolute;
+    //       right: 0;
+    //       transition: all .25s;
+    //       top: 0;
+    //       z-index: 10;
+    //     }
+    //   }
+    //   &:hover {
+    //     background-color: none;
+    //     aside { opacity: 1; }
+    //   }
     }
   }
 
-  @include breakpoint($breakpoint-desktop) {
-    ul {
-      grid-gap: 30px;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 60px;
-    }
-    .video {
-      aside { background-size: 64px auto; }
-    }
-  }
+  // @include breakpoint($breakpoint-desktop) {
+  //   ul {
+  //     grid-gap: 30px;
+  //     grid-template-columns: repeat(3, 1fr);
+  //     padding: 60px;
+  //   }
+  //   .video {
+  //     aside { background-size: 64px auto; }
+  //   }
+  // }
 
-  @include breakpoint($breakpoint-widescreen) {
-    .video {
-      aside { background-size: 92px auto; }
-    }
-  }
+  // @include breakpoint($breakpoint-widescreen) {
+  //   .video {
+  //     aside { background-size: 92px auto; }
+  //   }
+  // }
 }

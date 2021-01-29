@@ -4,11 +4,11 @@ footer {
   flex-direction: column;
   padding: 1rem;
 
-  @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
+  // @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
 
-  @include breakpoint($breakpoint-desktop) {
-    padding: 23px 60px;
-    text-align: center;
-    p { line-height: 1; }
-  }
+  // @include breakpoint($breakpoint-desktop) {
+  //   padding: 23px 60px;
+  //   text-align: center;
+  //   p { line-height: 1; }
+  // }
 }

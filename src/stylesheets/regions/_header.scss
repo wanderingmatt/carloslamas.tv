@@ -32,6 +32,6 @@ header {
     }
   }
 
-  @include breakpoint($breakpoint-tablet) { padding: 80px 40px; }
-  @include breakpoint($breakpoint-desktop) { padding: 100px 60px; }
+  // @include breakpoint($breakpoint-tablet) { padding: 80px 40px; }
+  @include breakpoint($breakpoint-desktop) { padding: 6rem 0; }
 }
