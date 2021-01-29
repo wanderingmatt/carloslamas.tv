@@ -12,6 +12,7 @@
     &:last-child { border: 0; }
   }
   .video {
+    align-items: center;
     display: flex;
     padding: .75rem 1rem;
     text-decoration: none;
@@ -44,7 +45,7 @@
     padding: 0 1rem;
   }
   h4, h5 { @include ellipsis; }
-  h6 { @extend %hidden; }
+  .icon { opacity: .2; }
 
   @include breakpoint($breakpoint-tablet) {
     ul {
