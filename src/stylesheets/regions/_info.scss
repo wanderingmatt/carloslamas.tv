@@ -3,7 +3,7 @@
   height: 100%;
   .content {
     background: $purple;
-    color: lighten($purple, 40%);
+    color: $light-purple;
     display: flex;
     height: 100%;
     flex-direction: column;

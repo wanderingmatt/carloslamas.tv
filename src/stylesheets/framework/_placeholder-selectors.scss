@@ -7,8 +7,7 @@
 %inherited { display: inherit; }
 %invisible { visibility: hidden; }
 %visible { visibility: visible; }
-%clearfix { @include clearfix; }
 
 @include breakpoint($breakpoint-tablet) {
-  %clearfix-tablet { @include clearfix; }
+  %hidden-tablet { display: none; }
 }
