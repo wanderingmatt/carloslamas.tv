@@ -8,6 +8,13 @@ $(document).ready(function() {
   $('#info-trigger').fancybox({
     src: '#info',
     baseClass: "info-box",
+    touch: false,
+    beforeShow: function(){
+      $("body").addClass("fixed");
+    },
+    afterClose: function(){
+      $("body").removeClass("fixed");
+    }
   });
 
   // $('[data-fancybox]').fancybox({

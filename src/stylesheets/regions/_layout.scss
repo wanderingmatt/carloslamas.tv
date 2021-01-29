@@ -4,5 +4,5 @@ body {
   background: #222 url('/images/bg.png');
   // background: #212126;
   color: #444;
-  // &.fixed { overflow: hidden; }
+  &.fixed { overflow: hidden; }
 }

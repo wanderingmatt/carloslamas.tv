@@ -1,7 +1,8 @@
 footer {
   background: fade_out(#000, .3);
-  overflow: auto;
-  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 
   @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
 
