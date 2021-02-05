@@ -3,6 +3,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  p { margin-bottom: 0; }
 
   // @include breakpoint($breakpoint-tablet) { padding: 20px 40px; }
 

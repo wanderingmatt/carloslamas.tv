@@ -20,6 +20,7 @@ header {
   }
   .info-text {
     @extend h1;
+    text-shadow: none;
     a {
       color: rgba(255, 255, 255, .3);
       font-weight: normal;
