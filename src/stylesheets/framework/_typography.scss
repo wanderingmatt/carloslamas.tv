@@ -48,7 +48,7 @@ h5 {
   font-size: ms(0);
 }
 
-p { margin: 0 0 1rem 0; }
+p { margin: 0 0 1.5rem 0; }
 
 a {
   color: inherit;
@@ -66,10 +66,7 @@ a {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-gap: 1.5rem;
-    // font-family: $custom-font;
-    // font-size: ms(6);
     font-weight: normal;
-    // letter-spacing: .05rem;
     text-transform: lowercase;
     &::before, &::after {
       border-top: 2px solid $purple;
@@ -84,10 +81,8 @@ a {
 @include breakpoint($breakpoint-desktop) {
   body { text-rendering: auto; }
   h1 { text-rendering: geometricPrecision; }
-  // h1 { font-size: 100px; }
-  // h2 { font-size: inherit; }
-  // h3 { font-size: inherit; }
-  // h4 { font-size: 16px; }
+  h1 { font-size: ms(8); }
+  h2, h3 { font-size: ms(2); }
 
   a {
     &:active {
