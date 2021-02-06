@@ -43,7 +43,11 @@
     padding: 0 1rem;
   }
   h4, h5 { @include ellipsis; }
-  .icon { opacity: .2; }
+  .icon {
+    height: 18px;
+    opacity: .2;
+    width: 18px;
+  }
 
   @include breakpoint($breakpoint-tablet) {
     ul {
