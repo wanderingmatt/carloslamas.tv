@@ -11,3 +11,7 @@
 @include breakpoint($breakpoint-tablet) {
   %hidden-tablet { display: none; }
 }
+
+@include breakpoint($breakpoint-desktop) {
+  %shown-desktop { display: inline; }
+}

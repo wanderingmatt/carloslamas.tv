@@ -54,8 +54,6 @@ p { margin: 0 0 1.5rem 0; }
 a {
   color: inherit;
   font-weight: bold;
-  transition: all .25s;
-  &:hover { color: #fff; }
 }
 
 @include breakpoint($breakpoint-tablet) {
