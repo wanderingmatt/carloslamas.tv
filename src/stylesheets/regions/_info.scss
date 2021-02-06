@@ -21,6 +21,7 @@
       padding: 0;
     }
     li:not(:last-child) { margin-right: 1rem; }
+    a { display: block; }
     .icon {
       height: 48px;
       width: 48px;
@@ -37,6 +38,29 @@
 
   @include breakpoint($breakpoint-desktop) {
     p { font-size: ms(2); }
+    .contact {
+      bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      li:not(:last-child) { margin-right: 1.5rem; }
+      a {
+        position: relative;
+        transition-duration: .2s;
+        transition-property: opacity, transform;
+        &:hover {
+          opacity: .6;
+          transform: translateY(-.25rem);
+        }
+        &:active {
+          opacity: .4;
+        }
+      }
+      .icon {
+        height: 60px;
+        opacity: 1;
+        width: 60px;
+      }
+    }
   }
 }
 
@@ -44,6 +68,20 @@
   @include z-index(modal);
   .fancybox-bg { background: none; }
   .fancybox-slide { padding: 0; }
+  .fancybox-close-small {
+    height: auto;
+    opacity: .6;
+    padding: 1rem;
+    right: 1rem;
+    top: 7.5rem;
+    transform: translateY(-50%);
+    width: auto;
+    .icon {
+      display: block;
+      height: 24px;
+      width: 24px;
+    }
+  }
   .fancybox-content {
     background: none;
     bottom: 0;
@@ -52,5 +90,23 @@
     position: fixed;
     right: 0;
     top: 0;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .fancybox-close-small { right: 3rem; }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .fancybox-close-small {
+      right: 6rem;
+      transition: opacity .2s;
+      top: 10.5rem;
+      .icon {
+        height: 36px;
+        width: 36px;
+      }
+      &:hover { opacity: 1; }
+      &:active { opacity: .4; }
+    }
   }
 }

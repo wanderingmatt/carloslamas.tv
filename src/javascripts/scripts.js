@@ -14,6 +14,12 @@ $(document).ready(function() {
     },
     afterClose: function(){
       $("body").removeClass("fixed");
+    },
+    btnTpl: {
+      smallBtn:
+        '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
+        '<span class="icon icon-close"></span>' +
+        "</button>",
     }
   });
 
