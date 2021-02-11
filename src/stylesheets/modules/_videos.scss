@@ -104,7 +104,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        transition: opacity .4s;
+        transition: opacity .2s;
         &::before {
           background-image: linear-gradient(to bottom, fade_out($purple, .2), fade_out($dark-purple, .1) 90%);
           bottom: 0;
@@ -126,7 +126,7 @@
         position: absolute;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        transition: opacity .4s;
+        transition: opacity .2s;
         width: 60px;
         @include z-index(front);
       }

@@ -125,8 +125,6 @@ function deploy() {
 exports.clean = clean;
 exports.clear = clear;
 
-exports.html = html;
-
 const build = gulp.series(
   clean,
   gulp.parallel(

@@ -24,6 +24,7 @@ $(document).ready(function() {
   });
 
   $('.video').fancybox({
+    baseClass: "video-box",
     caption: function() {
       return $(this).find('aside').html();
     },
@@ -61,9 +62,15 @@ $(document).ready(function() {
   //   //   arrowLeft: 'Previous'
   //   // },
   //   // arrows: false,
+    // fullScreen: {
+    //   autoStart: true
+    // },
+    buttons: [
+      "close"
+    ],
     infobar: false,
-    smallBtn: true,
-    toolbar: false,
+    // smallBtn: true,
+    // toolbar: false,
     transitionEffect: 'fade'
   });
 });
