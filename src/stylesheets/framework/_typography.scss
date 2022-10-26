@@ -4,10 +4,10 @@ $custom-font: 'Univers LT Std', $default-font-family;
 // MODULAR SCALE
 // 14px 16px 23px 26px 37px 42px 60px 68px 96px
 
-$modularscale: (
-  base: 14px 16px,
-  ratio: $golden,
-);
+// $modularscale: (
+//   base: 14px 16px,
+//   ratio: $golden,
+// );
 
 html, body { font-size: ms(0); }
 

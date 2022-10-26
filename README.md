@@ -4,7 +4,7 @@ Portfolio site for video editor Carlos Lamas.
 
 ## Setup
 
-The site is compiled and deployed via Gulp functions. You will need [Homebrew](https://brew.sh/), [Node](https://nodejs.org/en/download/package-manager), and [Gulp](http://gulpjs.com/) installed.
+The site is compiled and deployed via Grunt. You will need [Homebrew](https://brew.sh/), [Node](https://nodejs.org/en/download/package-manager), and [Parcel](https://parceljs.org/) installed.
 
 #### Install Homebrew
 
@@ -14,36 +14,15 @@ The site is compiled and deployed via Gulp functions. You will need [Homebrew](h
 
 `$ brew install node`
 
-#### Install Gulp
-
-`$ npm install gulp`
-
 #### Install Remaining Development Dependencies
 
 `$ npm install` (from project root)
 
 ## Developing
 
-#### Running
+The `start` task will start the Parcel server in the default configuration.
 
-The `default` Gulp task will start a server, watch the `src` directory, compile changes to the `dist` directory, and live reload the browser window. You can run the `default` task from the project root folder by typing:
-
-`$ gulp`
-
-#### Updating Dependencies
-
-If you ever want to update the Development Dependencies for the project, you can do so using [Check Updates](https://www.npmjs.com/package/npm-check-updates).
-
-##### Install Check Updates
-
-`$ npm install -g npm-check-updates`
-
-##### Update Dependency Hints and Install New Versions
-
-```
-$ ncu -u
-$ npm install
-```
+`$ npm start`
 
 ## Deploying
 

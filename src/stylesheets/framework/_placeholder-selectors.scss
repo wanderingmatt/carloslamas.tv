@@ -1,21 +1,15 @@
 // Shared placeholder selectors used throughout the product and included at the top of the payload.
-//
-// No styleguide reference.
 
 %hidden { display: none; }
-%shown { display: inline; }
-%inherited { display: inherit; }
-%invisible { visibility: hidden; }
-%visible { visibility: visible; }
-
-@include breakpoint($breakpoint-mobile-only) {
-  %hidden-mobile-only { display: none; }
-}
+// %shown { display: inline; }
+// %inherited { display: inherit; }
+// %invisible { visibility: hidden; }
+// %visible { visibility: visible; }
 
 @include breakpoint($breakpoint-tablet) {
   %hidden-tablet { display: none; }
 }
 
 @include breakpoint($breakpoint-desktop) {
-  %shown-desktop { display: inline; }
+  %shown-desktop { display: initial; }
 }

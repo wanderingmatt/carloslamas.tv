@@ -1,9 +1,12 @@
 // Variables for media queries and breakpoints.
-//
-// No styleguide reference.
 
-$breakpoint-mobile-only: max-device-width 414px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1366px;
 $breakpoint-widescreen: 1600px;
 $breakpoint-retina: min-resolution 2dppx;
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -6,12 +6,12 @@
   text-indent: -9999px;
 }
 
-.icon-close { background-image: url('/images/icons/close.svg'); }
-.icon-email { background-image: url('/images/icons/email.svg'); }
-.icon-phone { background-image: url('/images/icons/phone.svg'); }
-.icon-play { background-image: url('/images/icons/chevron.right.svg'); }
-.icon-twitter { background-image: url('/images/icons/twitter.svg'); }
+.icon-close { background-image: url('../images/icons/close.svg'); }
+.icon-email { background-image: url('../images/icons/email.svg'); }
+.icon-phone { background-image: url('../images/icons/phone.svg'); }
+.icon-play { background-image: url('../images/icons/chevron.right.svg'); }
+.icon-twitter { background-image: url('../images/icons/twitter.svg'); }
 
 @include breakpoint($breakpoint-desktop) {
-  .icon-play { background-image: url('/images/icons/play.svg'); }
+  .icon-play { background-image: url('../images/icons/play.svg'); }
 }
