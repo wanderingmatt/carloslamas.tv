@@ -22,7 +22,7 @@ This will install Parcel and all development Node modules. Make sure you run thi
 
 ## Developing
 
-The `start` task will automatically rebuild your app, and serve it at http://localhost:1234/ with live reload.
+The `start` task will automatically rebuild your app, and serve it at http://localhost:1234/ with live reload. All development should be done in the `src` directory.
 
 `$ npm run start`
 
