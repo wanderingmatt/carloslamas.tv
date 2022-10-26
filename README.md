@@ -24,10 +24,10 @@ This will install Parcel and all development Node modules. Make sure you run thi
 
 The `start` task will automatically rebuild your app, and serve it at http://localhost:1234/ with live reload.
 
-`$ npm start`
+`$ npm run start`
 
 ## Deploying
 
-The `deploy` task will copy everything in the local `dist` folder to the `gh-pages` branch and push it to GitHub.
+The `deploy` task will automatically rebuild your app, copy everything in the local `dist` folder to the `gh-pages` branch, and push it to GitHub.
 
 `$ npm deploy`
