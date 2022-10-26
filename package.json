@@ -11,11 +11,13 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "predeploy": "rm -rf dist && parcel build --public-url https://wanderingmatt.github.io/carloslamas.tv/",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "gh-pages": "^4.0.0",
     "parcel": "latest"
   }
 }
