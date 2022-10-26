@@ -1,10 +1,10 @@
-# carlos-lamas.tv
+# Carlos Lamas' Reel
 
 Portfolio site for video editor Carlos Lamas.
 
 ## Setup
 
-The site is compiled and deployed via Grunt. You will need [Homebrew](https://brew.sh/), [Node](https://nodejs.org/en/download/package-manager), and [Parcel](https://parceljs.org/) installed.
+The site is built and deployed via Parcel to GitHub Pages. You will need [Homebrew](https://brew.sh/), [Node](https://nodejs.org/en/download/package-manager), and [Parcel](https://parceljs.org/) installed.
 
 #### Install Homebrew
 
@@ -14,18 +14,20 @@ The site is compiled and deployed via Grunt. You will need [Homebrew](https://br
 
 `$ brew install node`
 
-#### Install Remaining Development Dependencies
+#### Install Node Dependencies
 
-`$ npm install` (from project root)
+This will install Parcel and all development Node modules. Make sure you run this command from the project root.
+
+`$ npm install`
 
 ## Developing
 
-The `start` task will start the Parcel server in the default configuration.
+The `start` task will automatically rebuild your app, and serve it at http://localhost:1234/ with live reload.
 
 `$ npm start`
 
 ## Deploying
 
-The site is hosted under a custom domain on Github Pages. The `deploy` Gulp task will copy everything in the `dist` folder to the `gh-pages` branch and push it to Github. You can run the `deploy` task from the project root folder by typing:
+The `deploy` task will copy everything in the local `dist` folder to the `gh-pages` branch and push it to GitHub.
 
-`$ gulp deploy`
+`$ npm deploy`
