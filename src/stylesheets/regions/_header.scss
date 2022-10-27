@@ -1,12 +1,9 @@
 header {
   align-items: center;
-  box-sizing: border-box;
   display: flex;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-  text-transform: uppercase;
+  justify-content: space-between;
+  padding: 6rem 1rem;
   .name-and-title {
-    flex: 1;
     position: relative;
     h1 {
       position: relative;
@@ -15,19 +12,19 @@ header {
   }
   h2 {
     position: absolute;
-    top: -.5rem;
+    top: -1.5rem;
   }
   .info-text {
     @extend h1;
     text-shadow: none;
     a {
-      color: rgba(255, 255, 255, .3);
+      color: $light-purple;
       font-weight: normal;
       text-decoration: none;
       &:hover { color: lighten($purple, 30%); }
     }
   }
 
-  @include breakpoint($breakpoint-tablet) { padding: 4rem 0; }
-  @include breakpoint($breakpoint-desktop) { padding: 6rem 0; }
+  // @include breakpoint($breakpoint-tablet) { padding: 4rem 0; }
+  // @include breakpoint($breakpoint-desktop) { padding: 6rem 0; }
 }

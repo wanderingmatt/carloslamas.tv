@@ -1,65 +1,58 @@
 #info {
-  @extend %hidden;
-  height: 100%;
-  width: 100%;
-  .content {
-    background: fade_out($purple, .02);
-    color: $light-purple;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-  }
+  background: $purple;
+  color: $light-purple;
+  padding: 1rem;
+  h3, p { margin-bottom: 1rem; }
   .contact {
-    bottom: 4rem;
-    position: absolute;
     ul {
       display: flex;
+      gap: .75rem;
       list-style-type: none;
-      margin: 0;
+      margin: 0 0 1rem 0;
       padding: 0;
-    }
-    li:not(:last-child) { margin-right: 1rem; }
-    a { display: block; }
-    .icon {
-      height: 48px;
-      width: 48px;
-    }
-  }
-
-  @include breakpoint($breakpoint-tablet) {
-    .content { padding: 3rem; }
-    .bio {
-      margin: 0 auto;
-      max-width: $breakpoint-tablet;
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    p { font-size: ms(2); }
-    .contact {
-      bottom: 6rem;
-      left: 50%;
-      transform: translateX(-50%);
-      li:not(:last-child) { margin-right: 1.5rem; }
       a {
-        position: relative;
-        transition-duration: .2s;
-        transition-property: opacity, transform;
-        &:hover {
-          opacity: .6;
-          transform: translateY(-.25rem);
+        display: block;
+        .icon { background-color: $light-purple; }
+        &:hover, &:active {
+          .icon { background-color: #fff; }
         }
-        &:active {
-          opacity: .4;
-        }
-      }
-      .icon {
-        height: 60px;
-        opacity: 1;
-        width: 60px;
       }
     }
+    p { margin-bottom: 0; }
   }
+
+  // @include breakpoint($breakpoint-tablet) {
+  //   .content { padding: 3rem; }
+  //   .bio {
+  //     margin: 0 auto;
+  //     max-width: $breakpoint-tablet;
+  //   }
+  // }
+
+  // @include breakpoint($breakpoint-desktop) {
+  //   p { font-size: ms(2); }
+  //   .contact {
+  //     bottom: 6rem;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     li:not(:last-child) { margin-right: 1.5rem; }
+  //     a {
+  //       position: relative;
+  //       transition-duration: .2s;
+  //       transition-property: opacity, transform;
+  //       &:hover {
+  //         opacity: .6;
+  //         transform: translateY(-.25rem);
+  //       }
+  //       &:active {
+  //         opacity: .4;
+  //       }
+  //     }
+  //     .icon {
+  //       height: 60px;
+  //       opacity: 1;
+  //       width: 60px;
+  //     }
+  //   }
+  // }
 }

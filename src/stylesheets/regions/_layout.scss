@@ -1,20 +1,18 @@
 $layout-constraint: 1792px;
 
-html, body { height: auto; }
-
 body {
-  background: #222 url('../images/bg.png');
+  background: #222 url('data-url:../images/bg.png');
   &.fixed { overflow: hidden; }
 }
 
-@include breakpoint($breakpoint-tablet) {
-  .wrapper { padding: 0 3rem; }
-}
+// @include breakpoint($breakpoint-tablet) {
+//   .wrapper { padding: 0 3rem; }
+// }
 
-@include breakpoint($breakpoint-desktop) {
-  .wrapper {
-    margin: 0 auto;
-    max-width: $layout-constraint;
-    padding: 0 6rem;
-  }
-}
+// @include breakpoint($breakpoint-desktop) {
+//   .wrapper {
+//     margin: 0 auto;
+//     max-width: $layout-constraint;
+//     padding: 0 6rem;
+//   }
+// }

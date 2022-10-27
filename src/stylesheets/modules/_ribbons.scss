@@ -1,17 +1,15 @@
 .ribbon {
-  backdrop-filter: blur(14px);
-  background-color: $purple;
+  backdrop-filter: blur(16px);
   background-color: fade_out($purple, .1);
   padding: 1rem;
   position: sticky;
   top: 0;
   @include z-index(default);
-  .commercial & { border-top-color: rgba(0, 0, 0, .5); }
 
-  @include breakpoint($breakpoint-tablet) {
-    backdrop-filter: none;
-    background: none;
-    padding: 0;
-    position: static;
-  }
+  // @include breakpoint($breakpoint-tablet) {
+  //   backdrop-filter: none;
+  //   background: none;
+  //   padding: 0;
+  //   position: static;
+  // }
 }

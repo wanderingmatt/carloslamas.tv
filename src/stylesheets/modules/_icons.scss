@@ -1,17 +1,22 @@
 .icon {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #fff;
   display: inline-block;
+  flex-shrink: 0; // Prevents squishing if it appears within a flexed parent.
+  height: 40px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
   text-indent: -9999px;
+  vertical-align: middle;
+  width: 40px;
 }
 
 .icon-close { background-image: url('../images/icons/close.svg'); }
-.icon-email { background-image: url('../images/icons/email.svg'); }
-.icon-phone { background-image: url('../images/icons/phone.svg'); }
-.icon-play { background-image: url('../images/icons/chevron.right.svg'); }
-.icon-twitter { background-image: url('../images/icons/twitter.svg'); }
+.icon-email { mask-image: url('data-url:../images/icons/email.svg'); }
+.icon-phone { mask-image: url('data-url:../images/icons/phone.svg'); }
+.icon-play { mask-image: url('data-url:../images/icons/chevron-right.svg'); }
+.icon-twitter { mask-image: url('data-url:../images/icons/twitter.svg'); }
 
-@include breakpoint($breakpoint-desktop) {
-  .icon-play { background-image: url('../images/icons/play.svg'); }
-}
+// @include breakpoint($breakpoint-desktop) {
+//   .icon-play { background-image: url('../images/icons/play.svg'); }
+// }

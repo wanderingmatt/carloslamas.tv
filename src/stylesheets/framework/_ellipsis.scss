@@ -1,7 +1,7 @@
 // Mixin for truncating a block of text. The element you are truncating must be either a block or inline-block element.
 
 @mixin ellipsis {
-  overflow: hidden;
+  overflow-x: clip;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
