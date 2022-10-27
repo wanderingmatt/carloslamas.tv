@@ -11,6 +11,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
+    "clean": "rm -rf .parcel-cache dist",
     "predeploy": "rm -rf dist && parcel build --public-url https://wanderingmatt.github.io/carloslamas.tv/",
     "deploy": "gh-pages -d dist"
   },

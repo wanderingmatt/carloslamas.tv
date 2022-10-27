@@ -1,12 +1,11 @@
 .videos {
   ul {
-    background: #fff;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
   li {
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
     &:last-child { border: 0; }
   }
   .video {
@@ -17,7 +16,10 @@
     text-decoration: none;
     .thumbnail {
       border-radius: 3px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px,
+                  rgba(0, 0, 0, 0.48) 0px 1px 2px;
       flex-basis: 96px;
+      flex-shrink: 0;
       overflow: hidden;
       position: relative;
       img {
@@ -27,13 +29,15 @@
       &::after {
         border-radius: 3px;
         bottom: 0;
-        box-shadow: inset rgba(0, 0, 0, .2) 0 0 0 1px;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
         content: '';
         display: block;
         left: 0;
+        mix-blend-mode: overlay;
         position: absolute;
         right: 0;
         top: 0;
+        @include z-index(default);
       }
     }
     aside {
@@ -41,10 +45,11 @@
       flex: 1;
       flex-direction: column;
       justify-content: center;
+      min-width: 0; // Allow truncation to activate.
     }
     h4, h5 { @include ellipsis; }
     .icon {
-      background-color: $grey;
+      background-color: $light-purple;
       height: 16px;
       width: 16px;
     }

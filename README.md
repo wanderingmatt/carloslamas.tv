@@ -26,6 +26,12 @@ The `start` task will automatically rebuild your app, and serve it at http://loc
 
 `$ npm run start`
 
+## Cache Busting
+
+If you run into issues will developing locally, the `clean` task will delete the Parcel cache and your current `dist` directory — providing you with a clean slate for your next rebuild.
+
+`$npm run clean`
+
 ## Deploying
 
 The `deploy` task will automatically rebuild your app, copy everything in the local `dist` folder to the `gh-pages` branch, and push it to GitHub.

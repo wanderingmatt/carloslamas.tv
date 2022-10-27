@@ -4,7 +4,7 @@
   padding: 1rem;
   position: sticky;
   top: 0;
-  @include z-index(default);
+  @include z-index(front);
 
   // @include breakpoint($breakpoint-tablet) {
   //   backdrop-filter: none;
