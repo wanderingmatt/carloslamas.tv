@@ -26,5 +26,5 @@ header {
   }
 
   @include breakpoint($breakpoint-tablet) { padding: 7rem 3rem; }
-  // @include breakpoint($breakpoint-desktop) { padding: 6rem 0; }
+  @include breakpoint($breakpoint-desktop) { padding: 9rem 4rem; }
 }

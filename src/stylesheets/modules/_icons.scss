@@ -17,6 +17,6 @@
 .icon-play { mask-image: url('data-url:../images/icons/chevron-right.svg'); }
 .icon-twitter { mask-image: url('data-url:../images/icons/twitter.svg'); }
 
-// @include breakpoint($breakpoint-desktop) {
-//   .icon-play { background-image: url('../images/icons/play.svg'); }
-// }
+@include breakpoint($breakpoint-desktop) {
+  .icon-play { mask-image: url('data-url:../images/icons/play.svg'); }
+}

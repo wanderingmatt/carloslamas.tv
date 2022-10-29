@@ -5,7 +5,7 @@
     padding: 0;
   }
   li {
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .125);
     &:last-child { border: 0; }
   }
   .video {
@@ -16,8 +16,8 @@
     text-decoration: none;
     .thumbnail {
       border-radius: 3px;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px,
-                  rgba(0, 0, 0, 0.48) 0px 1px 2px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                  rgba(0, 0, 0, 0.24) 0px 1px 2px;
       flex-basis: 96px;
       flex-shrink: 0;
       overflow: hidden;
@@ -30,7 +30,7 @@
       &::after {
         border-radius: 3px;
         bottom: 0;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .125);
         content: '';
         display: block;
         left: 0;
@@ -38,7 +38,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        @include z-index(default);
+        @include z-index(front);
       }
     }
     aside {
@@ -47,8 +47,8 @@
       flex-direction: column;
       justify-content: center;
       min-width: 0; // Allow truncation to activate.
+      h4, h5 { @include ellipsis; }
     }
-    h4, h5 { @include ellipsis; }
     .icon {
       background-color: $light-purple;
       height: 16px;
@@ -74,52 +74,63 @@
     }
   }
 
-  // @include breakpoint($breakpoint-desktop) {
-  //   ul {
-  //     grid-gap: 2rem;
-  //     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-  //   }
-  //   .video {
-  //     aside {
-  //       bottom: 0;
-  //       justify-content: flex-end;
-  //       left: 0;
-  //       opacity: 0;
-  //       padding: 1.5rem;
-  //       position: absolute;
-  //       right: 0;
-  //       top: 0;
-  //       transition: opacity .2s;
-  //       &::before {
-  //         background-image: linear-gradient(to bottom, fade_out($purple, .2), fade_out($dark-purple, .1) 90%);
-  //         bottom: 0;
-  //         content: '';
-  //         display: block;
-  //         left: 0;
-  //         position: absolute;
-  //         right: 0;
-  //         top: 0;
-  //         @include z-index(default);
-  //       }
-  //       h4, h5 { @include z-index(front); }
-  //     }
-  //     .icon {
-  //       @extend %shown-desktop;
-  //       height: 60px;
-  //       left: 50%;
-  //       opacity: 0;
-  //       position: absolute;
-  //       top: 50%;
-  //       transform: translateX(-50%) translateY(-50%);
-  //       transition: opacity .2s;
-  //       width: 60px;
-  //       @include z-index(front);
-  //     }
-  //     &:hover {
-  //       aside, .icon { opacity: 1; }
-  //     }
-  //   }
-  // }
+  @include breakpoint($breakpoint-desktop) {
+    ul {
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+      padding: 4rem;
+    }
+    .video {
+      justify-content: center;
+      position: relative;
+      .thumbnail {
+        border-radius: 6px;
+        transition: box-shadow .125s;
+        &::after { border-radius: 6px; }
+      }
+      aside {
+        bottom: 0;
+        justify-content: flex-end;
+        left: 0;
+        opacity: 0;
+        padding: 1rem 2rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity .125s;
+        &::before {
+          background-image: linear-gradient(to bottom, fade_out($purple, .25), $dark-purple);
+          border-radius: 6px;
+          bottom: 0;
+          content: '';
+          display: block;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include z-index(default);
+        }
+        h4, h5 { @include z-index(front); }
+      }
+      .icon {
+        @extend %shown-desktop;
+        background-color: #fff;
+        height: 48px;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .125s;
+        width: 48px;
+        @include z-index(front);
+      }
+      &:hover {
+        .thumbnail {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                      rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        aside, .icon { opacity: 1; }
+      }
+    }
+  }
 
   // @include breakpoint($breakpoint-widescreen) {
   //   ul {

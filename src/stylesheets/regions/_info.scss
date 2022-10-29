@@ -16,9 +16,12 @@
         display: block;
         .icon { background-color: $light-purple; }
         &:hover, &:active {
-          .icon { background-color: #fff; }
+          .icon { background-color: $off-white; }
         }
       }
+    }
+    a {
+      &:hover { color: $off-white; }
     }
     p { margin-bottom: 0; }
   }
@@ -29,30 +32,25 @@
     h3 { margin-bottom: 1.5rem;}
   }
 
-  // @include breakpoint($breakpoint-desktop) {
-  //   p { font-size: ms(2); }
-  //   .contact {
-  //     bottom: 6rem;
-  //     left: 50%;
-  //     transform: translateX(-50%);
-  //     li:not(:last-child) { margin-right: 1.5rem; }
-  //     a {
-  //       position: relative;
-  //       transition-duration: .2s;
-  //       transition-property: opacity, transform;
-  //       &:hover {
-  //         opacity: .6;
-  //         transform: translateY(-.25rem);
-  //       }
-  //       &:active {
-  //         opacity: .4;
-  //       }
-  //     }
-  //     .icon {
-  //       height: 60px;
-  //       opacity: 1;
-  //       width: 60px;
-  //     }
-  //   }
-  // }
+  @include breakpoint($breakpoint-desktop) {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    padding: 4rem;
+    .bio { grid-column: span 2; }
+    .contact {
+      ul {
+        a {
+          .icon {
+            height: 48px;
+            transition: background-color .125s;
+            width: 48px;
+          }
+          &:hover, &:active {
+            .icon { background-color: #fff; }
+          }
+        }
+      }
+    }
+  }
 }

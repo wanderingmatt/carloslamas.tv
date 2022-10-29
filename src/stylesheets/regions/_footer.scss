@@ -3,8 +3,14 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  .stamp { opacity: .5; }
-  a { text-decoration: none; }
+  .stamp { color: $darker-grey; }
+  a {
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 
   @include breakpoint($breakpoint-tablet) {
     flex-direction: row;

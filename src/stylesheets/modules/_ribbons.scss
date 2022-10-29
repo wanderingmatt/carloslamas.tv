@@ -7,4 +7,21 @@
   @include z-index(front);
 
   @include breakpoint($breakpoint-tablet) { padding: 1rem 3rem; }
+  @include breakpoint($breakpoint-desktop) {
+    backdrop-filter: none;
+    background-color: transparent;
+    padding: 0 4rem;
+    position: static;
+    h3 {
+      align-items: center;
+      color: $dark-grey;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-gap: 2rem;
+      &::before, &::after {
+        border-top: 2px solid $purple;
+        content: '';
+      }
+    }
+  }
 }

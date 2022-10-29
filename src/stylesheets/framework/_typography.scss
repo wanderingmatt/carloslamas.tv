@@ -34,21 +34,34 @@ h1 {
   line-height: 3.8125rem;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, .4);
-
   @include breakpoint($breakpoint-tablet) {
     font-size: 4.209rem;
     line-height: 5.125rem;
   }
+  @include breakpoint($breakpoint-desktop) {
+    font-size: 5.61rem;
+    line-height: 6.8125rem;
+    text-rendering: geometricPrecision;
+  }
 }
 
 h2 {
-  color: rgba(255, 255, 255, .4);
+  color: $darker-grey;
   font-size: 1.333rem;
   line-height: 1.625rem;
   text-transform: lowercase;
 }
 
-h3 { color: #fff; }
+h3 {
+  color: $off-white;
+  @include breakpoint($breakpoint-desktop) {
+    font-family: $custom-font;
+    font-size: 2.369rem;
+    line-height: 2.875rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
 
 h4 {
   color: $off-white;
@@ -60,6 +73,13 @@ h5 {
   font-size: .875rem;
 }
 
+@include breakpoint($breakpoint-desktop) {
+  h5 {
+    color: $light-purple;
+    mix-blend-mode: hard-light;
+  }
+}
+
 // Paragraphs
 
 p { margin: 0 0 1.5rem 0; }
@@ -69,40 +89,11 @@ p { margin: 0 0 1.5rem 0; }
 a {
   color: inherit;
   font-weight: bold;
+  transition: color .125s;
+  @include breakpoint($breakpoint-desktop) {
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
 }
-
-// @include breakpoint($breakpoint-tablet) {
-//   h3 {
-//     align-items: center;
-//     color: rgba(255, 255, 255, .3);
-//     display: grid;
-//     grid-template-columns: 1fr auto 1fr;
-//     grid-gap: 1.5rem;
-//     font-weight: normal;
-//     text-transform: lowercase;
-//     &::before, &::after {
-//       border-top: 2px solid $purple;
-//       content: '';
-//     }
-//   }
-
-//   h4 { color: #fff; }
-//   h5 { color: lighten($purple, 30%); }
-// }
-
-// @include breakpoint($breakpoint-desktop) {
-//   h1 {
-//     font-size: ms(8);
-//     line-height: 9rem;
-//     text-rendering: geometricPrecision;
-//   }
-
-//   h2, h3 { font-size: ms(2); }
-
-//   a {
-//     &:active {
-//       position: relative;
-//       top: 1px;
-//     }
-//   }
-// }
