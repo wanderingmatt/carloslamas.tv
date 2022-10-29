@@ -6,10 +6,5 @@
   top: 0;
   @include z-index(front);
 
-  // @include breakpoint($breakpoint-tablet) {
-  //   backdrop-filter: none;
-  //   background: none;
-  //   padding: 0;
-  //   position: static;
-  // }
+  @include breakpoint($breakpoint-tablet) { padding: 1rem 3rem; }
 }

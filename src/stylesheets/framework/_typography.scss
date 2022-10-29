@@ -19,13 +19,7 @@ body {
   line-height: 1.5rem;
   text-rendering: optimizeSpeed;
   text-size-adjust: none;
-}
-
-@include breakpoint($breakpoint-desktop) {
-  body {
-    font-size: 16px;
-    text-rendering: auto;
-  }
+  @include breakpoint($breakpoint-desktop) { text-rendering: auto; }
 }
 
 // Headings
@@ -40,6 +34,11 @@ h1 {
   line-height: 3.8125rem;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, .4);
+
+  @include breakpoint($breakpoint-tablet) {
+    font-size: 4.209rem;
+    line-height: 5.125rem;
+  }
 }
 
 h2 {

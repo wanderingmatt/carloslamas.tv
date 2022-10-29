@@ -1,6 +1,8 @@
 #info {
   background: $purple;
   color: $light-purple;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   h3, p { margin-bottom: 1rem; }
   .contact {
@@ -21,13 +23,11 @@
     p { margin-bottom: 0; }
   }
 
-  // @include breakpoint($breakpoint-tablet) {
-  //   .content { padding: 3rem; }
-  //   .bio {
-  //     margin: 0 auto;
-  //     max-width: $breakpoint-tablet;
-  //   }
-  // }
+  @include breakpoint($breakpoint-tablet) {
+    gap: 1.5rem;
+    padding: 3rem;
+    h3 { margin-bottom: 1.5rem;}
+  }
 
   // @include breakpoint($breakpoint-desktop) {
   //   p { font-size: ms(2); }

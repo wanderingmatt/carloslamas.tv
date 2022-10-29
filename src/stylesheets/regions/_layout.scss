@@ -5,9 +5,7 @@ body {
   &.fixed { overflow: hidden; }
 }
 
-// @include breakpoint($breakpoint-tablet) {
-//   .wrapper { padding: 0 3rem; }
-// }
+.wrapper { min-width: 375px; }
 
 // @include breakpoint($breakpoint-desktop) {
 //   .wrapper {

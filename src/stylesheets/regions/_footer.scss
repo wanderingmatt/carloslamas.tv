@@ -3,23 +3,17 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  div {
-    &:last-child { color: $darker-grey; }
-  }
+  .stamp { opacity: .5; }
   a { text-decoration: none; }
 
-  // @include breakpoint($breakpoint-tablet) {
-  //   flex-direction: row;
-  //   padding: 1.5rem 3rem;
-  //   div {
-  //     &:last-child {
-  //       margin-left: .5rem;
-  //       &::before {
-  //         content: '— ';
-  //       }
-  //     }
-  //   }
-  // }
+  @include breakpoint($breakpoint-tablet) {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1.5rem 3rem;
+    div { flex-basis: 50%; }
+    .copyright { text-align: end; }
+    .stamp { text-align: start; }
+  }
 
   // @include breakpoint($breakpoint-desktop) {
   //   justify-content: center;
