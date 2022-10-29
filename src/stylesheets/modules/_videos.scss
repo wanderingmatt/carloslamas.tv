@@ -40,6 +40,10 @@
         top: 0;
         @include z-index(front);
       }
+      &.missing {
+        background-color: red;
+        width: 100%;
+      }
     }
     aside {
       display: flex;
