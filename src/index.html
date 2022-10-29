@@ -31,7 +31,20 @@
       	<li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/391298953">
             <picture class="thumbnail">
-              <img src="./images/thumbnails/target-the-doux.jpg?width=492" alt="The Doux &bull; Target">
+              <source type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=492 492w,
+                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=984 984w,
+                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=1476 1476w">
+              <source type="image/webp"
+                      srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=96 96w,
+                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=192 192w,
+                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=288 288w"
+                      sizes="96w">
+              <img src="./images/thumbnails/target-the-doux.jpg?width=96"
+                   srcset="./images/thumbnails/target-the-doux.jpg?width=192 192w,
+                           ./images/thumbnails/target-the-doux.jpg?width=288 288w"
+                   alt="The Doux &bull; Target">
             </picture>
             <aside>
               <h4>The Doux</h4>
@@ -87,7 +100,7 @@
       <ul>
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/180381840">
-            <div class="thumbnail"><img src="./images/thumbnails/target-baby-itos.jpg" loading="lazy" alt="Baby / Itos &bull; Target" /></div>
+            <div class="thumbnail"><img src="./images/thumbnails/target-baby-itos.jpg" alt="Baby / Itos &bull; Target" /></div>
             <aside>
               <h4>Baby / Itos</h4>
               <h5>Target</h5>
