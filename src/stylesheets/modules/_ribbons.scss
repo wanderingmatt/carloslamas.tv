@@ -5,7 +5,6 @@
   position: sticky;
   top: 0;
   @include z-index(front);
-
   @include breakpoint($breakpoint-tablet) { padding: 1rem 3rem; }
   @include breakpoint($breakpoint-desktop) {
     backdrop-filter: none;
@@ -24,4 +23,5 @@
       }
     }
   }
+  @include breakpoint($breakpoint-widescreen) { padding: 0; }
 }

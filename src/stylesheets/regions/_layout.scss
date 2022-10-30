@@ -3,10 +3,9 @@ body {
   &.fixed { overflow: hidden; }
 }
 
-.wrapper { min-width: 375px; }
-
-@include breakpoint($breakpoint-widescreen) {
-  .wrapper {
+.wrapper {
+  min-width: 375px;
+  @include breakpoint($breakpoint-widescreen) {
     margin: 0 auto;
     max-width: 1728px;
   }

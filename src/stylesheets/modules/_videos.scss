@@ -55,7 +55,6 @@
       width: 16px;
     }
   }
-
   @include breakpoint($breakpoint-tablet) {
     ul {
       display: grid;
@@ -73,7 +72,6 @@
       .icon { @extend %hidden-tablet; }
     }
   }
-
   @include breakpoint($breakpoint-desktop) {
     ul {
       grid-gap: 2rem;
@@ -131,10 +129,7 @@
       }
     }
   }
-
   @include breakpoint($breakpoint-widescreen) {
-    ul {
-      padding: 6rem 0;
-    }
+    ul { padding: 6rem 0; }
   }
 }

@@ -1,56 +1,68 @@
 #info {
   background: $purple;
   color: $light-purple;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  h3, p { margin-bottom: 1rem; }
-  .contact {
-    ul {
-      display: flex;
-      gap: .75rem;
-      list-style-type: none;
-      margin: 0 0 1rem 0;
-      padding: 0;
-      a {
-        display: block;
-        .icon { background-color: $light-purple; }
-        &:hover, &:active {
-          .icon { background-color: $off-white; }
-        }
-      }
-    }
-    a {
-      &:hover { color: $off-white; }
-    }
-    p { margin-bottom: 0; }
-  }
-
-  @include breakpoint($breakpoint-tablet) {
-    gap: 1.5rem;
-    padding: 3rem;
-    h3 { margin-bottom: 1.5rem;}
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-    padding: 4rem;
-    .bio { grid-column: span 2; }
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    h3, p { margin-bottom: 1rem; }
     .contact {
       ul {
+        display: flex;
+        gap: .75rem;
+        list-style-type: none;
+        margin: 0 0 1rem 0;
+        padding: 0;
         a {
-          .icon {
-            height: 48px;
-            transition: background-color .125s;
-            width: 48px;
-          }
+          display: block;
+          .icon { background-color: $light-purple; }
           &:hover, &:active {
-            .icon { background-color: #fff; }
+            .icon { background-color: $off-white; }
           }
         }
       }
+      a {
+        &:hover { color: $off-white; }
+      }
+      p { margin-bottom: 0; }
+    }
+  }
+  @include breakpoint($breakpoint-tablet) {
+    section {
+      gap: 1.5rem;
+      padding: 3rem;
+      h3 { margin-bottom: 1.5rem;}
+    }
+  }
+  @include breakpoint($breakpoint-desktop) {
+    section {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 4rem;
+      .bio { grid-column: span 2; }
+      .contact {
+        ul {
+          a {
+            .icon {
+              height: 48px;
+              transition: background-color .125s;
+              width: 48px;
+            }
+            &:hover, &:active {
+              .icon { background-color: #fff; }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint($breakpoint-widescreen) {
+    section {
+      margin: 0 auto;
+      max-width: 1728px;
+      .bio { grid-column: 1; }
+      .contact { grid-column: 3; }
     }
   }
 }

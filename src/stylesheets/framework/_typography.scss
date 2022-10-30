@@ -1,12 +1,13 @@
 // Type Scale
 //
 // 16px - 1rem
-// 21px - 1.333rem
-// 28px - 1.777rem
-// 38px - 2.369rem
-// 50px - 3.157rem
-// 67px - 4.209rem
-// 89px - 5.61rem
+// 21px - 1.333rem @ 1.625rem
+// 28px - 1.777rem @ 2.125rem
+// 38px - 2.369rem @ 2.875rem
+// 50px - 3.157rem @ 3.8125rem
+// 67px - 4.209rem @ 5.125rem
+// 89px - 5.61rem  @ 6.8125rem
+// 120px - 7.478rem @ 9.0625rem
 
 html, body { font-size: 16px; }
 
@@ -41,6 +42,10 @@ h1 {
     line-height: 6.8125rem;
     text-rendering: geometricPrecision;
   }
+  @include breakpoint($breakpoint-widescreen) {
+    font-size: 7.478rem;
+    line-height: 9.0625rem;
+  }
 }
 
 h2 {
@@ -60,6 +65,10 @@ h3 {
     font-weight: normal;
     text-transform: uppercase;
   }
+  @include breakpoint($breakpoint-widescreen) {
+    font-size: 3.157rem;
+    line-height: 3.8125rem;
+  }
 }
 
 h4 {
@@ -70,14 +79,12 @@ h4 {
 h5 {
   color: $dark-grey;
   font-size: .875rem;
-}
-
-@include breakpoint($breakpoint-desktop) {
-  h5 {
+  @include breakpoint($breakpoint-desktop) {
     color: $light-purple;
     mix-blend-mode: hard-light;
   }
 }
+
 
 // Paragraphs
 

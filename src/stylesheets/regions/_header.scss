@@ -24,7 +24,6 @@ header {
       &:hover { color: lighten($purple, 30%); }
     }
   }
-
   @include breakpoint($breakpoint-tablet) { padding: 7rem 3rem; }
   @include breakpoint($breakpoint-desktop) { padding: 7rem 4rem; }
   @include breakpoint($breakpoint-widescreen) { padding: 10rem 0; }
