@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WanderingMatt/carloslamas.tv.git"
+    "url": "git+https://github.com/wanderingmatt/carloslamas.tv.git"
   },
   "author": "Matthew Anderson <matt@wanderingmatt.com>",
   "license": "MIT",
@@ -18,12 +18,12 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "@fancyapps/ui": "^4.0.31",
-    "@parcel/optimizer-data-url": "^2.7.0",
-    "@parcel/transformer-inline-string": "^2.7.0",
-    "@parcel/transformer-sass": "^2.7.0",
+    "@parcel/optimizer-data-url": "^2.8.0",
+    "@parcel/transformer-inline-string": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
     "gh-pages": "^4.0.0",
     "normalize.css": "^8.0.1",
     "parcel": "latest",
-    "sharp": "^0.29.3"
+    "sharp": "^0.31.2"
   }
 }

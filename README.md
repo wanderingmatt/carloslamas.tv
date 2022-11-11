@@ -32,6 +32,21 @@ If you run into issues will developing locally, the `clean` task will delete the
 
 `$npm run clean`
 
+## Updating Dependencies
+
+If you ever want to bump the Development Dependencies for the project, you can do so using [Check Updates](https://www.npmjs.com/package/npm-check-updates).
+
+##### Install Check Updates
+
+`$ npm install -g npm-check-updates`
+
+##### Update Dependency Hints and Install New Versions
+
+```
+$ ncu -u
+$ npm install
+```
+
 ## Deploying
 
 The `deploy` task will automatically rebuild your app, copy everything in the local `dist` folder to the `gh-pages` branch, and push it to GitHub.
