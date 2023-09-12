@@ -51,4 +51,4 @@ $ npm install
 
 The `deploy` task will automatically rebuild your app, copy everything in the local `dist` folder to the `gh-pages` branch, and push it to GitHub.
 
-`$ npm deploy`
+`$ npm run deploy`
