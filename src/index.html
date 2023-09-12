@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Carlos Lamas — Editor</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./stylesheets/styles.scss">
 </head>
+
 <body>
   <div class="wrapper">
     <header itemscope itemtype="http://schema.org/Person">
@@ -16,25 +18,48 @@
       <div class="info-text"><a href="#info" id="info-trigger">Info</a></div>
     </header>
     <section class="commercial videos">
-      <div class="ribbon"><h3>Commercial</h3></div>
+      <div class="ribbon">
+        <h3>Commercial</h3>
+      </div>
       <ul>
-    		<li>
+
+        <li>
+          <a class="video" data-fancybox="commercial" href="https://vimeo.com/635446222">
+            <picture class="thumbnail">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=624 624w,
+                                              ./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=1248 1248w,
+                                              ./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=1872 1872w">
+              <source type="image/webp"
+                srcset="./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=96 96w,
+                                              ./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=192 192w,
+                                              ./images/thumbnails/facebook-groups-beginner-sewing.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/facebook-groups-beginner-sewing.jpg?width=96" srcset="./images/thumbnails/facebook-groups-beginner-sewing.jpg?width=192 192w,
+                                           ./images/thumbnails/facebook-groups-beginner-sewing.jpg?width=288 288w"
+                alt="Facebook Groups &bull; 1stAveMachine">
+            </picture>
+            <aside>
+              <h4>Beginner Sewing</h4>
+              <h5>Facebook Groups &bull; 1stAveMachine</h5>
+            </aside>
+            <span class="icon icon-play">Play Video</span>
+          </a>
+        </li>
+
+
+        <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/502338576">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=192 192w,
                               ./images/thumbnails/estee-lauder-double-wear-dare.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/estee-lauder-double-wear-dare.jpg?width=96"
-                   srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?width=192 192w,
+                sizes="96w">
+              <img src="./images/thumbnails/estee-lauder-double-wear-dare.jpg?width=96" srcset="./images/thumbnails/estee-lauder-double-wear-dare.jpg?width=192 192w,
                            ./images/thumbnails/estee-lauder-double-wear-dare.jpg?width=288 288w"
-                   alt="Estée Lauder &bull; Peterson Milla Hooks">
+                alt="Estée Lauder &bull; Peterson Milla Hooks">
             </picture>
             <aside>
               <h4>Double Wear Dare</h4>
@@ -43,23 +68,17 @@
             <span class="icon icon-play">Play Video</span>
           </a>
         </li>
-      	<li>
+        <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/391298953">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-the-doux.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-the-doux.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-the-doux.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-the-doux.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-the-doux.jpg?width=96"
-                   srcset="./images/thumbnails/target-the-doux.jpg?width=192 192w,
-                           ./images/thumbnails/target-the-doux.jpg?width=288 288w"
-                   alt="The Doux &bull; Target">
+                              ./images/thumbnails/target-the-doux.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-the-doux.jpg?width=96" srcset="./images/thumbnails/target-the-doux.jpg?width=192 192w,
+                           ./images/thumbnails/target-the-doux.jpg?width=288 288w" alt="The Doux &bull; Target">
             </picture>
             <aside>
               <h4>The Doux</h4>
@@ -71,20 +90,16 @@
         <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/75240088">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=192 192w,
                               ./images/thumbnails/target-converse-one-star-race.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-converse-one-star-race.jpg?width=96"
-                   srcset="./images/thumbnails/target-converse-one-star-race.jpg?width=192 192w,
+                sizes="96w">
+              <img src="./images/thumbnails/target-converse-one-star-race.jpg?width=96" srcset="./images/thumbnails/target-converse-one-star-race.jpg?width=192 192w,
                            ./images/thumbnails/target-converse-one-star-race.jpg?width=288 288w"
-                   alt="Converse One Star / Race &bull; Target">
+                alt="Converse One Star / Race &bull; Target">
             </picture>
             <aside>
               <h4>Converse One Star / Race</h4>
@@ -96,20 +111,16 @@
         <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/50640775">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=192 192w,
                               ./images/thumbnails/target-shops-curiosuty-shoppe.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?width=96"
-                   srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?width=192 192w,
+                sizes="96w">
+              <img src="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?width=96" srcset="./images/thumbnails/target-shops-curiosuty-shoppe.jpg?width=192 192w,
                            ./images/thumbnails/target-shops-curiosuty-shoppe.jpg?width=288 288w"
-                   alt="Shops / Curiosity Shoppe &bull; Target">
+                alt="Shops / Curiosity Shoppe &bull; Target">
             </picture>
             <aside>
               <h4>Shops / Curiosity Shoppe</h4>
@@ -121,20 +132,15 @@
         <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/40788896">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/kmart-money-cant-buy-style.jpg?width=96"
-                   srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?width=192 192w,
+                              ./images/thumbnails/kmart-money-cant-buy-style.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/kmart-money-cant-buy-style.jpg?width=96" srcset="./images/thumbnails/kmart-money-cant-buy-style.jpg?width=192 192w,
                            ./images/thumbnails/kmart-money-cant-buy-style.jpg?width=288 288w"
-                   alt="Money Can't Buy Style &bull; Kmart">
+                alt="Money Can't Buy Style &bull; Kmart">
             </picture>
             <aside>
               <h4>Money Can't Buy Style</h4>
@@ -143,23 +149,18 @@
             <span class="icon icon-play">Play Video</span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a class="video" data-fancybox="commercial" href="https://vimeo.com/40787603">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-dream-in-color.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-dream-in-color.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-dream-in-color.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-dream-in-color.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-dream-in-color.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-dream-in-color.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-dream-in-color.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/target-dream-in-color.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-dream-in-color.jpg?width=96"
-                   srcset="./images/thumbnails/target-dream-in-color.jpg?width=192 192w,
+                              ./images/thumbnails/target-dream-in-color.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-dream-in-color.jpg?width=96" srcset="./images/thumbnails/target-dream-in-color.jpg?width=192 192w,
                            ./images/thumbnails/target-dream-in-color.jpg?width=288 288w"
-                   alt="Dream In Color / Luis Fonsi &bull; Target">
+                alt="Dream In Color / Luis Fonsi &bull; Target">
             </picture>
             <aside>
               <h4>Dream In Color / Luis Fonsi</h4>
@@ -167,29 +168,44 @@
             </aside>
             <span class="icon icon-play">Play Video</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </section>
     <section class="spanish videos">
-      <div class="ribbon"><h3>En Español</h3></div>
+      <div class="ribbon">
+        <h3>En Español</h3>
+      </div>
       <ul>
+        <li>
+          <a class="video" data-fancybox="espanol" href="https://vimeo.com/863698401">
+            <picture class="thumbnail">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-mas-que.jpg?as=webp&width=624 624w,
+                                      ./images/thumbnails/target-mas-que.jpg?as=webp&width=1248 1248w,
+                                      ./images/thumbnails/target-mas-que.jpg?as=webp&width=1872 1872w">
+              <source type="image/webp" srcset="./images/thumbnails/target-mas-que.jpg?as=webp&width=96 96w,
+                                      ./images/thumbnails/target-mas-que.jpg?as=webp&width=192 192w,
+                                      ./images/thumbnails/target-mas-que.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-mas-que.jpg?width=96" srcset="./images/thumbnails/target-mas-que.jpg?width=192 192w,
+                                   ./images/thumbnails/target-mas-que.jpg?width=288 288w" alt="Mas Que &bull; Target">
+            </picture>
+            <aside>
+              <h4>Mas Que / La Cuadra</h4>
+              <h5>Target</h5>
+            </aside>
+            <span class="icon icon-play">Play Video</span>
+          </a>
+        </li>
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/180381840">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-baby-itos.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-baby-itos.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-baby-itos.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-baby-itos.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-baby-itos.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-baby-itos.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-baby-itos.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/target-baby-itos.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-baby-itos.jpg?width=96"
-                   srcset="./images/thumbnails/target-baby-itos.jpg?width=192 192w,
-                           ./images/thumbnails/target-baby-itos.jpg?width=288 288w"
-                   alt="Baby / Itos &bull; Target">
+                              ./images/thumbnails/target-baby-itos.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-baby-itos.jpg?width=96" srcset="./images/thumbnails/target-baby-itos.jpg?width=192 192w,
+                           ./images/thumbnails/target-baby-itos.jpg?width=288 288w" alt="Baby / Itos &bull; Target">
             </picture>
             <aside>
               <h4>Baby / Itos</h4>
@@ -201,20 +217,15 @@
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/502345827">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-hhm-ada-ozzie.jpg?width=96"
-                   srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?width=192 192w,
+                              ./images/thumbnails/target-hhm-ada-ozzie.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-hhm-ada-ozzie.jpg?width=96" srcset="./images/thumbnails/target-hhm-ada-ozzie.jpg?width=192 192w,
                            ./images/thumbnails/target-hhm-ada-ozzie.jpg?width=288 288w"
-                   alt="Hispanic Heritage Month / Ada + Ozzie &bull; Target">
+                alt="Hispanic Heritage Month / Ada + Ozzie &bull; Target">
             </picture>
             <aside>
               <h4>Hispanic Heritage Month / Ada + Ozzie</h4>
@@ -226,20 +237,15 @@
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/118040374">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/boxtops-raul-de-molina.jpg?width=96"
-                   srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?width=192 192w,
+                              ./images/thumbnails/boxtops-raul-de-molina.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/boxtops-raul-de-molina.jpg?width=96" srcset="./images/thumbnails/boxtops-raul-de-molina.jpg?width=192 192w,
                            ./images/thumbnails/boxtops-raul-de-molina.jpg?width=288 288w"
-                   alt="Raul de Molina &bull; Boxtops for Education">
+                alt="Raul de Molina &bull; Boxtops for Education">
             </picture>
             <aside>
               <h4>Raul de Molina</h4>
@@ -251,20 +257,16 @@
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/118044391">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=192 192w,
                               ./images/thumbnails/canela-creative-celebra-lo-rico.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?width=96"
-                   srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?width=192 192w,
+                sizes="96w">
+              <img src="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?width=96" srcset="./images/thumbnails/canela-creative-celebra-lo-rico.jpg?width=192 192w,
                            ./images/thumbnails/canela-creative-celebra-lo-rico.jpg?width=288 288w"
-                   alt="Celebra lo Rico Episode 1 &bull; Canela Creative">
+                alt="Celebra lo Rico Episode 1 &bull; Canela Creative">
             </picture>
             <aside>
               <h4>Celebra lo Rico Episode 1</h4>
@@ -276,20 +278,15 @@
         <li>
           <a class="video" data-fancybox="espanol" href="https://vimeo.com/77731187">
             <picture class="thumbnail">
-              <source type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=624 624w,
+              <source type="image/webp" media="(min-width: 768px)" srcset="./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=624 624w,
                               ./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=1248 1248w,
                               ./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=1872 1872w">
-              <source type="image/webp"
-                      srcset="./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=96 96w,
+              <source type="image/webp" srcset="./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=96 96w,
                               ./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=192 192w,
-                              ./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=288 288w"
-                      sizes="96w">
-              <img src="./images/thumbnails/target-music-prince-royce.jpg?width=96"
-                   srcset="./images/thumbnails/target-music-prince-royce.jpg?width=192 192w,
+                              ./images/thumbnails/target-music-prince-royce.jpg?as=webp&width=288 288w" sizes="96w">
+              <img src="./images/thumbnails/target-music-prince-royce.jpg?width=96" srcset="./images/thumbnails/target-music-prince-royce.jpg?width=192 192w,
                            ./images/thumbnails/target-music-prince-royce.jpg?width=288 288w"
-                   alt="Target Music / Prince Royce &bull; Target">
+                alt="Target Music / Prince Royce &bull; Target">
             </picture>
             <aside>
               <h4>Music / Prince Royce</h4>
@@ -300,6 +297,8 @@
         </li>
       </ul>
     </section>
+
+    <!--
     <section class="music videos">
       <div class="ribbon"><h3>Music Videos</h3></div>
       <ul>
@@ -610,22 +609,27 @@
         </li>
       </ul>
     </section>
+  -->
   </div>
   <div id="info">
     <section>
       <div class="bio">
         <h3>Bio</h3>
-        <p>Carlos Lamas is a freelance video editor from Minneapolis, working in post-production since 2005. He has edited for national brands including Target, Estée Lauder, Kmart, Capital One, and Best Buy. He has also edited feature films, music videos, and had his work featured on MTVU, Pitchfork, and Kanye West's blog.</p>
-        <p>When he's not working, Carlos is either at the beach or skiing, depending on the season. Carlos was raised bi-lingual, and loves to edit in Spanish.</p>
+        <p>Carlos Lamas is a freelance video editor from Minneapolis, working in post-production since 2005. He has
+          edited for countless national brands including Target, Estée Lauder, Facebook, Kohl's, ESPN, and Best Buy. He
+          has also edited several feature films and music videos. When he's not working, Carlos is either at the beach
+          or skiing, depending on the season.</p>
+        <p> Carlos was raised bilingual, and loves to edit in Spanish. Carlos is a member of <a
+            href="https://www.cartel-msp.com/">Cartel-MSP</a>, a one-stop bilingual production team.</p>
       </div>
       <div class="contact">
         <h3>Contact</h3>
         <ul>
-          <li><a href="https://twitter.com/losdelfuego"><span class="icon icon-twitter">losdelfuego</span></a></li>
           <li><a href="mailto:carlos@carloslamas.tv"><span class="icon icon-email">carlos@carloslamas.tv</span></a></li>
           <li><a href="tel:+1612-424-5143"><span class="icon icon-phone">612-424-5143</span></a></li>
         </ul>
-        <p>You can book Carlos directly, by emailing <a href="mailto:carlos@carloslamas.tv">carlos@carloslamas.tv</a>.</p>
+        <p>You can book Carlos directly, by emailing <a href="mailto:carlos@carloslamas.tv">carlos@carloslamas.tv</a>.
+        </p>
       </div>
     </section>
   </div>
@@ -635,4 +639,5 @@
   </footer>
   <script type="module" src="./javascripts/scripts.js"></script>
 </body>
+
 </html>
